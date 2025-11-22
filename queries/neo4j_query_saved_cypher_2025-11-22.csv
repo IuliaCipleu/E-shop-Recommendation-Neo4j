@@ -1,0 +1,153 @@
+name,description,query,id,parentId,isFolder
+Cleaning,,"MATCH (n)
+DETACH DELETE n;
+DROP CONSTRAINT order_id_unique IF EXISTS;
+DROP CONSTRAINT wishlist_id_unique IF EXISTS;
+DROP CONSTRAINT user_id_unique IF EXISTS;
+DROP CONSTRAINT product_id_unique IF EXISTS;
+DROP CONSTRAINT category_id_unique IF EXISTS;
+
+
+",0,,FALSE
+Create graph,,"// --- USERS ---
+LOAD CSV WITH HEADERS FROM 'file:///dataset_small/users.csv' AS row
+CREATE (:User {
+  user_id: toInteger(row.user_id),
+  name: row.name,
+  email: row.email,
+  registration_date: date(row.registration_date)
+});
+
+// --- CATEGORIES ---
+LOAD CSV WITH HEADERS FROM 'file:///dataset_small/categories.csv' AS row
+CREATE (:Category {
+  category_id: toInteger(row.category_id),
+  name: row.name,
+  description: row.description
+});
+
+// --- PRODUCTS ---
+LOAD CSV WITH HEADERS FROM 'file:///dataset_small/products.csv' AS row
+MATCH (c:Category {category_id: toInteger(row.category_id)})
+CREATE (p:Product {
+  product_id: toInteger(row.product_id),
+  name: row.name,
+  price: toFloat(row.price),
+  brand: row.brand,
+  rating: toFloat(row.rating)
+})
+CREATE (p)-[:BELONGS_TO]->(c);
+
+// --- ORDERS ---
+LOAD CSV WITH HEADERS FROM 'file:///dataset_small/orders.csv' AS row
+MATCH (u:User {user_id: toInteger(row.user_id)}),
+      (p:Product {product_id: toInteger(row.product_id)})
+CREATE (u)-[:PLACED {
+  order_id: toInteger(row.order_id),
+  timestamp: datetime(replace(trim(row.timestamp), "" "", ""T"")),
+  quantity: toInteger(row.quantity),
+  total_price: toFloat(row.total_price)
+}]->(p);
+
+// --- WISHLISTS ---
+LOAD CSV WITH HEADERS FROM 'file:///dataset_small/wishlists.csv' AS row
+MATCH (u:User {user_id: toInteger(row.user_id)}),
+      (p:Product {product_id: toInteger(row.product_id)})
+CREATE (u)-[:WISHLISTED {
+  added_on: date(row.added_on)
+}]->(p);
+",1,,FALSE
+Constraints,,"CREATE CONSTRAINT user_id_unique IF NOT EXISTS
+FOR (u:User) REQUIRE u.user_id IS UNIQUE;
+
+CREATE CONSTRAINT product_id_unique IF NOT EXISTS
+FOR (p:Product) REQUIRE p.product_id IS UNIQUE;
+
+CREATE CONSTRAINT category_id_unique IF NOT EXISTS
+FOR (c:Category) REQUIRE c.category_id IS UNIQUE;
+
+CREATE INDEX product_price_index IF NOT EXISTS
+FOR (p:Product) ON (p.price);
+",2,,FALSE
+Show,,"CALL db.schema.visualization();
+",3,,FALSE
+"Recommend by history of orders / wishlist, price range, and category",,"MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Product)-[:BELONGS_TO]->(c:Category)<-[:BELONGS_TO]-(rec:Product)
+WHERE rec.product_id <> p1.product_id
+  AND rec.price >= p1.price * 0.3 
+  AND rec.price <= p1.price * 1.5
+  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)
+WITH DISTINCT rec, c
+RETURN rec.name AS RecommendedProduct, 
+       c.name AS Category, 
+       rec.price AS Price, 
+       rec.rating AS Rating
+ORDER BY Rating DESC
+LIMIT 10;
+",4,,FALSE
+Recommend by history of orders & wishlist combined with price range + category,,"// Step 1 – collect purchase categories and average price
+MATCH (u:User {user_id: 1})-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c:Category)
+WITH u, COLLECT(DISTINCT c) AS purchaseCategories, AVG(p1.price) AS avgPrice
+
+// Step 2 – collect wishlist categories separately
+OPTIONAL MATCH (u)-[:WISHLISTED]->(w:Product)-[:BELONGS_TO]->(wc:Category)
+WITH u, purchaseCategories, avgPrice, COLLECT(DISTINCT wc) AS wishlistCategories
+
+// Step 3 – merge the two lists without APOC
+WITH u, avgPrice, purchaseCategories + wishlistCategories AS allCategories
+UNWIND allCategories AS cat
+WITH u, avgPrice, COLLECT(DISTINCT cat) AS interestCategories
+
+// Step 4 – find recommended products
+MATCH (rec:Product)-[:BELONGS_TO]->(cat:Category)
+WHERE cat IN interestCategories
+  AND rec.price >= avgPrice * 0.7 
+  AND rec.price <= avgPrice * 1.3
+  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)
+RETURN rec.name AS RecommendedProduct,
+       cat.name AS Category,
+       rec.price AS Price,
+       rec.rating AS Rating
+ORDER BY Rating DESC
+LIMIT 10;
+",5,,FALSE
+Recommend what other users bought,,"MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec:Product)
+WHERE u1 <> other
+  AND NOT (u1)-[:PLACED|WISHLISTED]->(rec)
+RETURN rec.name AS RecommendedProduct, COUNT(*) AS Popularity
+ORDER BY Popularity DESC
+LIMIT 5;
+",6,,FALSE
+Hybrid recommendation,,"// Hybrid recommendation combining multiple signals
+MATCH (u:User {user_id: 1})
+
+// --- Purchases ---
+OPTIONAL MATCH (u)-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c1:Category)<-[:BELONGS_TO]-(rec1:Product)
+WHERE rec1 <> p1
+WITH u, rec1, COUNT(*) * 2 AS purchaseScore  // weight 2
+
+// --- Wishlists ---
+OPTIONAL MATCH (u)-[:WISHLISTED]->(p2:Product)-[:BELONGS_TO]->(c2:Category)<-[:BELONGS_TO]-(rec2:Product)
+WHERE rec2 <> p2
+WITH u, rec1, rec2, purchaseScore, COUNT(rec2) * 1.5 AS wishlistScore  // weight 1.5
+
+// --- Other users (collaborative) ---
+OPTIONAL MATCH (u)-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec3:Product)
+WHERE rec3 <> p
+WITH u, rec1, rec2, rec3, purchaseScore, wishlistScore, COUNT(rec3) * 1.0 AS collabScore
+
+// --- Combine all ---
+WITH COALESCE(rec1, rec2, rec3) AS rec,
+     COALESCE(purchaseScore,0) + COALESCE(wishlistScore,0) + COALESCE(collabScore,0) AS totalScore
+RETURN rec.name AS RecommendedProduct, rec.price, rec.brand, totalScore
+ORDER BY totalScore DESC
+LIMIT 5;
+",7,,FALSE
+Point read user,,"// Fetch a specific user's orders
+MATCH (u:User {user_id: 1})-[r:PLACED]->(p:Product)
+RETURN u.name, p.name, r.quantity, r.total_price;
+
+",8,,FALSE
+Point read product,,"
+// Fetch a product’s details and its category
+MATCH (p:Product {product_id: 3})-[:BELONGS_TO]->(c:Category)
+RETURN p.name, p.price, p.brand, c.name AS category;",9,,FALSE
