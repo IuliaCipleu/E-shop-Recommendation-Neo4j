@@ -84,12 +84,15 @@ def generate_dataset(scale='small'):
                 price = round(random.uniform(5, 500), 2)
             writer.writerow([i, product_name, price, brand, round(random.uniform(1, 5), 1), cat_id])
 
+    regions = ["EU", "US", "ASIA", "AFRICA", "LATAM"]
+    
     # Users
     with open(f"{outdir}/users.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter=",")
-        writer.writerow(["user_id", "name", "email", "registration_date"])
+        writer.writerow(["user_id", "name", "email", "registration_date", "region"])
         for i in range(cfg['users']):
-            writer.writerow([i, faker.name(), faker.email(), faker.date_this_decade()])
+            region = random.choice(regions)
+            writer.writerow([i, faker.name(), faker.email(), faker.date_this_decade(), region])
 
     # Orders
     with open(f"{outdir}/orders.csv", "w", newline="", encoding="utf-8") as f:
@@ -113,51 +116,51 @@ def generate_dataset(scale='small'):
                 faker.date_this_year()
             ])
 
-#     print(f"✅ {scale.capitalize()} dataset generated successfully!")
+    print(f"✅ {scale.capitalize()} dataset generated successfully!")
 
-#     print("\n📜 Use these Cypher commands in Neo4j Browser or Aura:")
-#     print(f"""
-# LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/users.csv' AS row
-# CREATE (:User {{
-#     user_id: toInteger(row.user_id),
-#     name: row.name,
-#     email: row.email,
-#     registration_date: date(row.registration_date)
-# }});
+    print("\n📜 Use these Cypher commands in Neo4j Browser or Aura:")
+    print(f"""
+LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/users.csv' AS row
+CREATE (:User {{
+    user_id: toInteger(row.user_id),
+    name: row.name,
+    email: row.email,
+    registration_date: date(row.registration_date)
+}});
 
-# LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/categories.csv' AS row
-# CREATE (:Category {{
-#     category_id: toInteger(row.category_id),
-#     name: row.name,
-#     description: row.description
-# }});
+LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/categories.csv' AS row
+CREATE (:Category {{
+    category_id: toInteger(row.category_id),
+    name: row.name,
+    description: row.description
+}});
 
-# LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/products.csv' AS row
-# MATCH (c:Category {{category_id: toInteger(row.category_id)}})
-# CREATE (p:Product {{
-#     product_id: toInteger(row.product_id),
-#     name: row.name,
-#     price: toFloat(row.price),
-#     brand: row.brand,
-#     rating: toFloat(row.rating)
-# }})
-# CREATE (p)-[:BELONGS_TO]->(c);
+LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/products.csv' AS row
+MATCH (c:Category {{category_id: toInteger(row.category_id)}})
+CREATE (p:Product {{
+    product_id: toInteger(row.product_id),
+    name: row.name,
+    price: toFloat(row.price),
+    brand: row.brand,
+    rating: toFloat(row.rating)
+}})
+CREATE (p)-[:BELONGS_TO]->(c);
 
-# LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/orders.csv' AS row
-# MATCH (u:User {{user_id: toInteger(row.user_id)}}),
-#       (p:Product {{product_id: toInteger(row.product_id)}})
-# CREATE (u)-[:PLACED {{
-#     order_id: toInteger(row.order_id),
-#     timestamp: datetime(row.timestamp),
-#     quantity: toInteger(row.quantity),
-#     total_price: toFloat(row.total_price)
-# }}]->(p);
+LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/orders.csv' AS row
+MATCH (u:User {{user_id: toInteger(row.user_id)}}),
+      (p:Product {{product_id: toInteger(row.product_id)}})
+CREATE (u)-[:PLACED {{
+    order_id: toInteger(row.order_id),
+    timestamp: datetime(row.timestamp),
+    quantity: toInteger(row.quantity),
+    total_price: toFloat(row.total_price)
+}}]->(p);
 
-# LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/wishlists.csv' AS row
-# MATCH (u:User {{user_id: toInteger(row.user_id)}}),
-#       (p:Product {{product_id: toInteger(row.product_id)}})
-# CREATE (u)-[:WISHLISTED {{added_on: date(row.added_on)}}]->(p);
-# """)
+LOAD CSV WITH HEADERS FROM 'file:///dataset_{scale}/wishlists.csv' AS row
+MATCH (u:User {{user_id: toInteger(row.user_id)}}),
+      (p:Product {{product_id: toInteger(row.product_id)}})
+CREATE (u)-[:WISHLISTED {{added_on: date(row.added_on)}}]->(p);
+""")
 
 def main():
     for scale in ['small', 'medium', 'large']:
