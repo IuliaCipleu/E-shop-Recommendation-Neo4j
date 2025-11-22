@@ -1,0 +1,101 @@
+product_id,name,price,brand,rating,category_id
+0,Body Lotion Them,45.91,Maybelline,4.7,4
+1,Air Purifier Reach,94.04,IKEA,2.5,3
+2,Smile,273.96,"Grant, Brown and Miles",2.8,5
+3,Novel Opportunity,85.09,O'Reilly,1.4,1
+4,Learn,22.8,"Murphy, White and Horton",3.8,8
+5,Textbook Nothing,49.66,Macmillan,4.8,1
+6,Myself,319.09,Hood PLC,1.5,7
+7,TV Wide,483.48,HP,2.3,0
+8,Microwave Ok,427.26,IKEA,1.1,3
+9,Face Cream Course,131.58,L'Oreal,5.0,4
+10,Event,148.35,"Smith, Landry and Lopez",3.6,8
+11,T-shirt Thousand,251.27,Adidas,3.9,2
+12,Prepare,58.57,Norris PLC,3.6,7
+13,Painting,68.43,"Morris, Sanchez and Pena",4.4,7
+14,Camera Skin,464.66,HP,3.1,0
+15,Hope,111.35,Hall Inc,4.5,7
+16,Lipstick Rate,149.34,Dove,1.7,4
+17,Can,24.93,Burns-Miller,1.9,9
+18,Claim,68.49,Smith PLC,1.5,7
+19,Decade,259.63,Buckley PLC,1.6,6
+20,Lead,29.79,Ortiz and Sons,2.9,7
+21,Today,188.9,"Morton, Arias and Allen",2.6,7
+22,Perfume A,78.19,Nivea,1.1,4
+23,Apply,173.18,"Johnson, Martin and Crawford",2.0,6
+24,Me,302.83,Gutierrez LLC,4.8,6
+25,Sneakers Part,194.86,H&M,4.5,2
+26,Face Cream Send,124.28,Nivea,1.6,4
+27,Fear,168.07,Marsh-Gordon,3.7,5
+28,Biography Congress,81.19,Macmillan,3.2,1
+29,Smile,209.83,Nicholson Inc,2.6,8
+30,Value,185.01,"Cohen, Mccullough and Freeman",1.3,7
+31,Happen,279.62,"Adams, Chen and Miller",1.9,9
+32,Jeans Western,59.87,H&M,1.5,2
+33,Novel Couple,77.5,Macmillan,4.9,1
+34,Headphones Benefit,1083.13,HP,3.2,0
+35,Only,304.57,"Howell, Bryant and Smith",1.9,7
+36,Remain,178.75,Cruz Group,2.4,9
+37,School,295.0,"Hess, Smith and Davenport",3.2,7
+38,Should,48.5,Rodriguez-Brady,4.5,6
+39,Smartwatch When,169.85,Apple,1.2,0
+40,Return,469.44,"Turner, Soto and Cox",3.2,6
+41,Arrive,215.86,Carter-Ward,5.0,8
+42,Jacket Building,112.34,Uniqlo,2.9,2
+43,TV Establish,1508.55,LG,4.3,0
+44,Plant,111.49,"George, Santana and Wiggins",3.8,5
+45,Sneakers Nor,275.61,Nike,1.8,2
+46,Perfume Dinner,84.26,L'Oreal,3.1,4
+47,Bag,475.85,Fields-Solis,4.8,5
+48,Smartphone Couple,202.26,HP,1.4,0
+49,Perfume Forget,6.79,Clinique,1.0,4
+50,Sneakers Late,221.13,H&M,1.1,2
+51,Determine,274.42,Clark-Mcbride,4.7,9
+52,Comics Program,78.42,Macmillan,2.3,1
+53,Blender Magazine,565.25,Dyson,1.1,3
+54,Lipstick Yard,79.1,L'Oreal,2.3,4
+55,Body,195.01,Brock-Young,1.4,8
+56,Shampoo Expert,112.35,L'Oreal,1.1,4
+57,Civil,218.44,Kennedy Inc,4.1,5
+58,Perform,87.63,Brown Group,2.8,6
+59,Focus,150.88,Orr LLC,3.4,9
+60,Perfume Various,117.2,Nivea,2.4,4
+61,Jacket Dog,116.05,Adidas,4.8,2
+62,Lipstick Red,34.97,Maybelline,3.6,4
+63,Dress Order,258.78,H&M,1.7,2
+64,Particularly,155.14,Grant and Sons,3.7,6
+65,Dress See,128.48,Uniqlo,2.4,2
+66,Bed,377.33,Smith PLC,4.5,6
+67,Comics Role,11.3,Vintage,4.9,1
+68,Microwave Real,357.83,Dyson,4.9,3
+69,Dress Peace,205.05,Nike,2.7,2
+70,Would,472.48,Wilkerson-Mathews,1.6,5
+71,Comics Care,14.71,Penguin,2.8,1
+72,World,323.81,Boone PLC,2.4,7
+73,Section,190.38,Vincent Ltd,3.7,8
+74,Upon,209.94,Brown Inc,3.3,9
+75,Last,217.33,Snyder PLC,4.8,8
+76,Body Lotion Only,137.42,Maybelline,1.9,4
+77,Perfume Realize,35.28,Clinique,4.9,4
+78,Dress Kind,297.28,Zara,4.7,2
+79,Home,466.27,Garcia-Herring,4.7,6
+80,Though,316.97,Soto Inc,1.3,6
+81,Dress Many,226.64,Nike,2.8,2
+82,Jeans Just,61.84,H&M,4.2,2
+83,Administration,474.23,"Stewart, Ferrell and Escobar",2.0,6
+84,T-shirt Wall,274.74,Adidas,3.6,2
+85,Remember,114.94,"Rasmussen, Williams and Clark",3.0,6
+86,Morning,63.28,Newton and Sons,3.3,9
+87,T-shirt Agent,121.13,Uniqlo,3.4,2
+88,Sneakers Blue,276.67,Zara,2.1,2
+89,T-shirt Bad,123.85,H&M,2.1,2
+90,Hospital,97.32,"Ramos, Fields and Meadows",3.0,5
+91,Dress Table,73.22,Uniqlo,2.7,2
+92,Artist,194.49,"Gibson, White and King",3.3,6
+93,Lipstick Her,33.47,Nivea,4.8,4
+94,Body Lotion Our,140.9,L'Oreal,5.0,4
+95,Cookbook Management,42.34,Penguin,1.2,1
+96,Novel At,65.91,Penguin,2.1,1
+97,Tablet Lay,1258.35,Dell,4.5,0
+98,Face Cream Material,14.24,Maybelline,3.5,4
+99,Tablet Condition,557.21,Samsung,2.1,0
