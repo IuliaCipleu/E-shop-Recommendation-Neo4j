@@ -3,170 +3,189 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-INPUT_JSON = "benchmark_results_large.json"
-OUTPUT_DIR = "plots_large"
+# ===============================
+# CONFIG: all three datasets
+# ===============================
+INPUT_JSONS = {
+    "small":  "benchmark_results_small.json",
+    "medium": "benchmark_results_medium.json",
+    "large":  "benchmark_results_large.json"
+}
 
+OUTPUT_DIR = "plots_combined"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# ============================
-# Load benchmark data
-# ============================
-with open(INPUT_JSON, "r") as f:
-    data = json.load(f)
-
-print(f"Loaded {len(data)} queries from {INPUT_JSON}")
-
-# ============================
-# Helper: Save plots nicely
-# ============================
+# ===============================
+# Helper: Save plot
+# ===============================
 def save_plot(filename):
     path = os.path.join(OUTPUT_DIR, filename)
     plt.savefig(path, dpi=200, bbox_inches='tight')
     print(f"Saved: {path}")
     plt.close()
 
-# ============================
-# Generate plots per query
-# ============================
-for entry in data:
-    qid = entry["query_id"]
-    query = entry["query"]
-    per_param = entry["per_param_results"]
+# ===============================
+# Load all JSONs
+# ===============================
+datasets = {}
 
-    # Extract data
-    means = [p["mean"] for p in per_param]
-    params = [p["params"]["userId"] for p in per_param]
+for size, file in INPUT_JSONS.items():
+    with open(file, "r") as f:
+        datasets[size] = json.load(f)
+    print(f"Loaded {len(datasets[size])} queries from {file}")
 
-    # ============================
-    # 1. LINE PLOT (mean vs param)
-    # ============================
-    plt.figure(figsize=(10,5))
-    plt.plot(params, means, marker='.')
-    plt.title(f"Query {qid} — Mean Execution Time per Parameter")
-    plt.xlabel("userId")
-    plt.ylabel("Time (sec)")
-    plt.grid(True, linestyle="--", alpha=0.5)
-    save_plot(f"query_{qid}_lineplot.png")
+# ==============================================================
+#   SECTION 1 — PER-DATASET PLOTS (cold vs hot per query)
+# ==============================================================
 
-    # ============================
-    # 2. BOX PLOT (distribution)
-    # ============================
-    plt.figure(figsize=(6,6))
-    plt.boxplot(means, vert=True, patch_artist=True)
-    plt.title(f"Query {qid} — Execution Time Distribution")
-    plt.ylabel("Mean time (sec)")
-    save_plot(f"query_{qid}_boxplot.png")
+for size, data in datasets.items():
 
-    # ============================
-    # 3. HISTOGRAM
-    # ============================
-    plt.figure(figsize=(10,5))
-    plt.hist(means, bins=20, color="skyblue", edgecolor="black")
-    plt.title(f"Query {qid} — Histogram of Execution Times")
-    plt.xlabel("Mean time (sec)")
-    plt.ylabel("Frequency")
-    save_plot(f"query_{qid}_histogram.png")
+    print(f"\nGenerating plots for dataset: {size}")
 
-    # ============================
-    # 4. SCATTER (performance cloud)
-    # ============================
-    plt.figure(figsize=(10,5))
-    plt.scatter(params, means, s=10, alpha=0.6)
-    plt.title(f"Query {qid} — Performance Scatter")
-    plt.xlabel("userId")
-    plt.ylabel("Time (sec)")
-    plt.grid(True, linestyle="--", alpha=0.5)
-    save_plot(f"query_{qid}_scatter.png")
+    size_dir = os.path.join(OUTPUT_DIR, size)
+    os.makedirs(size_dir, exist_ok=True)
 
+    def save_local_plot(name):
+        save_plot(os.path.join(size, name))
 
-print("\n All plots generated and saved in the 'plots' folder.")
+    for entry in data:
+        qid = entry["query_id"]
+        cold = entry["cold_avg_sec"]
+        hot = entry["hot_avg_sec"]
 
-############################################
-# OVERALL SUMMARY PLOTS
-############################################
+        # ------------------------------
+        # Cold vs Hot BAR plot
+        # ------------------------------
+        plt.figure(figsize=(8,5))
+        plt.bar(["Cold (1st run)", "Hot (avg subsequent)"], [cold, hot], color=["red","green"])
+        plt.title(f"Query {qid} — Cold vs Hot ({size} dataset)")
+        plt.ylabel("Seconds")
+        save_plot(f"{size}_query_{qid}_cold_vs_hot_bar.png")
 
-query_ids = [entry["query_id"] for entry in data]
-overall_means = [entry["overall_mean_sec"] for entry in data]
+        # ------------------------------
+        # Cold vs Hot SCATTER plot
+        # (per-parameter values)
+        # ------------------------------
+        per_param = entry["per_param_results"]
+        cold_times = [p["cold_time"] for p in per_param]
+        hot_means  = [p["hot_mean"] for p in per_param]
+        params     = [p["params"]["userId"] for p in per_param]
 
-# =============== 1. BAR CHART ===============
+        plt.figure(figsize=(10,5))
+        plt.scatter(params, cold_times, color="red", label="Cold")
+        plt.scatter(params, hot_means,  color="green", label="Hot")
+        plt.title(f"Query {qid} — Cold vs Hot by Parameter ({size})")
+        plt.xlabel("userId")
+        plt.ylabel("Seconds")
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        save_plot(f"{size}_query_{qid}_cold_vs_hot_scatter.png")
+
+# ==============================================================
+#   SECTION 2 — COMPARATIVE PLOTS ACROSS DATASETS
+# ==============================================================
+
+print("\nGenerating cross-dataset comparisons")
+
+# ----------------------------------------------
+# Average HOT execution per query across datasets
+# ----------------------------------------------
+all_query_ids = [entry["query_id"] for entry in datasets["small"]]
+
 plt.figure(figsize=(12,6))
-plt.bar(query_ids, overall_means, color="steelblue")
-plt.title("Average Execution Time Per Query")
-plt.xlabel("Query ID")
-plt.ylabel("Mean Time (sec)")
-plt.grid(axis='y', alpha=0.4)
-save_plot("overall_bar_mean_per_query.png")
 
-# =============== 2. BOX PLOT ===============
+for size, data in datasets.items():
+    hot_avgs = [entry["hot_avg_sec"] for entry in data]
+    plt.plot(all_query_ids, hot_avgs, marker='o', linestyle='--', label=f"{size} (hot)")
+
+plt.title("HOT Execution Time Comparison — Small vs Medium vs Large")
+plt.xlabel("Query ID")
+plt.ylabel("Avg Execution Time (sec)")
+plt.legend()
+plt.grid(True, alpha=0.4)
+save_plot("all_hot_exec_comparison.png")
+
+# ----------------------------------------------
+# Average COLD execution per query across datasets
+# ----------------------------------------------
 plt.figure(figsize=(12,6))
-box_data = [ [p["mean"] for p in entry["per_param_results"]] for entry in data ]
-plt.boxplot(box_data, labels=query_ids, patch_artist=True)
-plt.title("Execution Time Distribution Per Query")
+
+for size, data in datasets.items():
+    cold_avgs = [entry["cold_avg_sec"] for entry in data]
+    plt.plot(all_query_ids, cold_avgs, marker='o', linestyle='--', label=f"{size} (cold)")
+
+plt.title("COLD Execution Time Comparison — Small vs Medium vs Large")
 plt.xlabel("Query ID")
-plt.ylabel("Mean Execution Time (sec)")
-save_plot("overall_boxplot_per_query.png")
+plt.ylabel("Cold Start Time (sec)")
+plt.legend()
+plt.grid(True, alpha=0.4)
+save_plot("all_cold_exec_comparison.png")
 
-# =============== 3. LINE PLOT ===============
-plt.figure(figsize=(12,6))
-plt.plot(query_ids, overall_means, marker='o', linestyle='--')
-plt.title("Trend of Average Query Time")
+# ==============================================================
+#   SECTION 3 — COMBINED BAR CHART (HOT + COLD)
+# ==============================================================
+
+width = 0.25
+x = np.arange(len(all_query_ids))
+
+plt.figure(figsize=(14,6))
+
+for i, size in enumerate(["small","medium","large"]):
+    data = datasets[size]
+    cold_vals = [entry["cold_avg_sec"] for entry in data]
+    plt.bar(x + i*width, cold_vals, width=width, label=f"{size} (cold)")
+
+plt.xticks(x + width, all_query_ids)
+plt.title("COLD Start Time per Query — All Sizes")
 plt.xlabel("Query ID")
-plt.ylabel("Mean Time (sec)")
-plt.grid(True, linestyle="--", alpha=0.5)
-save_plot("overall_line_mean_per_query.png")
+plt.ylabel("Seconds")
+plt.legend()
+plt.grid(axis='y', alpha=0.3)
+save_plot("cold_all_sizes_bar.png")
 
-# =============== 4. HEATMAP ===============
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(14,6))
 
-# Normalize means for color scale
-norm = (np.array(overall_means) - min(overall_means)) / (max(overall_means)-min(overall_means)+1e-9)
+for i, size in enumerate(["small","medium","large"]):
+    data = datasets[size]
+    hot_vals = [entry["hot_avg_sec"] for entry in data]
+    plt.bar(x + i*width, hot_vals, width=width, label=f"{size} (hot)")
 
-plt.imshow([norm], cmap="viridis", aspect="auto")
-plt.colorbar(label="Normalized Execution Time")
+plt.xticks(x + width, all_query_ids)
+plt.title("HOT Execution Time per Query — All Sizes")
+plt.xlabel("Query ID")
+plt.ylabel("Seconds")
+plt.legend()
+plt.grid(axis='y', alpha=0.3)
+save_plot("hot_all_sizes_bar.png")
 
-plt.yticks([])
-plt.xticks(range(len(query_ids)), query_ids)
-plt.title("Execution Time Heatmap (Normalized)")
-save_plot("overall_heatmap_per_query.png")
+# ==============================================================
+#   SECTION 4 — LATEX TABLE FOR ALL DATASETS
+# ==============================================================
 
-############################################
-# GENERATE LATEX TABLE (overall mean times)
-############################################
+latex_path = os.path.join(OUTPUT_DIR, "latex_table_all_sizes.tex")
 
-latex_output = f"{OUTPUT_DIR}\latex_table_queries.tex"
-
-with open(INPUT_JSON, "r") as f:
-    data = json.load(f)
-
-rows = []
-for entry in data:
-    qid = entry["query_id"]
-    query = entry["query"].replace("\n", " ")  # flatten for table
-    mean_time = entry["overall_mean_sec"]
-
-    rows.append((qid, query, mean_time))
-
-# Build LaTeX table
 latex = []
 latex.append("\\begin{table}[h!]")
 latex.append("\\centering")
-latex.append("\\begin{tabular}{|c|p{8cm}|c|}")
+latex.append("\\begin{tabular}{|c|c|c|c|}")
 latex.append("\\hline")
-latex.append("\\textbf{Query ID} & \\textbf{Query (truncated)} & \\textbf{Avg Time (s)}\\\\")
+latex.append("\\textbf{Query ID} & \\textbf{Small (hot)} & \\textbf{Medium (hot)} & \\textbf{Large (hot)}\\\\")
 latex.append("\\hline")
 
-for qid, query, mean_time in rows:
-    q_short = query[:60] + "..." if len(query) > 60 else query
-    latex.append(f"{qid} & {q_short} & {mean_time:.4f}\\\\")
+for q in all_query_ids:
+    s = datasets["small"][q-1]["hot_avg_sec"]
+    m = datasets["medium"][q-1]["hot_avg_sec"]
+    l = datasets["large"][q-1]["hot_avg_sec"]
+    latex.append(f"{q} & {s:.4f} & {m:.4f} & {l:.4f}\\\\")
     latex.append("\\hline")
 
 latex.append("\\end{tabular}")
-latex.append("\\caption{Average execution time per query on Neo4j AuraDB.}")
-latex.append("\\label{tab:query_benchmark}")
+latex.append("\\caption{Hot execution time comparison across datasets.}")
+latex.append("\\label{tab:hot_comparison}")
 latex.append("\\end{table}")
 
-# Save LaTeX
-with open(latex_output, "w") as f:
+with open(latex_path, "w") as f:
     f.write("\n".join(latex))
 
-print(f"LaTeX table saved to {latex_output}")
+print(f"LaTeX table saved to {latex_path}")
+print("\n  All plots and comparisons generated!")
