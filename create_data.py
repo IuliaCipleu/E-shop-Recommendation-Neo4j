@@ -5,9 +5,9 @@ faker = Faker()
 
 def generate_dataset(scale='small'):
     scales = {
-        'small':  {'users': 400, 'products': 100, 'categories': 10, 'orders': 440, 'wishlists': 50},
-        'medium': {'users': 4000, 'products': 1000, 'categories': 15, 'orders': 4500, 'wishlists': 500},
-        'large':  {'users': 40000, 'products': 10000, 'categories': 20, 'orders': 40000, 'wishlists': 10000}
+        'small':  {'users': 400, 'products': 100, 'categories': 10, 'orders': 440, 'wishlists': 50}, # 1000
+        'medium': {'users': 4000, 'products': 1000, 'categories': 15, 'orders': 4485, 'wishlists': 500}, # 10000
+        'large':  {'users': 40000, 'products': 10000, 'categories': 20, 'orders': 39980, 'wishlists': 10000} # 100000
     }
 
     cfg = scales[scale]

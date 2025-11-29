@@ -1,1001 +1,1001 @@
 product_id,name,price,brand,rating,category_id
-0,Car,49.29,Elliott Group,4.5,9
-1,Production,210.82,Harris-Cruz,3.7,11
-2,Feeling,98.5,Hudson-Brooks,3.5,8
-3,Perfume Thing,102.76,L'Oreal,1.1,4
-4,Level,452.59,"Ali, Benson and Charles",1.0,8
-5,Feel,118.6,Barnes Group,2.0,13
-6,Population,413.97,"Murphy, Henry and Garcia",3.7,6
-7,Animal,396.59,"Willis, Ochoa and Vega",3.7,12
-8,Score,370.76,Archer PLC,2.2,10
-9,Career,140.0,Perez and Sons,2.9,10
-10,Off,121.2,Simpson-Lopez,1.1,6
-11,Leave,83.15,"Jackson, Harper and Bowman",3.5,12
-12,Lipstick Current,78.7,L'Oreal,3.4,4
-13,T-shirt Test,217.23,Uniqlo,2.4,2
-14,Across,211.01,"Henderson, Wilson and Martin",1.3,12
-15,Individual,145.94,Hernandez PLC,3.6,11
-16,Dress Court,23.97,Nike,2.4,2
-17,Comics Foot,80.35,Penguin,1.3,1
-18,Forward,359.98,Whitehead and Sons,3.9,8
-19,Finish,183.05,"Page, Freeman and Anderson",2.9,10
-20,Increase,235.11,Rivera-Sparks,2.8,5
-21,Comics Leg,44.23,Macmillan,1.8,1
-22,Ability,153.86,White LLC,1.2,13
-23,Within,361.03,Shaffer Inc,2.6,14
-24,Probably,26.31,Austin-Ellison,2.5,8
-25,Air Purifier Baby,304.04,Philips,2.5,3
-26,Huge,382.58,"Sexton, Cortez and Kane",4.7,9
-27,Country,354.69,"Orozco, Howell and Myers",4.4,11
-28,Age,119.07,"Martin, Delacruz and Hayes",2.7,8
-29,Forget,190.7,Baker Ltd,2.5,6
-30,Air Purifier Animal,461.98,Philips,1.1,3
-31,Way,321.14,Cruz-Powers,4.5,8
-32,Comics Just,82.63,Penguin,1.4,1
-33,Several,243.89,Powell-Kemp,3.6,14
-34,Rule,419.86,Mccarthy Inc,3.2,13
-35,Sea,464.76,Wall PLC,2.2,8
-36,With,47.43,Moody-Arroyo,4.7,6
-37,Smartphone Heavy,1029.31,LG,4.6,0
-38,Face Cream Station,42.51,Clinique,3.6,4
-39,Would,87.22,Russell LLC,1.1,12
-40,Especially,6.15,Lopez PLC,1.7,8
-41,If,164.29,"Jimenez, Allen and Ford",1.4,11
-42,Student,168.5,Smith-Rodriguez,1.3,7
-43,Lipstick However,57.14,L'Oreal,4.0,4
-44,Carry,41.97,Anderson and Sons,3.6,10
-45,Home,268.57,"Long, Schwartz and Ellis",1.4,9
-46,See,374.58,Wallace Ltd,1.6,9
-47,Lipstick Or,126.2,Nivea,1.5,4
-48,Situation,107.13,Hall Ltd,4.5,5
-49,Jeans Paper,143.6,Nike,2.2,2
-50,Microwave Law,475.93,Dyson,4.0,3
-51,Great,394.3,"Diaz, James and Roberts",1.3,8
-52,Shampoo Interview,121.6,Nivea,3.3,4
-53,Reality,130.78,Williamson and Sons,3.5,13
-54,Floor,365.92,Morgan Group,1.9,14
-55,Jacket Begin,72.04,Adidas,3.5,2
-56,Moment,245.51,Flores Group,2.0,7
-57,Find,253.72,Ward and Sons,4.6,14
-58,Laptop Media,851.89,Samsung,4.7,0
-59,Operation,124.32,Berry-Hernandez,4.2,14
-60,Prepare,151.07,"Perry, Humphrey and Adkins",4.2,6
-61,Lipstick Model,109.82,L'Oreal,3.8,4
-62,Shampoo Population,16.05,Dove,1.4,4
-63,His,92.69,"Davenport, Moss and Smith",1.4,10
-64,Vacuum Cleaner Present,611.18,Philips,1.3,3
-65,Mouth,425.45,Arias-Bates,3.1,10
-66,Ago,278.89,Levine-Huber,2.8,6
-67,Biography Help,8.72,Vintage,2.3,1
-68,Sneakers Ask,93.75,Uniqlo,2.4,2
-69,Environmental,375.34,Cook Inc,4.7,10
-70,Jacket Young,190.69,Adidas,3.4,2
-71,However,432.31,"Carter, Davidson and Richards",4.2,14
-72,Those,302.44,"Ross, Turner and Evans",2.4,7
-73,Politics,248.49,"Mckenzie, Johnson and Scott",4.9,7
-74,Political,391.01,Hernandez-Smith,1.2,11
-75,Detail,457.0,Hall-Young,1.1,7
-76,Meeting,287.09,Matthews Group,2.7,6
-77,Wide,455.49,Martinez-Wallace,1.8,12
-78,T-shirt Might,205.43,Zara,2.5,2
-79,Senior,56.14,Cochran-Nguyen,3.9,6
-80,Adult,211.6,"Stuart, Decker and Miller",1.7,8
-81,Face Cream Town,26.63,L'Oreal,4.6,4
-82,Us,499.02,"Montgomery, Kirby and Mason",3.0,14
-83,Continue,377.73,Henderson and Sons,4.2,13
-84,Face Cream Pretty,107.68,Clinique,1.8,4
-85,Firm,293.09,"Everett, Thompson and White",2.1,8
-86,Dress Realize,82.9,Zara,3.2,2
-87,Drug,208.68,"Bryan, Ross and Sanchez",2.4,5
-88,Continue,72.49,Cooper-Perez,2.6,13
-89,Area,456.68,"Nicholson, Collins and Lewis",1.2,11
-90,Stop,133.14,Watson-James,4.6,11
-91,Fast,347.16,Stewart LLC,4.5,7
-92,Attention,76.77,Fuller PLC,4.8,13
-93,Recently,235.32,"Sims, Wilson and Lin",4.2,8
-94,Speak,298.91,"Martin, Griffith and Parks",3.8,6
-95,Seek,168.83,"Hensley, Pineda and Dyer",3.5,9
-96,Approach,210.48,Little and Sons,2.9,14
-97,Affect,9.49,Hayes Inc,1.0,12
-98,Film,265.49,Stephens-Bell,2.4,11
-99,Third,324.02,Williams Group,1.6,10
-100,Smartwatch Beat,132.24,Asus,3.3,0
-101,Factor,436.39,Myers Inc,1.9,11
-102,Perfume Marriage,69.52,Maybelline,2.4,4
-103,First,174.72,Kelly Group,4.1,13
-104,Design,459.08,Reyes LLC,3.3,14
-105,Return,394.8,Owens Group,1.8,6
-106,While,498.61,Alvarado-Hayes,1.5,6
-107,Perfume Owner,140.07,Dove,3.1,4
-108,Sneakers Executive,247.62,Zara,4.4,2
-109,Glass,204.9,Adams LLC,4.8,13
-110,Step,464.25,"Moore, Parker and Peters",1.6,8
-111,Along,228.6,Morrison-Henry,3.5,12
-112,Continue,292.08,"Bowers, Montgomery and Marquez",3.8,11
-113,Laptop Professor,1711.33,Sony,3.3,0
-114,Because,57.3,Livingston-Petersen,3.4,5
-115,Rather,334.68,"Lee, Sanders and Kaiser",4.5,6
-116,Dress History,212.37,Nike,2.6,2
-117,Summer,28.53,"Robinson, Roberson and Garcia",3.3,12
-118,Must,159.19,"Fernandez, Williams and Howard",3.0,8
-119,Price,80.04,"Schmidt, Lewis and Gonzalez",3.4,14
-120,TV Thus,1696.18,HP,3.3,0
-121,Develop,344.31,"Miller, Salazar and Durham",3.5,7
-122,Cookbook Fund,30.9,Macmillan,1.7,1
-123,Also,237.82,Williams Group,1.7,13
-124,Us,46.8,"Hayes, Patel and Clark",2.6,6
-125,Biography That,67.88,O'Reilly,1.6,1
-126,General,326.3,Robinson Ltd,1.0,5
-127,Share,246.3,Howard Ltd,3.8,10
-128,Camera Administration,1150.05,LG,4.9,0
-129,Hospital,279.6,Ward PLC,1.4,10
-130,Education,473.47,"Escobar, Dalton and Stein",3.4,5
-131,Act,322.98,Day and Sons,3.5,10
-132,Now,393.27,"Garcia, Kelley and Jefferson",2.7,13
-133,Drop,208.4,Scott Group,4.3,9
-134,World,154.62,Morgan Inc,1.4,8
-135,Body Lotion Stuff,55.61,L'Oreal,3.0,4
-136,Novel Individual,44.59,O'Reilly,2.1,1
-137,College,423.79,"Rogers, Parker and Peck",4.0,9
-138,Do,332.26,"Moore, Rodriguez and Spencer",1.5,7
-139,Field,372.65,Saunders Ltd,1.8,10
-140,Which,153.22,"Watson, Johnson and Paul",4.5,12
-141,T-shirt Visit,127.45,Adidas,3.0,2
-142,Brother,295.88,Olson-Fischer,1.6,6
-143,Indeed,170.38,"Adkins, Small and Henderson",2.1,7
-144,Bank,461.36,"Pena, Gibson and Smith",4.8,13
-145,Civil,145.77,Brown-Haynes,4.9,6
-146,Jeans Site,78.78,H&M,3.6,2
-147,Jeans That,58.59,Zara,3.8,2
-148,Fear,76.14,Jones LLC,2.0,12
-149,Air Purifier Involve,477.08,Bosch,2.7,3
-150,Statement,143.35,"Crosby, Cook and Alvarez",4.8,8
-151,Upon,455.13,Thomas-Coffey,1.6,11
-152,Jeans Music,240.21,Nike,4.7,2
-153,Girl,30.93,"Garza, Valentine and Byrd",4.1,7
-154,Either,220.63,"Fisher, James and Bender",3.5,8
-155,Seem,235.76,Cortez Inc,3.7,13
-156,Like,270.18,"Chavez, Kline and Webb",3.2,11
-157,Out,210.6,Davis and Sons,1.3,14
-158,Face Cream Bag,10.07,Maybelline,3.0,4
-159,Whatever,208.91,Moreno-Jarvis,3.2,12
-160,Light,220.95,Mendez-Roy,4.9,13
-161,Moment,479.81,"Bell, Miller and Duncan",4.3,12
-162,Seat,215.82,"Adams, Benjamin and Murphy",2.3,13
-163,Face Cream What,109.7,Dove,4.6,4
-164,Course,43.02,Love Inc,3.9,11
-165,Great,350.46,Stout-West,2.9,11
-166,Shampoo Say,60.37,Maybelline,3.1,4
-167,Move,369.52,Wilson-Meyer,4.0,11
-168,Hot,172.09,"Hill, Ortega and Kennedy",2.5,9
-169,Sneakers Movement,101.4,Adidas,3.2,2
-170,Organization,487.3,Schwartz-Payne,1.5,9
-171,Perfume Religious,139.32,L'Oreal,2.8,4
-172,Hot,27.16,Johnson-Cole,1.7,7
-173,Whatever,182.99,Young-Gutierrez,3.4,10
-174,Not,130.12,"Lopez, Fuller and Briggs",4.3,8
-175,T-shirt Expert,253.33,H&M,3.8,2
-176,Free,176.34,Perry-Simon,2.1,14
-177,Lamp Recently,336.22,Bosch,3.4,3
-178,Trouble,462.27,"Duncan, Taylor and Bright",4.8,14
-179,Choice,275.74,"Perry, Delgado and Wyatt",3.8,8
-180,Smartphone Including,2141.36,Samsung,3.6,0
-181,Believe,137.98,Obrien-Duncan,2.1,9
-182,Perfume Ever,76.13,Nivea,2.3,4
-183,Allow,443.93,Todd LLC,4.9,7
-184,Worker,375.86,"Curtis, Burgess and Clark",3.3,12
-185,Television,14.25,Holland-Riley,2.5,9
-186,Face Cream However,58.5,Nivea,3.3,4
-187,Staff,375.03,Ferguson Inc,2.9,9
-188,Child,49.36,Martin and Sons,1.4,7
-189,Jeans Onto,183.48,Zara,5.0,2
-190,Enter,388.22,Friedman-Booth,3.7,6
-191,Smartwatch Size,1179.04,Apple,1.8,0
-192,Air Purifier Later,401.37,Philips,2.6,3
-193,Shampoo Garden,106.64,Clinique,4.8,4
-194,No,51.32,Salinas-Brown,5.0,11
-195,Camera Perform,2101.95,Samsung,4.5,0
-196,Send,35.94,"Davis, Johnson and Boyd",3.7,9
-197,Carry,320.35,Lozano-Richardson,1.7,9
-198,Why,386.37,Hopkins-Gray,4.1,11
-199,Close,303.08,Flowers-Smith,2.9,5
-200,Hope,303.87,"Barry, Peterson and Pennington",2.2,14
-201,Wait,116.09,Martinez-Harding,2.4,7
-202,Right,156.42,Howard-Caldwell,3.2,6
-203,Headphones Ask,1907.0,LG,2.5,0
-204,Jacket Total,239.79,H&M,2.9,2
-205,Degree,384.08,Butler Group,4.0,10
-206,On,61.68,Wright-White,4.4,10
-207,Style,52.42,Rubio-Brown,4.9,7
-208,Plant,241.93,Miller-Thomas,4.6,11
-209,Nation,336.06,"Vasquez, Sampson and Hunter",4.3,13
-210,Lipstick Old,115.66,L'Oreal,3.3,4
-211,Headphones Apply,816.17,Apple,3.0,0
-212,Although,146.46,Rivera and Sons,2.3,11
-213,Why,128.35,"Briggs, Vaughn and Espinoza",3.3,11
-214,Brother,408.94,Ramirez-Martinez,1.5,7
-215,Front,280.58,Wagner Inc,1.4,7
-216,Jeans Room,75.52,Nike,2.2,2
-217,His,215.86,Johnson PLC,4.0,6
-218,Vacuum Cleaner Artist,358.43,Panasonic,3.1,3
-219,Along,206.61,Cunningham Inc,3.3,14
-220,Score,322.61,Phillips-Miller,3.6,7
-221,After,365.24,Johnson-Martinez,1.7,10
-222,Middle,356.84,"Moreno, Jenkins and Harrison",1.4,14
-223,Sneakers My,24.6,Zara,2.1,2
-224,Laptop Also,1915.68,Asus,2.0,0
-225,Camera Some,620.4,Asus,2.0,0
-226,End,192.51,"Keller, Martin and Cohen",4.6,8
-227,Model,404.01,"Perez, Sullivan and White",3.1,7
-228,Jeans Woman,143.38,Uniqlo,3.2,2
-229,Own,176.58,"Ellis, May and Lin",2.1,9
-230,Comics Economy,10.75,Vintage,1.7,1
-231,Daughter,382.96,"Barnett, Krueger and Pope",3.1,13
-232,This,168.18,Peterson PLC,3.8,14
-233,Over,86.24,Burns LLC,4.9,7
-234,Cookbook Voice,91.65,Macmillan,2.4,1
-235,Jeans Level,201.65,Adidas,1.7,2
-236,Comics Week,39.93,HarperCollins,2.2,1
-237,Tough,306.8,"Kline, Morris and West",1.5,11
-238,Biography Fire,69.98,O'Reilly,4.6,1
-239,Body Lotion Find,22.53,Clinique,4.5,4
-240,Heavy,157.41,Moore-Zavala,2.0,9
-241,Nation,418.94,Mack-Pratt,3.9,11
-242,TV Us,2288.33,Dell,4.3,0
-243,Comics Option,71.87,O'Reilly,4.5,1
-244,Vacuum Cleaner They,145.45,Dyson,4.7,3
-245,Outside,164.82,"Hubbard, Clay and King",4.8,7
-246,Position,230.16,"Peterson, Graves and Lambert",3.4,8
-247,Jeans Ago,284.3,Zara,1.8,2
-248,Land,84.88,Jennings LLC,3.1,6
-249,Success,431.54,Swanson Inc,4.3,6
-250,Of,29.78,"Lamb, Oliver and Li",2.9,8
-251,Smartwatch Collection,2220.73,LG,3.9,0
-252,Television,239.84,Johnson Group,2.0,13
-253,Main,493.54,Sellers-Brown,1.9,6
-254,Create,47.99,Thomas Inc,3.6,11
-255,Tell,30.97,"Pace, Fernandez and Raymond",1.3,14
-256,During,57.68,"Welch, Hill and Hall",4.2,11
-257,Paper,193.15,Gray and Sons,4.8,6
-258,Out,482.51,Andrews Group,2.9,13
-259,Society,467.35,Kramer LLC,3.7,10
-260,Family,220.35,Acosta and Sons,3.3,14
-261,Investment,437.89,"Oliver, Spencer and Silva",3.9,11
-262,Its,454.11,Woods-Smith,5.0,11
-263,Since,480.83,Walker-Santos,2.2,14
-264,Share,183.63,"Knight, Lam and York",1.3,13
-265,Headphones Usually,1104.19,Apple,4.3,0
-266,Purpose,34.02,"Goodwin, Whitaker and Warren",4.7,5
-267,Trial,488.84,"Buchanan, Larsen and Wood",1.4,12
-268,Military,244.46,Flowers Inc,2.5,7
-269,Work,69.06,Evans-Sweeney,1.6,12
-270,Sneakers Age,246.61,H&M,3.1,2
-271,Biography Actually,11.47,O'Reilly,1.8,1
-272,Heart,194.51,"Brown, Dyer and Malone",2.4,11
-273,Shampoo Away,142.95,Clinique,2.7,4
-274,Lipstick Strong,148.3,L'Oreal,2.1,4
-275,Thing,448.21,"Brown, Valdez and Coleman",2.9,11
-276,Performance,453.55,"Jackson, Johnson and Johnson",2.8,7
-277,Store,372.03,Morrison Ltd,2.5,11
-278,Jeans Production,184.27,Uniqlo,3.1,2
-279,Beat,386.26,Valdez-Lewis,1.6,10
-280,Before,468.93,Rodriguez-Ray,2.4,10
-281,Model,256.2,Sullivan-Munoz,3.7,6
-282,Shampoo Conference,97.55,Dove,4.0,4
-283,Laptop Store,1705.23,Sony,3.9,0
-284,Smartphone Bed,189.74,Asus,1.1,0
-285,Kind,212.13,Mcpherson-Martin,1.9,10
-286,Lipstick Hundred,42.64,Nivea,4.9,4
-287,Tablet News,1271.06,Samsung,4.4,0
-288,Mouth,255.55,"Richards, Reynolds and Craig",1.6,11
-289,She,240.52,Sutton Inc,1.3,13
-290,Report,36.06,"Johnson, Young and Davis",3.9,6
-291,May,93.5,Burke-Ward,4.4,10
-292,Dress Final,200.65,Uniqlo,2.0,2
-293,Beyond,251.62,Mitchell PLC,2.7,10
-294,Answer,146.64,Bryan-Huynh,3.7,5
-295,Face Cream Boy,10.78,Clinique,1.2,4
-296,Official,384.79,Baker PLC,4.3,7
-297,My,149.55,Huff-Nelson,4.0,5
-298,Cookbook Career,68.7,Penguin,4.1,1
-299,Jacket Record,100.29,H&M,4.7,2
-300,Almost,178.39,Browning-Simmons,3.0,5
-301,Look,495.4,Bates LLC,1.9,9
-302,TV Act,1801.9,Dell,3.2,0
-303,Institution,440.89,Shaw Inc,1.5,9
-304,Drive,198.04,"Vang, Pittman and Webster",1.8,11
-305,Think,337.09,Gates Group,2.9,5
-306,Lipstick Necessary,60.76,Dove,2.9,4
-307,Novel Song,55.29,Macmillan,1.6,1
-308,Radio,252.68,Hunt LLC,2.3,7
-309,Popular,296.47,"Wong, Roberts and Bishop",2.8,10
-310,Novel Long,40.98,Penguin,3.9,1
-311,Textbook Whatever,53.32,HarperCollins,4.5,1
-312,Catch,278.53,Adams and Sons,1.1,6
-313,General,252.38,"Clarke, Flynn and Howard",1.1,11
-314,For,50.66,Powell PLC,1.1,6
-315,Particular,332.69,"Sharp, Miller and Duran",1.0,8
-316,Security,393.15,"Rubio, Moses and Haney",2.6,7
-317,Might,152.38,Stone-Lawrence,3.2,7
-318,Smile,206.41,Simpson-Sullivan,4.3,10
-319,President,482.14,Lee PLC,2.3,12
-320,Evening,330.84,Giles LLC,2.7,5
-321,Check,336.72,Hammond Ltd,4.4,9
-322,Mother,477.4,Herrera PLC,1.5,14
-323,Thing,294.28,"Henderson, Ray and Scott",1.7,12
-324,Training,472.54,Hamilton-Curtis,1.4,14
-325,Reflect,110.38,Roberts-May,2.3,8
-326,Guess,457.36,Mueller-Mayer,1.1,14
-327,Radio,52.91,"Bray, Jones and Smith",3.6,12
-328,Image,295.56,Smith-Hudson,3.5,7
-329,Pay,93.6,Nunez Group,5.0,7
-330,No,343.67,Clay Inc,3.8,6
-331,Cookbook Care,61.06,O'Reilly,1.4,1
-332,News,288.87,Reese and Sons,2.6,12
-333,Enjoy,493.02,Henderson Inc,3.1,14
-334,Better,197.37,"Walton, Lloyd and Ramos",2.2,5
-335,He,372.54,Martin-Roman,1.3,14
-336,Meet,173.65,Patrick and Sons,2.3,10
-337,Sneakers But,71.37,Zara,1.6,2
-338,Sneakers Old,129.39,Zara,3.9,2
-339,Argue,363.65,Gomez-Pham,2.0,8
-340,Center,153.78,Thomas Ltd,3.5,9
-341,Lipstick Argue,113.62,Maybelline,4.6,4
-342,Race,150.23,Walter Group,3.3,8
-343,Blender Suddenly,390.97,IKEA,1.5,3
-344,Break,44.41,Jones Ltd,1.4,12
-345,System,328.35,Shaffer-Andrews,1.7,5
-346,Biography Group,45.49,Macmillan,2.7,1
-347,Process,220.4,Campbell and Sons,3.6,9
-348,Cookbook We,75.51,Vintage,2.0,1
-349,Camera Mind,1439.6,LG,4.1,0
-350,Rich,154.02,"Evans, Taylor and Lynn",3.4,10
-351,Face Cream Despite,123.98,Dove,3.0,4
-352,TV Close,1137.3,Samsung,1.2,0
-353,Dress Event,49.67,Uniqlo,2.9,2
-354,Cookbook Cold,63.7,Vintage,2.4,1
-355,Can,497.13,"Gross, Reese and Stephenson",1.1,10
-356,Perfume Important,80.14,L'Oreal,3.2,4
-357,What,317.93,"Wright, Stewart and Brown",1.5,7
-358,Paper,323.58,"Tucker, Mcclure and Wood",2.3,5
-359,Vacuum Cleaner Inside,223.67,Panasonic,2.4,3
-360,Field,499.15,Nelson-Walker,2.2,13
-361,Comics High,14.85,O'Reilly,3.8,1
-362,Laptop Discuss,853.24,Asus,4.6,0
-363,Laptop Full,2373.91,Asus,4.5,0
-364,Sneakers We,284.75,Zara,3.1,2
-365,Cup,492.26,"Walker, Snyder and Taylor",4.8,5
-366,Headphones Single,1427.76,Apple,4.4,0
-367,Body Lotion Author,103.3,Clinique,1.7,4
-368,Phone,437.07,"Baker, Sanders and Johnson",2.2,6
-369,TV Money,2163.29,HP,3.8,0
-370,Then,36.54,Nguyen-Strong,1.3,8
-371,Again,252.78,Li LLC,1.2,7
-372,Wear,283.28,"Brown, Mathis and Jones",3.5,5
-373,Group,450.39,Hart-Newman,4.3,6
-374,Young,428.47,Williams PLC,3.7,9
-375,Textbook Cost,79.84,O'Reilly,1.7,1
-376,General,133.01,Manning PLC,2.6,13
-377,Safe,317.85,"Harris, Landry and Gill",1.9,7
-378,Group,178.29,White-Daniels,1.1,10
-379,Use,442.97,Lewis and Sons,3.2,13
-380,Real,315.06,"Harrison, Clark and Ramos",2.1,7
-381,Perfume Sing,52.65,Dove,4.6,4
-382,Jeans Program,133.59,Zara,1.7,2
-383,Will,251.71,"Young, Mack and Gonzalez",4.5,5
-384,Lamp Must,580.01,IKEA,4.5,3
-385,Black,287.46,"Gutierrez, Walker and Young",1.9,11
-386,President,303.13,"Freeman, Rogers and Willis",1.0,14
-387,Body Lotion Card,113.27,Nivea,3.5,4
-388,Station,134.05,"Herring, Ryan and Blackburn",1.6,6
-389,Open,488.88,Briggs-Clark,2.4,13
-390,Biography Technology,39.41,O'Reilly,1.7,1
-391,Social,417.63,Martinez Inc,3.3,11
-392,Amount,48.27,Burton and Sons,1.5,13
-393,Novel Point,32.7,HarperCollins,1.7,1
-394,T-shirt Indicate,78.01,Uniqlo,1.4,2
-395,Audience,432.95,Terry-Porter,4.2,7
-396,Smartphone Voice,222.81,LG,4.5,0
-397,Lot,22.81,Luna-Jensen,3.4,7
-398,Blender Whose,57.47,Dyson,1.2,3
-399,Civil,136.26,Ballard-Cox,1.5,14
-400,Body Lotion Tonight,11.17,Maybelline,1.7,4
-401,Somebody,337.84,"Cruz, Reyes and Ward",3.4,7
-402,Democrat,248.56,Russell LLC,3.2,7
-403,Item,189.44,"Abbott, Howe and Charles",2.2,10
-404,Practice,440.83,Wilson-Weiss,2.5,6
-405,Hundred,51.15,"Hernandez, Diaz and Graves",1.5,5
-406,Discover,473.36,Lester-Strong,3.1,13
-407,Natural,363.75,Livingston PLC,1.3,9
-408,Novel Full,86.5,HarperCollins,4.3,1
-409,Security,237.93,"Morton, Bowen and Miller",4.8,13
-410,Letter,386.32,Harrison Ltd,2.4,14
-411,Base,25.98,Hernandez-Fowler,2.8,14
-412,One,471.22,Phillips Inc,4.6,6
-413,Activity,340.05,Hernandez and Sons,2.4,11
-414,Base,249.95,Allen-Barton,4.8,7
-415,Center,266.01,"Miller, Young and Lee",1.3,13
-416,Lipstick Might,90.4,Maybelline,4.9,4
-417,Face Cream Officer,66.94,Clinique,2.4,4
-418,Comics Indeed,74.64,O'Reilly,2.2,1
-419,Understand,461.57,Dalton-Kline,3.0,5
-420,Lamp Brother,150.75,Dyson,4.6,3
-421,Information,268.98,"Rogers, Elliott and Reyes",1.9,9
-422,Space,323.42,Turner-Perry,4.9,10
-423,Bed,276.07,Soto-Stewart,1.1,8
-424,Novel True,9.81,Macmillan,1.6,1
-425,Biography Out,76.51,HarperCollins,2.5,1
-426,Dress Long,162.97,Nike,1.1,2
-427,Interest,299.21,Thompson Inc,4.6,12
-428,Go,252.6,Foster-Francis,3.8,7
-429,Novel Understand,44.51,Vintage,3.8,1
-430,Role,23.04,"Ray, Lewis and George",1.8,13
-431,Character,240.95,Soto-Garner,4.1,9
-432,Beyond,255.7,Benson-Kim,4.2,11
-433,Others,208.96,Rivera-Downs,1.5,14
-434,Expert,29.79,"Robinson, Henry and Pierce",2.3,12
-435,Tablet Tell,107.07,LG,1.0,0
-436,Husband,365.95,May LLC,2.0,11
-437,Thousand,233.22,Weiss LLC,4.9,5
-438,Party,378.77,Alvarez-Hunt,2.2,8
-439,Discover,71.61,Jordan-Quinn,1.3,14
-440,Alone,449.85,"Evans, Jackson and Hayden",4.0,14
-441,However,478.05,"Elliott, Woodward and Ryan",2.3,14
-442,Test,178.02,Anthony-Williams,1.5,8
-443,Character,473.65,Dalton-Kim,3.0,6
-444,Yeah,55.85,Green and Sons,4.2,8
-445,Mother,137.93,Taylor-Weber,2.5,12
-446,Dress Common,158.12,Adidas,3.3,2
-447,Hear,224.1,Pratt-Russell,3.4,10
-448,Cookbook Again,58.04,Penguin,1.4,1
-449,Offer,483.87,Ray-Shields,4.2,7
-450,Shampoo Interview,88.85,L'Oreal,4.3,4
-451,Major,397.07,"Harvey, Stephenson and White",2.2,9
-452,Attention,227.29,"Villegas, Eaton and Miller",4.5,11
-453,Even,40.51,Landry-Evans,4.9,9
-454,First,151.5,"Williams, Mills and Poole",4.7,7
-455,Do,130.83,Herrera LLC,1.6,5
-456,TV Quickly,2290.52,Dell,3.6,0
-457,Good,471.21,"Adams, Medina and Moore",4.3,13
-458,Owner,413.98,Fleming and Sons,3.3,9
-459,Step,41.53,Davis Ltd,3.6,14
-460,Economy,410.14,"Allen, Fowler and Stafford",3.1,13
-461,Population,140.67,Wilkinson-Anderson,1.1,6
-462,T-shirt Cold,235.24,H&M,2.5,2
-463,Lipstick Can,15.16,Nivea,4.7,4
-464,Big,69.49,"Pena, Jenkins and Thompson",2.3,6
-465,Textbook Identify,66.54,Penguin,5.0,1
-466,Owner,50.44,"Morris, Williams and Serrano",1.6,10
-467,Ready,449.85,Mendoza PLC,4.0,6
-468,Adult,362.83,"Mercado, Duncan and Carlson",2.1,8
-469,Painting,175.21,"Walker, Rasmussen and Johnson",1.2,6
-470,Dress Event,97.44,Uniqlo,1.8,2
-471,Lipstick Five,47.54,Nivea,2.9,4
-472,Structure,93.61,Smith LLC,1.2,7
-473,Expect,59.72,"Buchanan, Snyder and Leon",4.7,11
-474,Real,200.92,Meyer Ltd,2.8,11
-475,Total,355.68,Fernandez-Rodriguez,3.8,8
-476,Left,306.22,Austin Ltd,4.0,11
-477,Lamp Director,673.15,Philips,1.2,3
-478,Identify,229.92,Gordon-Valencia,4.7,12
-479,Research,473.7,"Neal, Gates and Harris",3.7,13
-480,We,411.39,Parsons-Gomez,4.7,7
-481,Smartwatch Participant,1184.15,Sony,4.5,0
-482,Billion,424.92,Bennett-Hill,3.0,9
-483,Charge,413.96,"Ryan, Marquez and Morales",1.4,5
-484,Air Purifier Training,374.85,IKEA,4.0,3
-485,Learn,132.35,Alexander Group,3.9,12
-486,Writer,366.92,Yoder Inc,3.0,5
-487,Without,269.68,Ingram-Fox,2.2,12
-488,Civil,364.66,"Gray, Cherry and Holmes",4.0,6
-489,Both,143.56,Johnson and Sons,2.4,7
-490,Biography Point,7.76,Macmillan,1.0,1
-491,Summer,54.67,Mercer-Walker,1.5,6
-492,Shampoo National,23.24,Clinique,1.8,4
-493,Choose,40.65,"Thompson, Sanchez and Myers",4.8,6
-494,T-shirt Yard,74.42,Zara,3.0,2
-495,Find,402.05,Downs Group,1.9,9
-496,T-shirt Side,274.91,H&M,1.4,2
-497,Shampoo Next,108.24,Maybelline,3.4,4
-498,Field,384.83,"Ayers, Obrien and Perez",2.9,10
-499,Hotel,173.69,"Martinez, Juarez and Cooper",4.5,10
-500,Cookbook Tonight,44.68,Vintage,4.9,1
-501,Up,157.02,Hill LLC,2.5,11
-502,Answer,224.64,Brennan-Khan,3.5,11
-503,Food,125.88,Peck Inc,4.8,13
-504,Body Lotion Her,57.34,Clinique,2.4,4
-505,Air Purifier Successful,647.88,Dyson,3.2,3
-506,Textbook Best,88.85,Penguin,2.4,1
-507,Could,318.96,"Guerra, Davila and Norris",2.9,12
-508,Seek,262.4,"Morgan, Nash and Miller",4.8,12
-509,Body,278.74,"Hall, Miller and Buchanan",1.7,10
-510,Green,93.74,Campbell-Arias,4.2,8
-511,Along,56.65,"Valdez, Cunningham and Smith",2.5,7
-512,Case,240.46,Davis LLC,1.6,14
-513,TV Expect,1104.07,Asus,2.3,0
-514,Smartwatch Recent,1651.29,Samsung,2.2,0
-515,Dress Save,63.85,Uniqlo,1.4,2
-516,Hotel,397.81,"Mueller, Franklin and Harris",2.6,12
-517,Cookbook Fire,16.35,Penguin,3.9,1
-518,Not,61.36,Baker-Pierce,1.5,9
-519,School,200.03,Jackson-Booker,3.4,8
-520,Headphones Hundred,690.87,HP,3.9,0
-521,TV Drug,422.8,Dell,2.9,0
-522,Call,386.06,Murphy PLC,4.7,9
-523,Dress Peace,37.85,Zara,3.7,2
-524,Comics Republican,35.67,Penguin,3.9,1
-525,Compare,233.53,Williams LLC,2.2,6
-526,Claim,233.9,"Haynes, Williams and Morris",3.7,6
-527,Blender Green,146.81,Dyson,4.9,3
-528,Sneakers Rule,42.41,H&M,3.5,2
-529,Describe,424.67,Gray-Scott,4.0,10
-530,Sneakers Start,21.98,Uniqlo,3.9,2
-531,Record,113.33,"Perez, Hale and Shepard",2.1,12
-532,Blender Write,185.92,Dyson,3.1,3
-533,Identify,13.42,"Reeves, Collins and Robertson",4.1,8
-534,Least,468.69,"Thompson, Mendez and Roach",4.0,6
-535,Cover,346.82,Dixon LLC,4.4,8
-536,Partner,469.7,Acevedo Ltd,4.2,13
-537,Shampoo Culture,119.06,L'Oreal,1.7,4
-538,Body Lotion City,32.39,L'Oreal,4.3,4
-539,TV Safe,305.12,Asus,4.3,0
-540,Lipstick Truth,63.86,Clinique,4.3,4
-541,Coach,465.78,Strong-Underwood,1.1,12
-542,Purpose,372.13,"Rivera, Jackson and Armstrong",4.5,12
-543,Same,40.71,Hatfield Inc,1.4,7
-544,Biography Always,88.61,Vintage,4.2,1
-545,Budget,321.99,Harvey-Moore,4.4,8
-546,Candidate,287.27,"Bennett, Pace and Floyd",3.9,6
-547,Health,24.69,Hughes-Padilla,1.6,12
-548,Role,153.48,Middleton-Phillips,2.4,8
-549,About,415.88,Sanchez-Dunn,1.6,8
-550,Enjoy,232.2,Hanson-Cannon,4.6,5
-551,Jeans Campaign,93.2,Zara,4.2,2
-552,Skill,159.7,Roman-Harris,3.5,10
-553,Themselves,226.87,"Thompson, Young and Knox",3.1,13
-554,Headphones Admit,533.78,Dell,1.7,0
-555,Current,393.73,"Reed, Gray and Jones",1.7,12
-556,Smile,232.33,Lopez LLC,2.1,7
-557,Face Cream Now,66.92,Nivea,4.4,4
-558,Front,110.62,Gonzales Inc,3.5,13
-559,Step,161.91,Wilson-Carroll,2.2,7
-560,Nearly,391.85,"Reynolds, Hayes and Flynn",3.2,8
-561,Number,227.0,"Kerr, Alexander and Bennett",2.0,9
-562,Teach,104.19,Simmons Ltd,1.5,7
-563,Cost,157.2,Garcia Group,2.5,5
-564,Say,477.25,"Sanders, Lewis and Morse",4.8,9
-565,Wide,409.19,Knight LLC,1.3,7
-566,Analysis,86.4,"Abbott, Ryan and Curry",1.4,14
-567,Jacket Bar,106.55,Uniqlo,3.1,2
-568,Perfume Prepare,128.25,L'Oreal,2.4,4
-569,Option,31.03,White-Long,2.2,14
-570,Blender Discuss,89.13,IKEA,1.9,3
-571,Body Lotion Help,7.77,Dove,1.7,4
-572,Theory,353.17,"Johnson, Robinson and Smith",3.9,9
-573,Maybe,445.24,"Barker, Becker and Jackson",3.1,13
-574,Jeans Program,270.0,Uniqlo,2.4,2
-575,Drive,33.4,"Brown, Clark and Leonard",2.2,7
-576,Easy,162.36,Potter PLC,4.4,8
-577,Support,360.49,Hayes-Odonnell,1.8,6
-578,Textbook Hit,98.13,Macmillan,4.0,1
-579,Source,147.85,Roberts Inc,3.8,13
-580,Blender Throughout,157.81,IKEA,1.9,3
-581,Sneakers Model,152.18,Zara,3.2,2
-582,Know,252.05,Jones and Sons,3.3,14
-583,TV Me,889.19,Apple,4.1,0
-584,Jacket Magazine,200.17,H&M,3.5,2
-585,Hundred,120.58,Arias PLC,1.8,6
-586,High,469.22,"Vasquez, Williams and Gaines",4.2,6
-587,Novel Seat,29.52,Macmillan,4.6,1
-588,Institution,363.73,"Campbell, Weeks and Swanson",3.8,14
-589,Blender Rise,263.78,Dyson,4.4,3
-590,Product,176.99,"Randolph, Daniels and Li",4.0,13
-591,Situation,269.57,"Ross, Melton and Armstrong",1.1,14
-592,Degree,17.8,Johnson-Nicholson,3.2,12
-593,Save,487.25,Chen LLC,3.6,12
-594,Camera Section,2288.8,HP,1.4,0
-595,Biography Officer,74.69,HarperCollins,2.7,1
-596,Fight,239.98,Perry LLC,2.3,14
-597,Lipstick Argue,18.35,Nivea,2.2,4
-598,Novel Close,21.92,O'Reilly,2.8,1
-599,Jacket Audience,156.18,H&M,3.9,2
-600,On,198.51,Watson PLC,1.6,9
-601,Job,498.69,Brown and Sons,1.7,8
-602,Herself,71.53,Davis Inc,4.5,11
-603,T-shirt My,233.18,Uniqlo,2.7,2
-604,Microwave Kid,167.34,Philips,1.7,3
-605,Lamp Language,369.0,IKEA,1.8,3
-606,Now,43.57,Benjamin-Jones,2.3,12
-607,T-shirt Study,236.89,Nike,3.5,2
-608,Perfume Question,120.07,Clinique,1.7,4
-609,Everybody,193.98,Mueller Group,1.2,9
-610,Headphones Will,254.18,Apple,2.1,0
-611,Tablet Later,605.37,Sony,4.6,0
-612,Lipstick Section,89.95,Clinique,3.9,4
-613,Example,496.11,"Scott, Davis and Miller",4.4,14
-614,Jacket Product,246.58,Zara,2.8,2
-615,Painting,72.25,Ramirez-Thomas,1.5,9
-616,Long,305.81,Ramirez-Alexander,2.3,8
-617,Admit,13.99,Gonzales Group,1.4,6
-618,Hear,428.19,Perez Inc,2.5,5
-619,Air Purifier Politics,309.69,IKEA,3.1,3
-620,Girl,34.55,Flores LLC,4.9,10
-621,Form,301.86,Rodriguez-Miller,2.6,6
-622,Same,132.07,Rios LLC,4.5,6
-623,Product,213.44,Stein Group,2.9,11
-624,Whatever,23.19,Brewer-Perez,1.7,6
-625,Address,250.36,Chandler-Watkins,1.5,9
-626,Air Purifier Tree,129.93,Dyson,2.5,3
-627,Song,211.48,Robles and Sons,3.5,13
-628,Smartwatch Project,724.85,HP,2.5,0
-629,Choice,5.46,Christian-Phillips,1.2,7
-630,Answer,173.88,Davis Group,2.0,8
-631,Buy,297.04,Jones-Figueroa,3.4,5
-632,Machine,176.01,Hamilton-Hill,3.1,13
-633,Hard,401.96,Ward-Miller,3.3,7
-634,First,156.98,Hendricks Ltd,3.4,14
-635,T-shirt Big,95.73,Uniqlo,3.0,2
-636,Whose,309.16,Williams-Walker,3.7,10
-637,Upon,156.1,"Barnes, Brown and Norris",4.5,12
-638,Land,251.47,Knox PLC,1.9,13
-639,Official,211.24,Walker LLC,3.1,13
-640,Air Purifier Of,536.74,Bosch,3.5,3
-641,Headphones Else,1053.94,Samsung,1.8,0
-642,Vacuum Cleaner Television,437.55,Bosch,1.3,3
-643,Democratic,200.05,Walker-Hall,2.9,14
-644,Work,96.73,"Herring, Larson and Clayton",4.7,10
-645,Another,413.3,"Ewing, Miller and White",2.3,12
-646,Jeans Term,298.03,Adidas,4.1,2
-647,Which,110.38,Bailey Ltd,3.1,14
-648,Comics Bar,11.56,Macmillan,2.7,1
-649,Subject,372.24,Rogers-Schwartz,1.4,14
-650,Skill,282.29,"Calderon, Stokes and Thomas",2.0,11
-651,Laptop Any,1891.57,Sony,4.2,0
-652,Former,202.89,Scott and Sons,3.2,14
-653,Jeans Effort,178.05,Nike,1.8,2
-654,Nice,357.43,Mitchell-Ramos,3.6,7
-655,Cookbook Enough,32.56,Penguin,4.3,1
-656,At,317.93,Winters-Turner,3.3,10
-657,Seem,168.87,Aguilar Inc,4.4,6
-658,Page,448.49,Rogers-Vasquez,3.6,12
-659,Turn,108.65,"Robinson, Diaz and Smith",3.0,13
-660,Interview,222.99,Gray-Williams,4.9,10
-661,Owner,310.56,Jackson Ltd,2.0,9
-662,Throughout,421.74,"Dalton, Smith and Jones",2.7,5
-663,Environment,278.29,"Jones, Hanson and Calderon",4.0,9
-664,I,407.75,Spears Ltd,3.6,14
-665,Lipstick Rate,36.4,L'Oreal,4.7,4
-666,Because,100.62,Rodriguez and Sons,4.6,10
-667,Respond,403.86,Wells-Prince,1.1,10
-668,Lamp Machine,150.08,Bosch,2.2,3
-669,Shampoo Use,11.05,Clinique,1.1,4
-670,Forget,495.24,Wells-Barrera,4.1,10
-671,Textbook Again,37.62,O'Reilly,4.1,1
-672,So,326.46,Wilson-Lee,1.6,5
-673,Society,249.45,Watkins-Elliott,3.0,12
-674,Likely,58.29,"Ray, Underwood and Stewart",4.5,10
-675,Term,324.18,Jensen-Gordon,1.9,11
-676,Defense,484.72,"White, Bridges and Parker",2.4,7
-677,Investment,155.29,"Day, Rogers and Page",4.5,7
-678,Tv,24.37,Bradshaw LLC,1.7,7
-679,Camera,213.31,"Fuller, Mathews and Nelson",4.1,6
-680,Picture,155.85,Carpenter-Johns,3.0,7
-681,Name,220.57,Williams-Waters,3.4,6
-682,Camera Cell,2460.04,Sony,3.9,0
-683,Source,117.1,Johnston-Hurst,2.8,9
-684,Jacket Ask,238.55,Nike,3.6,2
-685,Lay,480.26,Davis-Chang,3.2,13
-686,Line,53.32,Smith Inc,2.7,9
-687,Smartwatch Capital,2414.12,Samsung,4.0,0
-688,Jeans Care,18.24,Zara,4.9,2
-689,Speak,246.51,Ruiz PLC,2.3,12
-690,Later,454.12,Hunt LLC,3.2,9
-691,Do,237.35,Singh-Shields,2.7,8
-692,Lamp Each,79.88,Panasonic,1.9,3
-693,Born,237.56,"Rice, Rodriguez and Malone",4.0,10
-694,Determine,257.3,Carter LLC,3.9,11
-695,Blender Sell,476.67,Dyson,3.9,3
-696,T-shirt Once,230.59,H&M,2.7,2
-697,Second,67.4,Curtis-Newman,1.4,9
-698,Dress Money,37.33,Uniqlo,3.1,2
-699,Most,325.38,Santana-Holmes,4.3,12
-700,First,255.33,Carroll-Washington,1.7,11
-701,Body Lotion Message,12.62,Clinique,2.3,4
-702,Area,318.34,Clements Inc,3.4,11
-703,Door,317.45,"Braun, David and Levine",2.4,10
-704,Wind,136.84,Thomas and Sons,2.6,7
-705,Pick,307.3,Cohen-Lopez,3.2,11
-706,Cup,139.81,Davis-Vazquez,2.1,11
-707,Heavy,339.31,Johnson Inc,2.7,6
-708,Analysis,346.54,Thomas Group,4.1,7
-709,Textbook Travel,72.34,Macmillan,1.7,1
-710,Headphones Meet,153.87,Apple,1.5,0
-711,Microwave Box,601.59,Philips,3.3,3
-712,Comics Between,10.94,Macmillan,2.7,1
-713,Participant,129.41,Payne-Ortega,3.1,14
-714,Painting,403.39,Rodriguez Inc,1.5,11
-715,Herself,78.81,White PLC,1.5,12
-716,Foot,40.7,"Robinson, Reed and Marquez",3.2,9
-717,TV Town,887.13,HP,3.7,0
-718,Late,228.93,Brown-Rodriguez,2.2,12
-719,Comics Moment,40.68,Macmillan,4.8,1
-720,Building,92.41,Curtis-Romero,2.5,8
-721,Body Lotion How,49.3,Maybelline,4.0,4
-722,Can,313.91,"Lester, Wagner and Dean",3.5,5
-723,Identify,461.84,Salazar-Price,3.0,9
-724,Before,485.67,"Haley, Wiley and Acosta",3.6,13
-725,Both,299.71,"Chapman, Saunders and Davis",4.6,5
-726,Growth,120.27,"Valdez, Mcneil and Reed",1.4,8
-727,Them,306.87,"Green, Howe and Smith",1.1,13
-728,Bed,119.21,"Villa, Ross and Foster",3.1,11
-729,Blender Necessary,345.97,IKEA,1.1,3
-730,Car,22.91,Mcdaniel-Glenn,1.1,5
-731,Novel Year,23.05,Penguin,1.9,1
-732,Bed,232.13,Perez-Mills,5.0,14
-733,Least,8.59,"Pitts, Lawrence and Mooney",3.2,7
-734,Hospital,22.36,Savage and Sons,1.3,11
-735,Jacket Picture,78.34,H&M,2.1,2
-736,Perfume Only,112.51,Dove,3.9,4
-737,Air Purifier Case,348.9,Philips,1.7,3
-738,Comics Bill,12.04,Vintage,4.9,1
-739,Blender Face,612.45,Panasonic,2.1,3
-740,Machine,417.53,Nelson-Richardson,4.6,5
-741,Leave,54.98,"Wright, Johnston and Snyder",3.3,12
-742,Effort,188.57,Harris Inc,2.6,11
-743,Beyond,373.25,Murillo and Sons,3.9,10
-744,Assume,92.67,Tanner-Romero,4.0,5
-745,Body Lotion Fine,14.65,Clinique,1.7,4
-746,Life,369.5,Cole-Lewis,4.6,6
-747,State,111.44,"Gillespie, Dennis and Smith",4.1,10
-748,Result,490.85,Williams PLC,1.7,5
-749,Vacuum Cleaner Again,675.2,Bosch,1.5,3
-750,Vacuum Cleaner Finish,75.03,IKEA,3.8,3
-751,Listen,431.22,Trujillo and Sons,4.1,10
-752,All,434.07,"Cordova, Phillips and Robinson",2.5,9
-753,Once,69.14,Cruz and Sons,4.7,6
-754,Smartwatch To,337.43,Samsung,4.5,0
-755,Play,437.13,Anderson-Anderson,4.9,6
-756,Paper,71.47,Hale-Lee,4.5,8
-757,Need,269.36,Harrison-Hutchinson,1.2,13
-758,Father,392.67,Hernandez and Sons,1.8,7
-759,Data,241.42,Howard Group,4.9,7
-760,Which,351.14,Richmond-Miller,4.1,8
-761,Father,201.73,"Rodriguez, Jones and Olson",1.7,9
-762,Vacuum Cleaner Agency,619.16,Philips,1.4,3
-763,Feel,168.61,"Burnett, Jackson and Young",1.6,11
-764,Wind,207.67,Rich PLC,2.5,11
-765,Military,445.87,Kennedy and Sons,2.8,13
-766,Air Purifier Every,47.02,IKEA,2.3,3
-767,Form,106.48,"Vang, Anderson and Hood",1.5,9
-768,Issue,40.93,Bell-Burch,3.1,10
-769,Most,392.38,Scott LLC,3.7,7
-770,Line,257.05,"Graham, Powell and Smith",4.7,9
-771,As,434.4,Lawson PLC,1.7,9
-772,Loss,262.32,Pearson-Shannon,4.1,10
-773,Headphones Per,1160.0,LG,2.1,0
-774,Whole,131.27,"Miles, Matthews and James",3.3,12
-775,Indeed,238.39,Davis-Cole,3.0,12
-776,Institution,197.03,Brown-White,4.8,6
-777,Finish,72.7,Moore-Ross,3.6,13
-778,Party,461.6,Singh PLC,3.9,11
-779,Imagine,29.82,Burnett Ltd,2.1,5
-780,Second,294.74,Rogers PLC,1.6,7
-781,Up,488.23,Jackson and Sons,2.4,9
-782,Headphones Best,196.51,Apple,1.2,0
-783,Research,460.04,"Craig, Callahan and Mills",3.5,13
-784,Microwave Animal,337.55,Dyson,3.0,3
-785,T-shirt Lose,156.91,Adidas,4.0,2
-786,How,457.17,Peters Group,4.3,5
-787,Others,96.65,"Callahan, Oconnor and Tyler",4.6,6
-788,Lamp Authority,148.68,Dyson,3.9,3
-789,Perfume Kitchen,106.38,Nivea,2.4,4
-790,Almost,275.58,Miller PLC,3.9,8
-791,Eight,432.98,Brown-Edwards,4.7,7
-792,As,491.32,Anderson Inc,3.8,6
-793,Until,153.03,Hicks-Bush,3.7,14
-794,Yet,107.28,Spencer-Lopez,1.2,14
-795,Hard,409.12,Garcia Inc,4.6,11
-796,Rate,234.3,Quinn-Hernandez,4.8,9
-797,Fast,247.36,Hurst LLC,4.5,9
-798,Novel Rise,48.87,Penguin,4.7,1
-799,Line,375.3,Morrison-Black,3.6,9
-800,Skill,497.72,"Anderson, Acosta and Hernandez",4.9,8
-801,Card,428.26,Wagner-Brown,2.6,13
-802,Score,285.91,"Davis, Hill and Miller",3.8,9
-803,Collection,295.25,Moore Inc,1.9,10
-804,Cookbook Against,25.85,Vintage,3.2,1
-805,Best,257.99,Swanson PLC,1.6,10
-806,Air Purifier Deal,626.94,Dyson,1.5,3
-807,Camera View,2387.03,HP,2.9,0
-808,Series,71.14,"Hicks, Hoover and Howe",4.8,5
-809,Hold,62.64,Young Group,1.1,9
-810,Dress Write,229.38,Adidas,4.8,2
-811,Region,322.31,Gates-Cortez,3.7,10
-812,Vacuum Cleaner Certainly,402.4,Panasonic,4.9,3
-813,Follow,339.87,"Martinez, Singh and Crawford",1.6,7
-814,Coach,195.97,Leon and Sons,3.0,5
-815,Sister,446.83,"Potter, Hicks and Johnson",1.3,6
-816,Jacket Manager,170.79,H&M,1.9,2
-817,National,90.74,"Brown, Gardner and King",2.0,7
-818,Textbook Only,87.09,O'Reilly,1.5,1
-819,Television,421.15,"Vincent, Merritt and Shaffer",3.5,13
-820,Message,398.95,Hensley and Sons,2.2,11
-821,Budget,154.17,Bush LLC,4.5,10
-822,Republican,430.5,"Lewis, Smith and Brown",2.7,10
-823,Stand,443.1,Young LLC,3.1,7
-824,Fear,75.95,Meyers Inc,2.7,13
-825,Program,271.34,Swanson Ltd,1.3,12
-826,Modern,7.68,Love Ltd,3.2,8
-827,Nearly,354.88,Arnold-Schneider,3.4,5
-828,Alone,432.3,Singleton-Ortega,3.6,9
-829,Lamp About,335.25,Bosch,3.8,3
-830,Perfume Possible,30.08,Maybelline,2.8,4
-831,Question,288.94,Holland-Jones,2.1,6
-832,Microwave Along,381.85,Philips,4.8,3
-833,Air Purifier South,640.11,Bosch,2.7,3
-834,Few,63.16,Owens PLC,4.6,11
-835,Lamp But,116.54,Dyson,3.0,3
-836,Microwave Wonder,499.49,Panasonic,3.0,3
-837,Available,444.23,Jones-Phillips,2.2,9
-838,Air Purifier Play,354.19,IKEA,1.4,3
-839,Smartphone Worker,956.05,Apple,3.2,0
-840,Both,292.8,Gallegos Inc,3.1,13
-841,Make,385.95,Morse and Sons,1.9,13
-842,Also,70.5,"Burton, Clark and Scott",2.3,5
-843,Jeans Alone,33.67,Zara,3.3,2
-844,Full,479.45,"Morales, Hernandez and Smith",3.9,9
-845,See,472.54,Bond LLC,4.5,14
-846,Issue,231.82,Zuniga-Hernandez,2.5,9
-847,Vacuum Cleaner Practice,552.92,Dyson,3.0,3
-848,Blender Next,318.47,Bosch,1.9,3
-849,Laptop Boy,1010.71,Samsung,3.3,0
-850,Laptop Model,1535.75,Samsung,1.5,0
-851,Perfume Alone,41.71,Clinique,3.6,4
-852,Century,72.77,King and Sons,4.0,5
-853,Vacuum Cleaner Poor,315.01,Bosch,2.2,3
-854,Soldier,479.71,"Mccoy, Brown and Ross",1.7,13
-855,Headphones Idea,1204.9,Sony,4.3,0
-856,Far,385.07,Martin and Sons,3.8,7
-857,Smartwatch Technology,1654.38,LG,2.1,0
-858,Smartwatch Again,401.75,HP,4.8,0
-859,Sort,43.41,"Yates, Wagner and Martinez",1.6,8
-860,Car,322.1,"Baker, Rivera and Griffin",2.9,9
-861,Short,259.61,Olson and Sons,1.8,8
-862,Indeed,200.39,Beard-Kim,5.0,11
-863,Study,433.16,Hatfield Inc,2.3,12
-864,Type,274.43,Gordon-Gomez,3.0,12
-865,Pattern,479.76,"Manning, Willis and Giles",2.5,14
-866,Lipstick Decision,23.13,Clinique,3.4,4
-867,Test,455.58,Ramos-Thomas,1.7,12
-868,Say,482.86,Mccormick Inc,1.4,12
-869,TV Food,127.22,Asus,4.1,0
-870,Would,74.54,Lambert Inc,1.1,9
-871,Buy,487.12,"Hernandez, Jones and Martinez",3.9,7
-872,Headphones Budget,2301.72,Sony,1.5,0
-873,T-shirt Remain,137.15,Zara,4.7,2
-874,Body Lotion Fight,101.86,Dove,1.7,4
-875,Citizen,26.83,"Campbell, Mcdonald and Blair",4.3,12
-876,Blender Site,628.16,Philips,3.8,3
-877,Body Lotion Truth,18.3,L'Oreal,2.6,4
-878,Meet,111.49,White-Baker,2.4,12
-879,Street,116.48,Mcdonald-Reyes,2.2,7
-880,Tree,216.68,Phillips-Alvarez,1.0,11
-881,Blender Describe,664.32,Bosch,2.5,3
-882,Factor,221.1,"Henderson, Riggs and Conway",2.1,12
-883,Stock,53.64,Diaz Inc,4.6,11
-884,White,353.41,Hahn LLC,4.2,8
-885,Language,158.67,"Flores, Andrews and Olson",1.2,8
-886,Woman,438.5,"Rodriguez, Underwood and Davis",3.4,6
-887,Center,22.82,"Santos, Harvey and Lucas",2.4,13
-888,Lipstick Animal,111.85,Nivea,1.9,4
-889,TV Position,891.99,Sony,3.0,0
-890,Ask,30.03,"Hancock, Harvey and Rivas",3.4,10
-891,Whether,433.83,"Smith, Anthony and Jackson",3.3,5
-892,Tablet Account,304.39,HP,2.2,0
-893,Perfume Probably,71.17,Nivea,1.8,4
-894,All,235.22,"Howell, Ingram and Wilson",1.2,10
-895,Buy,341.63,Pratt-Scott,3.1,10
-896,Until,373.86,Benson-Riggs,2.3,13
-897,Moment,468.15,Smith and Sons,4.1,10
-898,Too,327.54,Perez LLC,3.9,7
-899,Face Cream End,78.44,Clinique,4.3,4
-900,Meet,113.56,Castillo PLC,4.9,9
-901,Treat,359.12,"Ray, Neal and Taylor",4.1,12
-902,Its,382.39,Nelson-Navarro,4.5,6
-903,Establish,421.32,Smith-Green,2.5,5
-904,Jacket Step,183.24,Uniqlo,1.7,2
-905,Long,234.11,"Gutierrez, Carroll and Travis",4.3,12
-906,Shampoo Brother,98.59,Dove,1.8,4
-907,Already,276.92,Lane-Alvarez,4.0,6
-908,Page,249.79,Wells Inc,2.4,9
-909,Vacuum Cleaner Opportunity,340.34,Philips,3.7,3
-910,Contain,389.06,"Thomas, Pace and Gonzalez",3.7,9
-911,World,45.82,Smith Inc,2.1,6
-912,But,112.21,"Dominguez, Rodriguez and King",3.8,13
-913,Idea,467.19,Holland Group,4.6,5
-914,Writer,252.76,"Shelton, Green and Lewis",3.9,12
-915,Responsibility,282.76,Griffin Inc,1.2,13
-916,Reduce,111.17,Kelly-Klein,4.8,12
-917,Enjoy,384.79,Mann-Day,4.9,13
-918,Personal,365.17,"Jackson, Livingston and Bass",5.0,6
-919,Laptop Pay,1183.42,Asus,3.6,0
-920,Partner,302.59,Brady and Sons,3.5,14
-921,Air Purifier Or,332.23,Dyson,1.2,3
-922,Through,15.96,Gallegos-Hartman,4.9,11
-923,Fish,182.93,Snyder-Williams,4.1,5
-924,Under,334.21,Wells-Sherman,2.3,5
-925,Represent,159.91,Edwards Inc,3.0,12
-926,Jeans Newspaper,270.15,Nike,1.8,2
-927,Textbook Government,26.53,Vintage,1.7,1
-928,Few,438.52,Wheeler Inc,2.5,11
-929,Lamp Rule,330.24,Bosch,1.7,3
-930,List,40.88,"Luna, Phillips and Ewing",4.8,5
-931,Brother,184.94,Bennett-Hughes,3.6,9
-932,Economy,438.96,"Wallace, Gay and Wood",2.1,13
-933,Kid,420.07,"Stewart, Woods and Gallagher",3.5,9
-934,When,399.81,Russell-Walker,2.1,8
-935,Face Cream Employee,28.69,Maybelline,4.9,4
-936,Professor,398.14,"Jenkins, Martin and Perkins",3.9,6
-937,Range,45.83,Wells-Hughes,4.6,11
-938,Themselves,413.4,Hamilton-Alvarado,2.9,5
-939,Vacuum Cleaner Across,84.48,Bosch,1.1,3
-940,It,166.07,Sanchez Group,4.9,7
-941,Single,322.23,Pace Inc,3.7,5
-942,Dog,433.7,"Robertson, Smith and Taylor",3.8,6
-943,Friend,206.18,Hale Inc,3.0,6
-944,Phone,37.05,"Jones, Glover and Jackson",2.4,10
-945,Forward,470.32,"Lane, Nelson and Fitzgerald",4.5,10
-946,Whose,224.14,"Perry, Young and Jackson",5.0,9
-947,Rather,363.76,Russell-James,2.3,9
-948,Training,68.17,Vasquez Group,1.7,12
-949,Per,165.78,Baker-Nguyen,4.0,7
-950,Already,279.57,Kirk PLC,4.6,11
-951,Body Lotion Bar,40.75,Dove,4.7,4
-952,Lipstick Computer,53.25,Maybelline,2.4,4
-953,Cookbook Too,30.7,HarperCollins,3.7,1
-954,Sit,302.45,"Schmidt, Fisher and Lopez",1.7,8
-955,Behind,412.72,Duffy-Baker,4.7,5
-956,Face Cream Air,80.03,Dove,2.7,4
-957,Biography Member,30.08,O'Reilly,1.8,1
-958,Cookbook Both,55.61,HarperCollins,3.6,1
-959,Republican,410.39,Cooley Ltd,1.9,10
-960,Shampoo Success,36.09,L'Oreal,2.4,4
-961,Spend,480.01,"Owens, Caldwell and Lutz",2.2,6
-962,Woman,102.23,"Jones, Fowler and Torres",1.4,5
-963,Textbook Pattern,59.12,Vintage,1.7,1
-964,Cookbook White,12.16,Macmillan,4.8,1
-965,Cookbook Thousand,88.01,O'Reilly,2.6,1
-966,Sneakers Hundred,20.58,H&M,3.1,2
-967,With,103.43,Terrell-Wilson,2.6,9
-968,Dress War,17.04,H&M,3.0,2
-969,Might,244.96,Warren-Blake,1.1,10
-970,Smartwatch Situation,1936.28,Dell,1.8,0
-971,Life,382.6,Rocha and Sons,2.9,9
-972,Toward,188.25,"Brady, Jordan and Rice",3.1,6
-973,Smartphone North,1096.04,Apple,3.9,0
-974,Wait,332.81,"Ford, Robinson and Taylor",2.8,8
-975,End,419.13,Gibbs-Walker,1.4,11
-976,Effect,36.44,"Sanchez, Johnson and Stevenson",2.2,12
-977,Include,12.18,"Hicks, Lyons and Gonzalez",4.5,11
-978,Event,418.52,"Taylor, Salazar and Harris",3.2,11
-979,Carry,217.37,"Hill, Palmer and Schmidt",3.4,9
-980,To,39.15,Gonzalez-York,1.8,9
-981,Ball,61.72,Frazier Inc,4.1,8
-982,Quickly,180.83,Bailey and Sons,3.5,5
-983,Laptop Night,2470.79,Apple,1.1,0
-984,Would,241.31,"Fritz, Reeves and Gonzalez",3.2,9
-985,T-shirt Military,113.02,Adidas,4.7,2
-986,Service,22.92,Cervantes-Carter,1.9,8
-987,Lipstick Time,77.53,Dove,2.7,4
-988,Perfume Personal,12.43,Dove,4.8,4
-989,Young,275.27,Walter-Crosby,4.8,11
-990,Final,167.0,"Strong, Holland and Meyer",4.2,13
-991,Jacket Paper,38.92,Nike,2.1,2
-992,Four,247.1,"Lynch, Shelton and Sandoval",3.8,6
-993,Figure,405.59,"Fuentes, Rogers and Taylor",2.1,8
-994,Him,329.44,"Lee, Fuentes and Daniel",1.3,6
-995,Much,375.59,Graham-Nichols,2.9,6
-996,Positive,224.61,Young-Joseph,3.1,10
-997,Camera Car,701.6,Asus,1.4,0
-998,From,137.67,"Barber, Gonzalez and Jarvis",4.8,8
-999,Could,414.35,"Reese, Roberts and Morrison",1.4,11
+0,New,209.58,Ortiz-Davis,1.2,5
+1,Novel Culture,88.79,O'Reilly,3.4,1
+2,Seven,362.56,Bennett PLC,3.1,11
+3,Mention,470.61,"Sims, Burns and Villarreal",1.8,10
+4,Lipstick Discover,36.63,Dove,3.3,4
+5,My,464.57,Campbell-Haas,3.1,14
+6,Never,392.9,Murphy-Lopez,4.8,10
+7,TV Later,1657.94,Apple,1.9,0
+8,Jacket Answer,125.2,Adidas,2.6,2
+9,Cut,305.8,Martin-Martin,1.9,14
+10,Sound,244.24,Neal-Sanders,2.0,13
+11,About,181.61,Hernandez PLC,3.5,13
+12,Microwave Federal,658.64,Dyson,2.6,3
+13,Cookbook Nearly,32.5,Macmillan,3.2,1
+14,Key,229.99,"Combs, King and Keller",4.1,13
+15,Tv,241.8,Patton LLC,1.1,10
+16,Study,397.18,Kirk and Sons,2.9,7
+17,Admit,435.68,Castro Inc,3.5,7
+18,Body Lotion Fall,8.15,Dove,1.9,4
+19,Jeans Show,33.55,Adidas,2.9,2
+20,Worry,194.37,"Fernandez, Campos and Warner",2.1,9
+21,Camera Adult,297.65,Dell,1.6,0
+22,Textbook Similar,21.71,HarperCollins,2.0,1
+23,Listen,51.22,"Lee, Marshall and Hanson",1.1,5
+24,Visit,28.82,Gonzalez and Sons,1.6,7
+25,Front,38.4,Smith and Sons,2.6,13
+26,Party,449.58,Lewis-Saunders,4.6,8
+27,Recognize,437.87,"Davis, Morales and Cooper",4.3,6
+28,Blender Analysis,421.19,Panasonic,1.5,3
+29,Great,94.64,Osborne Ltd,2.0,8
+30,Visit,294.32,Taylor-Delgado,4.2,7
+31,Smartphone House,337.61,LG,2.8,0
+32,Clearly,215.01,"Meyer, Washington and Mcdaniel",3.5,5
+33,Behavior,499.69,"Moore, Watson and Johnson",2.5,5
+34,Textbook Contain,74.53,O'Reilly,2.6,1
+35,Smartphone Relate,374.96,Asus,2.5,0
+36,Traditional,111.25,Smith-Benson,4.9,5
+37,Vacuum Cleaner Power,520.0,Bosch,2.6,3
+38,Decade,324.9,Torres-Lopez,4.5,8
+39,Body Lotion Only,63.45,Nivea,3.4,4
+40,Way,64.07,Alvarado-Cook,2.9,5
+41,Vacuum Cleaner Every,373.73,Philips,3.0,3
+42,Jacket Smile,157.32,Uniqlo,1.8,2
+43,Wind,311.69,King-Smith,1.5,14
+44,Perfume Whom,104.26,Clinique,4.5,4
+45,Teacher,74.54,Hall-Martinez,2.3,13
+46,Likely,365.59,Rodriguez-Pollard,1.1,9
+47,Certainly,61.55,Moore and Sons,4.2,8
+48,Movie,159.48,Allen PLC,2.7,14
+49,Stuff,404.66,Manning Ltd,3.0,10
+50,Air Purifier We,190.61,Philips,4.7,3
+51,Present,260.49,Harris Group,1.3,12
+52,His,345.39,Pittman-Reynolds,2.1,6
+53,Comics Decade,92.03,O'Reilly,3.2,1
+54,Member,91.67,Williams LLC,2.3,9
+55,Yourself,249.3,Chavez-Gentry,2.1,14
+56,Smartwatch Open,1363.52,Sony,1.1,0
+57,There,304.68,Harris-Gilbert,2.5,12
+58,Yard,448.35,Thomas-White,4.9,11
+59,Type,79.63,Simpson-Kaufman,3.5,7
+60,T-shirt Chance,211.46,Adidas,1.1,2
+61,To,363.43,"Cole, Brown and Maxwell",3.7,11
+62,Activity,251.09,Thomas-Lopez,4.8,12
+63,Jeans How,240.64,Uniqlo,1.0,2
+64,TV Current,2079.33,Samsung,4.3,0
+65,Camera Second,1589.64,Asus,5.0,0
+66,Land,141.8,Wilson-Brown,4.4,8
+67,Similar,26.92,"Anderson, Hopkins and Harrell",4.0,9
+68,Wonder,88.17,Hayden-Gomez,4.8,9
+69,Tablet Thing,1153.19,Apple,1.8,0
+70,Brother,418.53,Fernandez-Lawrence,4.1,6
+71,Manager,241.13,Smith-Brooks,3.7,13
+72,Sneakers Guy,186.53,Zara,2.1,2
+73,Science,168.72,Hunter Ltd,3.2,7
+74,Amount,334.59,"Wilson, Johnson and Lee",1.6,6
+75,Miss,108.87,"Thomas, Kelly and Shah",4.1,6
+76,Particular,81.45,Raymond-Diaz,3.3,10
+77,T-shirt Way,189.48,Nike,2.6,2
+78,Economy,112.67,"Guerrero, Carpenter and Rice",2.7,12
+79,Difficult,138.15,Williams-Miller,2.2,12
+80,Microwave Democratic,58.7,IKEA,4.3,3
+81,Including,222.87,Robinson Group,2.9,10
+82,Present,162.83,Stafford-Vasquez,4.6,8
+83,Operation,492.35,Gray-Reeves,1.5,8
+84,Blender Which,43.46,Bosch,1.1,3
+85,Center,262.22,Bass-Johnson,2.8,5
+86,City,498.01,Green Ltd,3.9,14
+87,Policy,395.16,Wang-Brown,1.4,12
+88,Answer,425.35,"Black, Phelps and Jones",2.5,6
+89,Guy,422.91,"Glover, Wright and Douglas",2.7,6
+90,Explain,68.25,Owens Inc,3.2,7
+91,Microwave Large,629.95,Philips,2.6,3
+92,Laptop Group,2108.51,Asus,3.8,0
+93,Sometimes,259.59,Mcdaniel-Harper,3.4,6
+94,Government,34.44,Williams LLC,2.5,9
+95,Design,419.22,Adams Group,1.1,8
+96,Need,437.75,"Lawrence, Moody and Hutchinson",5.0,12
+97,Health,433.1,"Chambers, Edwards and Rich",3.8,11
+98,Traditional,107.22,Ware-Harper,4.6,9
+99,Blender Situation,177.82,IKEA,4.7,3
+100,Jeans Skin,55.17,Nike,3.4,2
+101,Finish,45.8,Taylor LLC,1.5,6
+102,Particularly,413.52,Abbott LLC,4.6,7
+103,Involve,9.06,Keith-Barnes,4.4,11
+104,Hold,247.29,Ramirez-Richardson,1.9,10
+105,Perfume Action,112.01,Nivea,1.4,4
+106,Green,169.06,Arnold Inc,4.2,14
+107,Song,338.94,Small-Johnson,3.4,9
+108,Water,61.97,Morgan-Jackson,2.3,6
+109,Cookbook Another,27.6,Vintage,1.1,1
+110,Body Lotion Imagine,100.16,Maybelline,1.6,4
+111,Great,283.76,Mclean PLC,4.2,8
+112,Three,189.76,"Salazar, Simpson and Barker",1.5,5
+113,Blender Forward,617.39,Dyson,3.3,3
+114,Pattern,225.98,Bautista-Torres,4.1,6
+115,Information,386.19,Rodriguez and Sons,4.9,12
+116,Smartwatch Such,899.25,Samsung,1.0,0
+117,Garden,450.48,Garrett-Hood,4.8,14
+118,Camera,160.44,Carpenter LLC,3.4,6
+119,Play,423.06,Frazier and Sons,1.8,7
+120,Fall,465.94,"Weaver, Webb and Young",2.0,12
+121,Support,404.86,"Hunter, Dorsey and Castro",2.4,8
+122,Cut,353.04,"Scott, Powell and Snyder",4.3,8
+123,Official,280.54,Summers-Bell,2.0,11
+124,Within,462.83,Robinson-Miller,1.4,8
+125,Blender Visit,306.51,Dyson,4.0,3
+126,Method,74.19,Young-Joyce,3.2,12
+127,Microwave Husband,46.7,Dyson,1.7,3
+128,Sneakers Fall,232.7,Adidas,4.1,2
+129,Contain,430.85,Sanchez-Nguyen,3.7,6
+130,Also,49.51,Smith-Perry,1.7,11
+131,Air Purifier Develop,667.61,Philips,1.6,3
+132,Heavy,34.6,Martinez Ltd,1.3,10
+133,T-shirt History,201.7,Zara,3.5,2
+134,Tablet Approach,559.63,Sony,2.0,0
+135,Sneakers Perhaps,163.55,Uniqlo,4.0,2
+136,Well,159.79,Blevins Inc,3.5,12
+137,Sneakers Capital,149.29,Adidas,2.7,2
+138,Build,309.92,"Odom, Ballard and Myers",2.4,14
+139,Significant,67.57,"Kennedy, Simmons and Washington",4.5,7
+140,Third,268.0,Erickson-King,4.8,7
+141,More,359.74,Davis-Parks,4.5,9
+142,Region,344.44,Martin-Chen,4.3,14
+143,Size,168.13,Gonzalez-Lowery,1.5,9
+144,Smartwatch Seem,1885.87,Asus,1.6,0
+145,Novel Capital,70.62,HarperCollins,2.1,1
+146,Factor,23.9,Rodriguez-Cole,4.7,12
+147,Fear,55.52,Pineda-Evans,1.9,13
+148,Camera Picture,1079.61,HP,1.4,0
+149,Headphones At,1164.46,Samsung,2.2,0
+150,Learn,200.19,Mcpherson Group,1.2,10
+151,Laptop Office,1387.37,LG,4.0,0
+152,Vacuum Cleaner Care,403.96,Panasonic,2.9,3
+153,Biography Itself,77.68,HarperCollins,3.7,1
+154,Loss,208.08,"Glover, Brock and Chapman",2.7,11
+155,Have,371.83,"Oliver, Morales and Brown",3.0,8
+156,Room,164.0,Sandoval Inc,3.6,13
+157,Heavy,464.41,Glenn-Shaw,2.8,12
+158,Chair,332.78,Perry Ltd,3.8,5
+159,Trial,280.9,"Moreno, Cervantes and Coffey",1.8,12
+160,Dress Across,164.31,Adidas,5.0,2
+161,It,30.1,Walker-Miller,3.4,5
+162,Until,117.86,"Moore, Powers and Rivera",3.1,12
+163,Comics Direction,89.98,HarperCollins,4.3,1
+164,Service,434.75,"Ward, Gates and Carter",3.3,14
+165,Power,197.58,Collins-Wood,4.3,8
+166,Lamp Movie,378.98,Dyson,2.9,3
+167,Chance,330.43,"Brown, Robinson and Murphy",3.1,5
+168,Yes,76.42,Mclean LLC,4.5,5
+169,Operation,215.15,Hanson Ltd,1.7,10
+170,Far,144.15,Davis-Campbell,4.4,12
+171,Shampoo Maybe,138.65,Maybelline,3.6,4
+172,T-shirt Skill,290.64,Zara,4.1,2
+173,Lamp Carry,64.36,Panasonic,2.3,3
+174,Headphones Your,801.78,HP,2.8,0
+175,Headphones Entire,236.7,Samsung,3.4,0
+176,Husband,305.84,Johnson LLC,4.8,12
+177,Hospital,403.09,Bryan Ltd,3.0,12
+178,Shampoo Paper,82.0,L'Oreal,4.8,4
+179,Dress Expert,132.1,H&M,3.5,2
+180,Then,219.25,Abbott LLC,1.2,7
+181,Eat,302.53,"Duke, Thompson and Brock",5.0,6
+182,Some,212.81,"Le, Martinez and Higgins",1.3,7
+183,Meet,310.88,"Stevenson, Wood and Jensen",2.4,10
+184,Size,65.51,"Coleman, Lopez and Reeves",3.1,8
+185,War,153.01,Tyler Ltd,3.6,14
+186,Though,9.53,Torres-Allen,4.8,14
+187,Operation,96.6,"Huang, Baker and Morrison",3.6,8
+188,Line,452.24,"Mann, Rodriguez and Clay",3.6,12
+189,Unit,52.26,Smith-Sloan,1.2,9
+190,Guess,466.32,"Ray, Howard and Campbell",1.8,9
+191,Ground,147.15,Rodriguez and Sons,3.9,11
+192,Sneakers City,122.1,Zara,1.8,2
+193,Final,315.73,"Rodriguez, Murphy and Vega",1.6,6
+194,Door,51.45,Griffith-Suarez,2.1,6
+195,Successful,149.37,Blackburn Inc,4.4,12
+196,Body Lotion Return,115.82,Maybelline,3.4,4
+197,Some,198.37,Dyer-Harris,4.1,13
+198,Comics Skin,19.72,Macmillan,2.9,1
+199,Week,78.53,Taylor-Lewis,1.8,6
+200,Girl,120.16,Stevens-Nielsen,4.3,6
+201,Textbook Seem,45.4,Macmillan,1.7,1
+202,He,264.69,"Russell, Garner and Carter",1.6,7
+203,Issue,339.86,Perry-Brown,3.8,11
+204,Recent,298.71,"Moody, Greer and Hoffman",2.2,10
+205,Several,423.1,Stevenson-Hall,3.7,10
+206,Actually,118.47,Gonzalez-Martinez,2.9,10
+207,Leave,403.74,Thomas Group,1.8,13
+208,Step,157.49,"Parker, Wright and Rodriguez",2.9,9
+209,Up,143.58,Williamson Inc,3.5,8
+210,All,417.41,Fox-Williams,3.4,11
+211,Blender Teach,530.59,Panasonic,1.0,3
+212,Tablet Realize,1722.2,Asus,2.1,0
+213,Rate,273.98,Byrd LLC,2.2,13
+214,Body Lotion Above,104.34,Nivea,3.8,4
+215,Far,81.54,Stephens-Hernandez,1.1,12
+216,Camera Chair,2418.3,Sony,2.2,0
+217,Air Purifier Generation,521.41,Philips,4.5,3
+218,Include,207.0,"Simpson, Watkins and Smith",1.2,10
+219,Jeans Measure,280.11,Uniqlo,3.9,2
+220,Microwave Take,329.81,Philips,3.1,3
+221,Vacuum Cleaner Material,250.01,Philips,2.5,3
+222,Star,457.19,Garrison-Anderson,1.9,5
+223,Ten,33.71,"Becker, Goodwin and Rodriguez",2.3,14
+224,Remember,397.83,Blanchard-Clark,4.0,6
+225,Biography Board,88.06,Penguin,3.4,1
+226,Biography Get,89.57,O'Reilly,2.9,1
+227,Eye,127.08,"Castillo, Ford and Foster",3.1,10
+228,Herself,48.73,Smith-James,2.5,12
+229,Shampoo Avoid,100.97,Nivea,4.0,4
+230,College,392.31,"Chen, Roman and Marquez",2.9,13
+231,Whatever,448.04,Cline Ltd,2.7,13
+232,Issue,426.12,"Hood, Wiley and Clark",3.1,8
+233,System,194.72,"Gonzalez, Fox and Walker",1.9,7
+234,Jacket Hit,152.66,Uniqlo,4.0,2
+235,Shampoo Wall,77.9,L'Oreal,1.2,4
+236,Comics Modern,75.54,Macmillan,2.5,1
+237,Which,210.81,"Moreno, Parrish and Robbins",3.1,6
+238,Night,157.82,Long-Wilson,2.2,11
+239,Audience,95.7,"Reed, Ellis and Bennett",1.2,14
+240,Thought,118.58,"Smith, Monroe and Smith",1.5,8
+241,Girl,381.59,Anderson-Burke,1.9,5
+242,Smartwatch Own,302.83,Dell,1.3,0
+243,How,230.34,Johnson LLC,1.3,7
+244,Skin,460.23,"Burnett, Woods and Ellis",1.8,8
+245,Seven,151.25,"Lopez, Reed and Hodge",3.3,8
+246,Smartwatch Available,2177.96,Sony,2.9,0
+247,Smartwatch Life,1858.32,Asus,1.0,0
+248,Push,136.4,Williams LLC,4.9,7
+249,Perhaps,224.89,Singleton LLC,3.3,10
+250,Floor,269.64,Chang PLC,4.8,5
+251,Listen,226.59,"Meyer, Chavez and Faulkner",3.2,14
+252,Man,276.75,Graham-Marshall,2.1,7
+253,Rate,280.12,Sanchez-Hendrix,1.1,6
+254,Sell,347.28,"Wagner, Hancock and Jackson",4.7,14
+255,Network,372.77,Jenkins-Davis,4.2,11
+256,Add,44.71,Peck PLC,2.0,12
+257,Unit,333.71,"Mcbride, Baker and Valdez",1.9,12
+258,TV Focus,1479.33,Sony,4.8,0
+259,Lamp Management,220.25,Panasonic,4.7,3
+260,Bad,363.78,Brown-Cooper,2.4,8
+261,Avoid,231.1,"Neal, Barnes and Simon",1.8,14
+262,Career,191.14,Cherry Inc,1.0,6
+263,Political,21.85,"Hardy, Fernandez and Mata",1.2,5
+264,Air Purifier Right,243.3,Philips,3.5,3
+265,List,131.57,Ray and Sons,3.4,10
+266,Jeans Day,141.57,Uniqlo,3.7,2
+267,Happy,123.41,"Scott, Wells and Mullins",1.4,14
+268,List,255.74,Hubbard-Newman,4.3,12
+269,Capital,122.55,Winters-Smith,1.7,6
+270,Himself,431.98,Gonzales-Baker,1.1,6
+271,Actually,324.35,Waller Ltd,1.7,8
+272,Trip,252.04,Archer-Cervantes,2.2,9
+273,Would,148.13,Davis-Horton,2.0,12
+274,Ever,469.13,Freeman Group,4.2,13
+275,Difficult,475.06,"Clay, Watts and Weber",4.7,12
+276,Body Lotion Left,119.6,Dove,3.6,4
+277,Their,55.6,Miller-Perry,1.9,8
+278,Able,412.76,Kirby-Nelson,4.1,10
+279,Stay,390.53,"Dyer, Jackson and Weber",1.4,12
+280,Jacket Impact,143.31,Uniqlo,2.4,2
+281,Consumer,15.15,Aguilar Ltd,2.9,5
+282,Represent,317.69,"Key, Spencer and Holden",1.4,13
+283,Particularly,180.89,Jones-Watson,4.5,11
+284,Air Purifier Fill,202.59,Philips,3.0,3
+285,Thus,156.62,Love PLC,4.6,14
+286,Individual,465.45,Rodriguez-Flores,3.0,9
+287,Parent,152.44,"West, Sandoval and Smith",4.9,13
+288,Against,160.53,Hebert Group,1.6,5
+289,TV Right,1492.53,LG,4.4,0
+290,Both,468.86,Brown-Rodriguez,2.2,13
+291,Week,141.52,Rose and Sons,2.2,14
+292,Morning,302.53,Page-Osborne,4.7,9
+293,Microwave Here,566.5,Panasonic,2.2,3
+294,Chair,266.25,Harrison and Sons,2.0,12
+295,Face Cream Which,109.9,L'Oreal,1.9,4
+296,Interesting,139.33,Holloway-Ford,4.0,8
+297,Since,453.53,"Miller, Massey and Forbes",3.1,7
+298,Biography Blood,54.05,HarperCollins,3.0,1
+299,I,440.07,"Mccann, Johnson and Smith",2.3,14
+300,Laptop Discuss,2095.92,Sony,1.9,0
+301,Short,110.63,Miles-Hoffman,4.4,12
+302,Lipstick Eat,27.68,L'Oreal,1.7,4
+303,Start,317.03,Hernandez Ltd,4.1,13
+304,T-shirt Type,286.01,Nike,4.1,2
+305,Jeans Effort,31.99,Zara,3.4,2
+306,After,354.81,Wheeler-Baker,3.9,6
+307,Movie,367.2,"Sherman, Clark and Riddle",1.6,14
+308,Attack,127.31,"Lewis, Reese and Owen",3.3,10
+309,She,474.05,Gordon Group,4.4,5
+310,Appear,217.23,Schultz-Bowman,3.9,7
+311,Eat,158.4,"Thomas, Henderson and Pearson",4.5,13
+312,Stand,195.44,Gentry Group,2.6,6
+313,East,445.44,Ellis-Hayes,3.9,11
+314,Dress Deal,128.79,Uniqlo,4.8,2
+315,Microwave None,76.15,Philips,1.3,3
+316,Sound,22.2,Thomas and Sons,4.4,5
+317,Price,86.14,"Smith, Simpson and Olson",2.3,7
+318,Biography Analysis,49.32,Vintage,2.9,1
+319,Smartphone Deal,2391.59,LG,4.7,0
+320,Present,248.78,Hill-Day,3.8,8
+321,Forget,283.09,Brandt-Brown,1.1,10
+322,Still,272.68,Wiley Ltd,4.1,11
+323,Finally,331.98,"Sexton, Smith and Reyes",4.0,11
+324,Down,139.28,Beck-Webb,3.6,11
+325,Year,283.28,"Harris, Barnes and Morris",3.2,12
+326,Face Cream Forward,56.0,Dove,5.0,4
+327,Marriage,469.03,Arnold-Porter,2.5,13
+328,Keep,468.65,"Adkins, Davis and Taylor",2.5,11
+329,Exist,10.21,Murphy Group,3.4,5
+330,Tree,366.01,Bishop and Sons,3.8,12
+331,Many,72.02,Doyle Ltd,1.2,7
+332,Before,480.63,Huang PLC,1.1,12
+333,Smartwatch Already,1783.49,Asus,2.4,0
+334,Novel Power,40.74,Vintage,2.5,1
+335,Sit,145.25,"Oliver, Bishop and Jackson",4.3,12
+336,Interesting,335.48,"Dawson, Durham and Mueller",3.6,13
+337,Jacket Front,60.03,Nike,2.5,2
+338,Lipstick Its,116.07,L'Oreal,4.8,4
+339,Agree,205.15,Garcia-Hoffman,3.5,5
+340,Only,50.83,"Phillips, Perez and Smith",4.7,6
+341,Nothing,90.15,Paul-Harris,4.4,8
+342,Beyond,311.8,Frazier-Stewart,1.4,11
+343,Section,177.71,Roberts LLC,4.8,9
+344,Mean,179.26,"Blankenship, Chavez and Smith",2.0,14
+345,Fund,478.29,Dyer LLC,4.6,9
+346,Mind,478.35,Allen-Phillips,4.0,11
+347,Building,388.41,Thornton Ltd,1.1,10
+348,While,417.09,"Allen, Glover and Lewis",4.8,13
+349,Blender Right,226.47,Panasonic,3.4,3
+350,Around,260.22,"Sanders, Mcfarland and Goodman",2.6,6
+351,Maybe,461.68,"Swanson, Jordan and Schroeder",3.0,5
+352,Approach,146.79,Bradford PLC,2.9,5
+353,Case,152.31,Pennington-Lewis,1.0,13
+354,Jeans Message,121.07,Nike,3.5,2
+355,Body Lotion Drug,139.56,Maybelline,4.8,4
+356,Officer,293.26,Patel Ltd,3.7,6
+357,This,363.45,"Ramirez, Sullivan and Walters",4.0,14
+358,Occur,76.38,Ayers-Barron,1.8,13
+359,Textbook Program,92.54,Vintage,3.7,1
+360,Cookbook Finally,18.83,Vintage,4.6,1
+361,Station,353.11,"Ramirez, Harris and White",2.0,7
+362,Ground,129.1,Hill LLC,2.4,5
+363,Perfume Career,65.57,Dove,4.6,4
+364,History,153.6,Sutton-Logan,2.2,12
+365,Comics Forward,27.13,HarperCollins,1.6,1
+366,Senior,93.47,Thomas LLC,4.2,13
+367,Discuss,443.05,"Taylor, Alvarez and Chen",4.2,5
+368,Vacuum Cleaner Yeah,130.61,Panasonic,3.1,3
+369,Poor,471.58,"Jensen, Singleton and Martinez",1.4,9
+370,Laptop Their,2479.3,Sony,4.5,0
+371,Laptop Realize,860.99,Sony,3.9,0
+372,Jeans Future,135.7,Zara,1.1,2
+373,Student,270.61,Sanders LLC,4.2,14
+374,North,177.78,Huang and Sons,2.1,12
+375,Many,432.57,Estrada-Tucker,3.8,7
+376,Send,315.11,"White, Coleman and Williams",2.1,11
+377,Mission,472.98,"Davidson, Miller and Chapman",3.4,7
+378,Information,112.58,"Gibson, Robertson and Hahn",1.3,5
+379,Jeans Case,146.09,Adidas,3.6,2
+380,Third,382.74,Stout-Case,1.2,12
+381,Capital,192.79,"Bailey, Hunter and Martinez",1.4,8
+382,Base,196.79,Armstrong-Thompson,3.0,10
+383,Generation,6.21,Meyer LLC,4.6,9
+384,Image,31.27,"Williams, Martinez and Kennedy",3.6,7
+385,We,306.53,Walter LLC,2.0,13
+386,Ahead,274.84,Garcia-Mills,1.7,14
+387,Lamp Talk,65.94,Philips,1.2,3
+388,Always,15.79,Abbott-Carroll,1.9,13
+389,Avoid,94.85,Wong PLC,2.5,9
+390,Control,5.88,Nguyen-Esparza,3.3,11
+391,It,380.78,Moody and Sons,1.1,5
+392,Laptop Add,284.94,Samsung,4.3,0
+393,Such,427.06,Parker Group,1.5,12
+394,Seat,22.37,Goodman Ltd,3.7,13
+395,Never,276.36,Patel and Sons,1.1,11
+396,Laptop Skin,1115.38,Samsung,4.9,0
+397,Mrs,52.96,Foster PLC,4.1,8
+398,Campaign,494.46,"Garcia, Castro and Shaw",4.8,12
+399,Side,499.18,"Anderson, Horton and Leblanc",1.2,6
+400,Event,419.57,Tran-Pollard,3.1,9
+401,Out,383.1,Friedman-Mcdonald,2.7,7
+402,Position,307.14,Green-Hanson,2.7,6
+403,Here,452.59,Avila-Mathis,2.0,5
+404,Practice,187.79,Smith-Bradley,3.3,7
+405,Lipstick Best,53.28,Dove,2.0,4
+406,Myself,234.67,Walls Ltd,3.7,13
+407,Clearly,217.25,"Buchanan, Vasquez and White",3.6,7
+408,Art,491.45,"Wilson, Briggs and Carter",1.7,7
+409,Letter,288.81,"Wright, Hancock and Velasquez",1.1,10
+410,Necessary,413.51,Wilkerson LLC,2.5,12
+411,Some,92.29,Christian Ltd,2.4,11
+412,Camera,499.83,Shaw Inc,2.3,5
+413,Conference,419.04,Stephens-Lawrence,1.0,6
+414,Beautiful,299.32,"Torres, Garcia and Smith",2.6,5
+415,Drive,359.85,Perez Ltd,1.0,13
+416,Perfume Be,23.36,Dove,1.8,4
+417,Smartwatch And,443.73,Apple,3.1,0
+418,T-shirt True,120.18,Zara,4.7,2
+419,Drive,354.59,"Stark, Pugh and Frank",1.0,6
+420,Politics,320.83,Chang Inc,3.7,9
+421,Body Lotion Scientist,105.91,L'Oreal,3.5,4
+422,Begin,484.02,"Sanders, Strong and Benton",2.4,9
+423,Dress Bar,91.08,Uniqlo,4.6,2
+424,Comics Prevent,22.31,HarperCollins,1.5,1
+425,Laptop Body,1378.72,Sony,1.3,0
+426,Second,376.31,Williams Inc,3.0,14
+427,Face Cream Consumer,79.09,Clinique,3.3,4
+428,Textbook Democratic,10.58,HarperCollins,2.1,1
+429,Smartwatch Week,755.63,HP,4.4,0
+430,Air Purifier Account,179.65,Bosch,2.1,3
+431,Perfume Church,145.22,Clinique,1.4,4
+432,Body Lotion Surface,85.7,L'Oreal,1.4,4
+433,At,152.19,"Johnson, Parks and Durham",3.3,10
+434,Air Purifier Body,435.85,Panasonic,3.8,3
+435,Wear,50.82,Phillips-Salas,3.0,11
+436,Blender Policy,62.75,Dyson,4.0,3
+437,Wish,5.13,Silva PLC,3.9,12
+438,Area,495.53,Stone-Obrien,1.2,13
+439,Cookbook Cover,47.06,Macmillan,4.9,1
+440,Biography Enjoy,23.45,Vintage,3.5,1
+441,Star,192.91,Allison-Livingston,4.2,10
+442,Message,420.35,Parrish-Nguyen,3.3,6
+443,Headphones State,1131.09,Samsung,3.9,0
+444,Character,289.08,"Clark, Crawford and Ramsey",1.4,13
+445,Red,256.68,Herrera and Sons,1.4,5
+446,Body Lotion Late,85.45,Maybelline,1.8,4
+447,Member,235.77,"Stephens, Davis and Scott",3.9,13
+448,Body Lotion Fund,10.54,Dove,3.3,4
+449,Plan,203.46,Peters-Berry,1.7,6
+450,Discuss,402.91,"Edwards, Wheeler and Reeves",3.4,6
+451,Ability,131.89,Williams Inc,3.6,12
+452,Difference,453.89,"Stephenson, Nguyen and Jackson",1.2,12
+453,Shampoo Billion,38.18,Maybelline,3.9,4
+454,Year,142.25,"Bryant, Sanchez and Smith",2.0,5
+455,Actually,347.74,"Chavez, Coleman and Williamson",1.6,5
+456,During,24.25,Chase Inc,3.0,7
+457,TV Share,1050.2,LG,3.0,0
+458,Somebody,98.6,Roberts LLC,4.2,10
+459,Laptop Beat,203.54,Apple,3.6,0
+460,Themselves,201.75,"Cook, Green and Burton",3.3,14
+461,Air Purifier Assume,404.43,Philips,1.8,3
+462,Headphones Score,1046.31,HP,2.4,0
+463,Your,107.65,Sullivan Ltd,3.8,8
+464,Month,339.33,Williams Ltd,1.0,13
+465,Four,368.1,Trujillo-Washington,4.5,5
+466,Too,426.59,"Pena, Beard and Curtis",1.3,6
+467,Dream,38.16,"Duran, Lopez and Hurst",4.3,7
+468,Out,339.7,Sanford Group,3.1,9
+469,Jeans Evidence,62.54,Zara,3.1,2
+470,Tax,267.31,Miller and Sons,3.6,7
+471,Meet,16.73,Phillips Ltd,3.9,12
+472,Air Purifier Avoid,539.97,Philips,3.4,3
+473,T-shirt Car,72.74,Zara,4.9,2
+474,Somebody,81.72,Rojas Inc,2.0,6
+475,Factor,312.16,"Hart, Mendez and Scott",3.3,9
+476,Sneakers Government,249.49,Uniqlo,2.4,2
+477,Under,109.05,"Jackson, Santana and Higgins",3.7,14
+478,Lipstick Floor,118.05,Maybelline,4.6,4
+479,Perfume North,141.72,Clinique,4.2,4
+480,Smartwatch Science,863.2,HP,4.6,0
+481,Really,421.78,Reynolds LLC,2.3,11
+482,Textbook War,93.92,Vintage,4.0,1
+483,Lot,379.83,White-Gonzalez,3.1,13
+484,Development,87.54,"Marshall, Aguilar and Smith",2.0,13
+485,Answer,444.54,"Rodriguez, Bowman and Gardner",4.3,8
+486,Them,343.88,Jackson Ltd,1.1,13
+487,Appear,179.78,Payne Ltd,4.1,10
+488,Jacket Personal,200.72,Nike,1.2,2
+489,Sea,144.22,Thomas-Morgan,3.0,10
+490,High,275.47,"Porter, Cox and Hansen",3.0,5
+491,Week,468.01,"Vasquez, Andrews and Dixon",1.1,13
+492,Late,498.61,Allen-Neal,3.1,12
+493,He,14.43,"Weaver, Moses and Benton",1.9,7
+494,Dress Bring,218.11,Uniqlo,3.5,2
+495,Vacuum Cleaner If,240.95,IKEA,3.0,3
+496,Ground,29.61,Rios Inc,2.8,10
+497,Method,299.2,Harmon Group,2.7,10
+498,Smartphone Administration,475.03,Dell,3.2,0
+499,Morning,292.79,"Kelly, Luna and Brown",2.2,10
+500,Audience,319.17,Boyd LLC,3.3,12
+501,Institution,419.59,Williams-Gutierrez,3.3,11
+502,Novel Sort,67.92,Macmillan,2.1,1
+503,Someone,412.35,Figueroa PLC,1.0,12
+504,Dress Specific,149.77,Nike,2.5,2
+505,Cold,345.18,Brown-Cooper,3.9,7
+506,Price,325.11,"Barker, Mason and Luna",4.3,12
+507,Cookbook Visit,17.9,HarperCollins,4.5,1
+508,Clear,225.99,"Brown, Perez and Davis",2.3,11
+509,Recent,56.55,Burke Ltd,1.4,6
+510,Drop,416.05,"Snyder, Butler and Hill",1.9,10
+511,Hard,85.37,"Quinn, Carter and Long",3.4,9
+512,Shampoo Open,44.58,Maybelline,2.7,4
+513,Add,217.81,Castillo and Sons,1.4,13
+514,Fish,87.79,"Berg, Mason and Walker",1.4,6
+515,Blender Five,129.6,Bosch,2.8,3
+516,People,53.97,Stephenson-George,2.0,13
+517,Five,222.5,Cook PLC,3.5,14
+518,Learn,211.7,Ferrell and Sons,3.2,7
+519,Visit,437.38,Phillips PLC,1.4,13
+520,Response,73.04,"Nelson, Hines and Meza",3.0,9
+521,Your,126.15,"Brown, Mayer and Anderson",2.5,7
+522,Jeans Hair,135.42,H&M,4.3,2
+523,Teach,468.04,Mckenzie Ltd,5.0,10
+524,Different,307.49,"Howard, Munoz and Hernandez",2.6,13
+525,Body Lotion Possible,59.82,Clinique,1.3,4
+526,According,251.56,Dixon LLC,2.7,14
+527,Novel Food,35.18,O'Reilly,2.6,1
+528,Perfume Few,12.99,Dove,4.0,4
+529,Standard,277.42,"Ward, Keller and Collins",2.4,7
+530,Jacket Care,15.74,Uniqlo,2.8,2
+531,Final,365.26,Thomas-Kent,1.3,10
+532,Cookbook Woman,88.53,Penguin,1.6,1
+533,Jacket Gun,167.6,Uniqlo,3.7,2
+534,Sneakers Station,274.34,Uniqlo,3.7,2
+535,Despite,386.45,Willis PLC,3.5,13
+536,Call,499.5,Hebert-Rose,3.7,5
+537,Maintain,311.1,Farrell-Cole,1.1,5
+538,Bit,483.11,Allen-Kirby,4.2,10
+539,May,270.41,"Ford, King and Brandt",4.2,11
+540,Central,8.52,Williams LLC,4.6,10
+541,Body Lotion Maintain,131.63,Clinique,2.7,4
+542,Often,356.53,Ponce-Walker,2.1,9
+543,Fire,57.88,Schmidt-Perez,2.4,8
+544,Population,127.17,"Long, Pierce and Stewart",2.6,9
+545,Jeans Task,297.37,Nike,1.6,2
+546,New,328.33,Boyd-Davis,3.5,12
+547,Television,207.35,"Norton, Neal and Clark",4.5,9
+548,Find,46.18,"Koch, Hicks and Hebert",4.6,12
+549,Goal,442.55,Parks and Sons,3.6,8
+550,Defense,433.88,Benson Group,4.4,7
+551,Admit,87.79,Brown-Richardson,3.9,5
+552,Loss,55.8,"Carter, Dunn and Gillespie",3.1,6
+553,Major,191.11,Schneider and Sons,3.7,9
+554,Exactly,343.46,Kent and Sons,1.8,6
+555,Foot,380.93,Green LLC,4.0,5
+556,Avoid,338.07,"Gonzalez, Rojas and Wilson",1.7,14
+557,Medical,461.85,"Duran, Collier and Price",3.9,13
+558,Comics Professional,12.44,HarperCollins,2.6,1
+559,Cookbook Man,75.0,Macmillan,3.4,1
+560,Worry,455.06,"Jackson, Smith and Adams",4.3,11
+561,Hear,98.5,Singh LLC,2.8,11
+562,Financial,349.02,Thompson-Gay,3.9,6
+563,Break,141.87,Conrad LLC,3.9,11
+564,It,27.26,"Randall, Garcia and Orozco",2.6,12
+565,Laptop Part,1151.7,Asus,2.5,0
+566,Body Lotion Author,61.31,Dove,4.1,4
+567,Meet,9.55,Payne PLC,4.1,8
+568,Use,292.09,Wolfe Ltd,3.5,7
+569,Night,302.08,"Ellis, Smith and George",3.4,10
+570,Air Purifier Degree,640.39,Panasonic,3.8,3
+571,System,30.29,Schneider Inc,2.3,6
+572,Follow,307.61,Waller-Johnson,3.3,5
+573,Positive,286.63,Miller-Hudson,2.4,12
+574,Once,464.58,"Patel, Jenkins and Navarro",2.7,10
+575,Smartphone Movie,913.26,LG,3.7,0
+576,Deep,219.84,Jones Inc,1.5,9
+577,According,358.39,Hartman and Sons,2.7,13
+578,Sea,81.65,Stevenson Inc,3.6,7
+579,Microwave Himself,288.92,Bosch,3.7,3
+580,Perform,288.54,"Cain, Hays and Watts",4.6,11
+581,Novel Which,24.25,Macmillan,4.4,1
+582,Property,440.99,Castro-Mathis,1.4,6
+583,Against,167.24,Callahan PLC,2.2,12
+584,Even,275.09,Cain LLC,4.5,9
+585,Everybody,399.89,Cruz Ltd,3.2,5
+586,Far,291.8,"Thompson, Diaz and Webb",2.7,7
+587,Sell,272.3,Dean-Cooper,3.7,9
+588,Increase,163.5,Carroll-Holt,1.5,8
+589,Shampoo Later,74.29,Dove,2.5,4
+590,Face Cream Five,46.33,L'Oreal,1.4,4
+591,Positive,255.37,Jones-Castillo,2.6,11
+592,Senior,411.51,Becker-Marquez,3.0,5
+593,T-shirt Building,135.0,Adidas,4.2,2
+594,Blood,458.0,Hicks-Moore,1.5,13
+595,Conference,79.15,Harris Inc,2.2,9
+596,Hard,165.71,Stewart-Lewis,3.0,9
+597,Reach,20.4,Davis Group,1.4,5
+598,Already,434.43,Hanna-Grant,2.1,8
+599,Three,81.24,"Crawford, Myers and Brock",4.3,11
+600,Bag,59.42,Friedman Ltd,3.8,6
+601,Jeans Ball,16.06,Nike,2.8,2
+602,Already,398.49,"Miller, Knapp and Adams",3.5,6
+603,Go,200.67,Barnes Group,3.8,12
+604,Agreement,130.32,Torres-Nicholson,4.8,8
+605,Form,366.24,"Weeks, Hanson and Simpson",4.7,11
+606,Trial,32.96,"Watson, Mcmahon and Griffith",1.4,9
+607,Allow,273.31,"Manning, Miller and Walls",4.8,7
+608,Cookbook Population,18.85,Penguin,1.4,1
+609,Face Cream No,38.6,Clinique,2.6,4
+610,Project,488.92,Hamilton-Meyer,3.0,11
+611,Though,223.09,Chaney Inc,4.9,7
+612,Perfume Us,136.23,L'Oreal,3.1,4
+613,Serve,440.35,"Smith, Sellers and Hines",4.0,7
+614,Lipstick Research,92.27,L'Oreal,4.6,4
+615,Price,405.72,Carpenter Inc,1.7,7
+616,Painting,428.03,Williams-Bailey,1.1,8
+617,Ago,318.47,White-Francis,4.7,13
+618,Share,283.08,Diaz-Flores,4.1,14
+619,Vacuum Cleaner Themselves,519.46,Panasonic,1.4,3
+620,This,264.9,"Thompson, Anderson and Warner",2.6,9
+621,Sneakers Item,55.61,Uniqlo,2.6,2
+622,Good,149.17,Baker LLC,3.2,5
+623,Party,404.68,"Andrews, Fisher and Young",1.3,11
+624,Push,232.41,"Burton, Burgess and Morris",4.3,7
+625,Center,229.07,Peterson-Gonzalez,1.5,13
+626,Textbook Newspaper,74.73,O'Reilly,4.3,1
+627,Thus,154.41,Romero-Huff,4.1,5
+628,Data,70.91,"Andrews, Monroe and Pierce",2.6,10
+629,Political,331.85,"Bell, Smith and Patterson",4.4,13
+630,Textbook Forward,20.89,Macmillan,3.2,1
+631,Jeans While,73.69,Zara,1.8,2
+632,Turn,273.93,Austin-Watson,1.5,9
+633,Shoulder,381.14,Giles-Coleman,3.0,7
+634,Land,59.57,Porter-Owen,4.9,13
+635,Jacket Movie,265.64,H&M,4.0,2
+636,Smartphone Which,1118.74,Samsung,1.8,0
+637,Thousand,35.15,Williams-Morris,4.8,12
+638,Biography Public,23.1,Macmillan,3.0,1
+639,Couple,241.33,"Williams, Thomas and Smith",2.3,5
+640,Low,79.23,Parker-Bell,5.0,5
+641,When,107.93,"Harris, Chapman and Williams",4.0,8
+642,Though,200.28,"Garcia, Castillo and Hanson",4.0,12
+643,Strong,135.93,Brock PLC,2.1,13
+644,Project,433.29,"Wallace, Johnson and Jones",1.8,9
+645,Speech,87.91,Orr and Sons,2.1,9
+646,Body,331.65,Liu PLC,1.5,12
+647,Comics Teach,28.17,Macmillan,1.8,1
+648,Around,468.7,"Fields, Walker and Jenkins",2.1,10
+649,Loss,442.87,Rivera-Warren,3.9,9
+650,Face Cream Couple,8.52,Maybelline,1.3,4
+651,Drop,120.86,Tate Group,1.7,12
+652,TV Performance,713.75,Apple,1.4,0
+653,Level,356.76,Love-Williams,3.6,9
+654,Fish,29.53,Wilson and Sons,2.0,12
+655,Fund,93.0,"Holmes, Casey and Jones",3.8,6
+656,Imagine,397.27,"Martin, Alexander and Graham",3.0,9
+657,Window,450.96,Hines Group,4.3,11
+658,Comics Society,96.44,Vintage,1.0,1
+659,Go,341.93,"Wilson, Bowers and Paul",1.5,5
+660,Couple,53.98,Shelton-Rivas,1.6,5
+661,Textbook Sure,64.75,Penguin,3.6,1
+662,Issue,44.99,Reynolds and Sons,5.0,5
+663,Half,299.8,Davis and Sons,2.2,7
+664,Customer,444.89,Rivera-Hatfield,2.0,13
+665,Security,490.0,Reed-Mcdonald,1.4,9
+666,Body Lotion Red,28.0,Maybelline,2.0,4
+667,Blender Sometimes,456.33,Panasonic,2.5,3
+668,Continue,461.22,Campos Inc,4.0,6
+669,Body Lotion And,9.55,Clinique,3.8,4
+670,Smartwatch Thus,1320.61,HP,2.7,0
+671,Textbook Miss,49.75,Macmillan,2.0,1
+672,T-shirt Still,245.66,Zara,3.3,2
+673,Rich,345.93,Carter-Morales,2.1,5
+674,Available,300.65,Campos-Simmons,3.3,7
+675,Clearly,173.71,Dunn Group,4.2,14
+676,Defense,20.84,"Hernandez, Washington and Johnson",2.4,8
+677,Microwave Nearly,284.46,Philips,2.5,3
+678,Camera Dark,203.18,Samsung,2.3,0
+679,Model,20.21,"Ramos, Flynn and Smith",4.4,13
+680,Him,430.47,Gibbs Inc,4.4,9
+681,Standard,9.55,"Carney, Wright and Smith",3.0,8
+682,Church,9.61,"Hughes, Davis and King",5.0,10
+683,T-shirt Business,138.16,Zara,2.8,2
+684,T-shirt Range,146.55,Uniqlo,2.4,2
+685,Range,281.65,Wheeler Inc,4.3,9
+686,Already,368.63,Villarreal-Park,3.4,5
+687,Sneakers Decade,95.39,Nike,2.4,2
+688,Language,240.94,Jones LLC,4.9,13
+689,Biography Face,56.93,Vintage,4.4,1
+690,Vacuum Cleaner However,135.13,IKEA,3.7,3
+691,Part,488.16,"Reyes, Garcia and Carpenter",4.1,5
+692,Garden,59.36,Thornton Group,2.5,11
+693,Lipstick Strategy,92.93,L'Oreal,3.2,4
+694,T-shirt Discover,156.5,Uniqlo,3.1,2
+695,Voice,78.61,Burton Group,1.0,12
+696,Body,376.11,Hodges-Dean,4.1,6
+697,World,42.77,"Montgomery, Kelley and Banks",1.8,11
+698,Of,496.15,"Arnold, Jones and Jensen",3.2,14
+699,Establish,410.93,"Marshall, Martin and Dorsey",2.1,8
+700,Dress Finally,156.05,Zara,1.3,2
+701,Thank,49.99,"Maxwell, Mckinney and Smith",1.2,5
+702,Teacher,206.84,"Rodriguez, Collins and Russell",3.9,8
+703,Nation,477.94,Miller LLC,2.8,13
+704,Personal,86.05,"Mann, Black and Rich",3.7,5
+705,Smartwatch Since,1647.51,Sony,3.9,0
+706,Biography Test,74.89,Penguin,3.1,1
+707,Blender Dark,102.16,Dyson,4.7,3
+708,Lipstick Within,15.71,Clinique,3.3,4
+709,Market,87.61,Merritt Inc,4.4,9
+710,Commercial,64.24,"Orozco, Cook and Michael",2.3,5
+711,Tend,329.89,Snow-Rodriguez,2.3,12
+712,Vacuum Cleaner But,152.5,Dyson,3.3,3
+713,Them,131.4,Cisneros-Anderson,3.3,10
+714,Let,212.92,"Stein, Clark and Armstrong",2.5,10
+715,Small,322.89,Flynn Inc,4.6,8
+716,Half,101.17,Hoffman PLC,3.4,13
+717,T-shirt Perform,124.93,Nike,1.2,2
+718,T-shirt Include,89.68,Uniqlo,2.9,2
+719,Million,299.08,Jennings PLC,2.8,9
+720,Comics Just,7.17,Penguin,4.6,1
+721,T-shirt Page,225.26,Uniqlo,2.6,2
+722,Yard,207.08,"Mcdonald, Burnett and Walton",3.0,6
+723,Head,279.85,"Austin, Kline and Wiley",2.9,14
+724,Sneakers Each,139.34,Adidas,1.3,2
+725,Dress Issue,179.57,Uniqlo,2.9,2
+726,Woman,264.63,"Ramirez, Hernandez and Smith",3.8,9
+727,Send,456.29,Fisher PLC,4.9,7
+728,Air Purifier Open,244.5,IKEA,3.6,3
+729,Comics Describe,62.72,HarperCollins,3.3,1
+730,Perfume Enter,77.13,Nivea,4.2,4
+731,Direction,166.11,Thomas-Gibbs,3.7,12
+732,Citizen,355.93,"Trujillo, Ramos and Mcpherson",3.1,10
+733,Microwave Mind,474.31,Philips,4.4,3
+734,Account,238.69,"Huffman, Herring and Fitzpatrick",2.7,8
+735,Various,329.11,"Nelson, Cole and Buchanan",3.6,10
+736,Textbook New,72.79,Macmillan,3.8,1
+737,Which,475.34,"Fitzgerald, Liu and Bullock",4.1,11
+738,Blender Natural,554.33,Bosch,4.5,3
+739,Lamp Situation,673.1,Philips,2.5,3
+740,Control,205.36,"Henry, Brown and Burnett",4.0,6
+741,Lipstick Who,93.57,Nivea,4.7,4
+742,Comics Sea,11.32,Macmillan,1.4,1
+743,Law,5.9,Burns and Sons,3.6,11
+744,Role,197.27,Mitchell-Allen,3.2,5
+745,People,290.94,"Garner, Porter and Pacheco",1.2,9
+746,Sneakers Almost,288.39,Zara,2.5,2
+747,T-shirt Police,203.69,Nike,3.8,2
+748,Microwave Threat,418.79,IKEA,1.1,3
+749,Across,377.47,"Gibson, Taylor and Sutton",2.4,6
+750,Threat,21.59,Lyons Group,2.9,7
+751,Textbook Charge,17.19,Macmillan,2.9,1
+752,Body Lotion Coach,108.1,Clinique,1.1,4
+753,Into,180.51,Kelly Inc,4.3,8
+754,Smartwatch Plant,2151.53,Dell,3.8,0
+755,Microwave Left,49.75,Bosch,3.6,3
+756,Jeans Sister,293.86,Nike,4.7,2
+757,Microwave Main,357.68,Bosch,3.8,3
+758,Police,235.52,Smith-Castillo,2.5,14
+759,Particular,213.56,"Brown, Boone and Phillips",2.3,10
+760,Ability,99.4,Davis Ltd,1.5,5
+761,Say,305.85,Lucas LLC,4.1,14
+762,Blender Me,352.93,Dyson,2.8,3
+763,Fight,80.73,Perez LLC,5.0,6
+764,Guy,422.74,"Richardson, Harris and Hunt",3.9,7
+765,Week,5.64,Turner-Walters,2.9,10
+766,Story,441.68,Wallace Ltd,1.8,6
+767,Biography Ever,69.05,HarperCollins,3.2,1
+768,Discuss,35.43,"Mejia, Romero and Shaffer",4.6,11
+769,Various,220.85,"Garza, Gill and Mora",4.4,13
+770,Increase,359.68,"Porter, David and Luna",4.2,13
+771,We,381.66,"Diaz, Meadows and Fletcher",2.6,8
+772,Understand,406.27,Dyer LLC,2.4,10
+773,Institution,411.3,Reyes-Adams,3.1,11
+774,Have,112.36,Chavez Ltd,1.8,11
+775,Tablet Form,1731.16,Dell,3.6,0
+776,Sneakers Last,84.0,H&M,1.8,2
+777,How,158.15,"Woodard, Hanson and Davis",3.3,12
+778,If,416.55,Montgomery PLC,2.2,6
+779,Perfume Add,19.79,Nivea,1.8,4
+780,Lipstick Bring,133.74,Dove,3.7,4
+781,Late,433.51,Wilson Ltd,1.2,8
+782,Traditional,83.73,"Becker, Walsh and Silva",1.2,5
+783,Dress Claim,206.08,Zara,4.5,2
+784,Soldier,400.12,"Perkins, Mcmahon and Juarez",3.8,9
+785,Career,90.02,Norman PLC,3.2,5
+786,Time,490.73,Shah LLC,2.2,14
+787,Consider,210.35,Mcgee-Murphy,4.5,11
+788,Perfume Security,43.37,Clinique,2.3,4
+789,Material,279.67,Taylor Ltd,1.3,10
+790,Value,272.71,Shelton Group,4.5,10
+791,Microwave Mention,157.86,Dyson,2.3,3
+792,Say,64.96,Martin Inc,2.6,6
+793,Whether,49.41,Horton-Norman,1.1,8
+794,Look,468.79,Gonzalez-Figueroa,4.9,12
+795,Laptop World,143.79,Apple,2.2,0
+796,Biography Give,12.17,HarperCollins,3.6,1
+797,Laptop Early,613.36,Asus,1.5,0
+798,Involve,371.65,"Hall, George and Jimenez",1.5,6
+799,Record,361.5,"Woodard, Small and Duncan",5.0,5
+800,Than,392.6,Henderson LLC,2.4,9
+801,Lead,223.91,Schroeder LLC,1.9,6
+802,Air Purifier Tax,283.81,Philips,2.7,3
+803,Science,469.9,"Wilkinson, Schneider and Moody",2.5,11
+804,Interview,407.78,Gregory Group,2.8,9
+805,Together,428.72,Stephens LLC,2.9,14
+806,Staff,155.07,Rogers and Sons,4.4,12
+807,Course,446.46,Mckay Inc,1.9,14
+808,Textbook Growth,87.79,Penguin,1.5,1
+809,Cover,435.44,Gross-Anderson,3.1,5
+810,Section,158.6,Snyder-Reed,1.4,10
+811,Vacuum Cleaner Section,448.86,IKEA,4.7,3
+812,Better,180.19,Powell-Armstrong,4.2,8
+813,Class,484.1,"Roth, Robertson and Farmer",4.1,14
+814,Under,88.33,Nichols-Gonzales,1.6,5
+815,West,415.26,Gaines-Simmons,1.8,8
+816,T-shirt Effort,163.51,Zara,3.3,2
+817,Animal,305.75,Lawrence PLC,2.2,10
+818,Whom,488.04,"Reyes, Cole and Hodges",1.3,8
+819,Notice,131.83,"Thompson, Macias and Zuniga",3.7,11
+820,Out,195.36,Wolf-Green,1.4,13
+821,Tend,440.3,"Lewis, Waters and Watts",4.0,13
+822,Comics Eight,91.64,Macmillan,3.8,1
+823,Husband,170.49,"Cook, Hernandez and Carter",1.3,10
+824,Novel Mind,14.2,O'Reilly,3.8,1
+825,Cause,288.78,Gordon and Sons,2.0,10
+826,General,264.28,"Johnson, Poole and Wood",1.9,6
+827,Stage,369.76,"Wilson, Smith and Case",3.3,10
+828,Result,151.85,Marquez-Alvarez,2.9,9
+829,About,350.18,Martin-James,1.4,5
+830,Other,412.7,Douglas-Williams,3.3,11
+831,Cookbook Computer,63.92,Vintage,3.9,1
+832,Shampoo Over,47.27,Dove,3.7,4
+833,Western,201.29,"Lee, Benson and Lawrence",2.8,7
+834,Imagine,78.51,"Conley, James and Lee",3.3,10
+835,Jeans Personal,275.13,Uniqlo,1.5,2
+836,Participant,373.14,Duffy-Barrett,2.3,14
+837,Blender Later,118.08,Bosch,3.6,3
+838,Test,370.93,Johnson and Sons,3.5,5
+839,Movie,487.33,"Gibson, Green and Landry",2.4,12
+840,Strong,300.31,Chapman-Mejia,4.1,7
+841,Like,156.18,Williams Inc,1.7,11
+842,Paper,462.21,Rodriguez-Williams,3.2,10
+843,Smartwatch Treat,1744.81,Apple,1.4,0
+844,People,78.66,Wood-Carey,1.5,6
+845,Option,292.61,"Santiago, Ortiz and Novak",1.2,7
+846,Team,391.78,"Allen, Perez and Mcconnell",3.3,7
+847,Professor,230.75,"Willis, Keith and Allen",3.2,8
+848,Dress Ahead,279.53,Zara,4.7,2
+849,Series,115.27,"Marsh, Wilson and Wood",4.2,9
+850,Face Cream Alone,100.76,Nivea,2.6,4
+851,Respond,261.63,Watson-Brewer,4.0,10
+852,Follow,171.54,"Reid, Crawford and Booth",4.4,5
+853,Claim,420.23,"Henderson, Luna and Cook",1.9,12
+854,Soldier,117.98,Padilla-Buchanan,4.7,13
+855,You,144.82,"Galvan, Martin and Wilkerson",4.6,6
+856,Thank,247.78,Nelson-Castillo,4.5,12
+857,Us,278.91,"Harmon, Reeves and Salazar",1.9,7
+858,Where,102.86,Rodriguez-Fry,4.6,5
+859,Center,172.82,Perez-Sheppard,2.9,6
+860,Standard,203.6,Stewart LLC,3.4,9
+861,Little,36.21,King-Robinson,2.3,10
+862,Student,152.62,Oliver and Sons,3.8,6
+863,They,38.44,"Johnson, Rivera and Gonzalez",3.5,6
+864,Director,236.98,"Mullins, Stokes and Ford",4.4,7
+865,Microwave Answer,404.32,Dyson,1.8,3
+866,Service,486.7,"Hogan, Powell and Humphrey",2.1,8
+867,Those,85.34,"Thompson, Mcmillan and Washington",2.0,9
+868,Type,420.34,"Bush, King and Mendoza",2.4,12
+869,TV Area,833.83,HP,4.1,0
+870,Air Purifier Necessary,227.79,IKEA,3.8,3
+871,Computer,126.22,Henry-Montoya,2.6,14
+872,Eat,19.89,"Williams, Austin and Colon",3.4,12
+873,Travel,28.7,Reed Ltd,3.2,9
+874,Comics Church,21.59,Macmillan,3.1,1
+875,Option,288.78,"Vasquez, Molina and Ray",4.5,8
+876,Biography Environment,8.37,Macmillan,3.4,1
+877,TV Because,209.69,Apple,4.1,0
+878,Traditional,113.72,"Wilson, Mayo and Davidson",2.3,6
+879,Ten,232.63,"Wilson, Holmes and Shelton",1.7,5
+880,Oil,320.02,"Walker, Jones and Downs",4.2,13
+881,Site,388.16,"Riley, Neal and Edwards",2.4,13
+882,Microwave Realize,313.86,Bosch,4.8,3
+883,Vacuum Cleaner Development,599.42,Philips,5.0,3
+884,Lamp Bad,198.75,Dyson,4.8,3
+885,Technology,21.18,Jones LLC,1.2,12
+886,Tablet Entire,1211.3,LG,1.7,0
+887,Hotel,395.57,Hampton PLC,4.0,7
+888,Dress Still,124.09,Uniqlo,1.3,2
+889,International,226.11,Bird-Pham,4.6,11
+890,Power,455.09,Odonnell-Holt,3.1,7
+891,Move,391.99,"Phillips, Jones and Wiley",1.9,9
+892,Tablet Thank,2461.25,Asus,3.5,0
+893,Economy,235.69,"Coleman, Santos and Duncan",1.4,7
+894,Textbook Audience,33.87,Penguin,3.2,1
+895,Shampoo Decision,24.34,Maybelline,5.0,4
+896,Position,82.95,"Khan, Bridges and Lopez",1.4,13
+897,Table,75.87,Abbott-Webster,3.3,14
+898,Across,88.44,"Scott, Salazar and Williams",2.9,12
+899,Process,144.39,"Jackson, Horn and Smith",3.2,10
+900,Price,44.03,Johnson Inc,3.0,5
+901,Full,447.58,"Johnson, Williams and Ramirez",2.3,14
+902,Rather,9.16,"Watson, Dean and Miller",2.4,5
+903,Picture,159.23,Brandt-Shepherd,3.0,5
+904,Country,138.2,Gallegos-Williams,1.9,14
+905,North,87.75,"Barnes, Robinson and Jones",3.5,7
+906,Significant,293.1,Miller Group,4.5,9
+907,Great,360.58,"Caldwell, Malone and Hall",5.0,6
+908,Report,114.19,"Sharp, Kelly and Lawson",3.4,9
+909,Microwave Newspaper,37.79,Dyson,2.3,3
+910,Wall,451.08,"Trevino, Garrison and White",1.0,7
+911,Biography Ten,38.51,HarperCollins,2.9,1
+912,Away,418.74,"Jones, Lopez and Guerrero",1.4,9
+913,Camera Share,1255.97,Samsung,1.8,0
+914,Biography When,29.32,HarperCollins,1.3,1
+915,Headphones Whether,797.18,Dell,4.6,0
+916,Learn,218.75,"Long, James and Jones",4.9,10
+917,Sneakers Buy,125.66,Nike,1.7,2
+918,Happen,389.27,"Lewis, Smith and Bennett",2.5,11
+919,Biography Not,6.44,Macmillan,4.7,1
+920,Admit,138.31,"Smith, Evans and Estes",3.1,13
+921,Vacuum Cleaner Day,538.34,Bosch,2.5,3
+922,Themselves,467.26,Henry-Washington,5.0,13
+923,Lamp Everybody,558.08,IKEA,4.3,3
+924,Lamp Trial,504.35,Bosch,4.5,3
+925,Factor,434.11,Thompson Ltd,3.5,5
+926,Administration,83.11,"Thompson, Banks and Walker",3.5,8
+927,Cookbook International,93.91,Vintage,2.4,1
+928,TV Take,1136.8,Samsung,1.4,0
+929,Together,27.51,Walters-Nelson,2.0,7
+930,Admit,465.83,"Clay, Lynch and Goodman",3.8,7
+931,Often,369.22,Rivera LLC,3.3,9
+932,Headphones Person,2280.39,Asus,2.8,0
+933,Partner,185.18,Bryant Ltd,1.4,8
+934,Camera Try,1782.91,LG,1.3,0
+935,Just,93.78,"Davidson, Mercer and Brown",2.1,14
+936,Clear,402.37,"Smith, Jones and Bryant",2.8,5
+937,Comics Fill,17.13,HarperCollins,4.9,1
+938,Body Lotion Camera,43.5,Dove,5.0,4
+939,Before,264.89,Barry LLC,3.4,8
+940,Lamp Interest,321.83,Panasonic,3.6,3
+941,Several,134.81,"Hansen, Rice and Thompson",3.2,12
+942,Headphones Beat,1829.23,HP,5.0,0
+943,Discuss,149.96,"Webster, Snyder and Williams",1.7,6
+944,Cell,356.08,"Brown, Krueger and Rodriguez",3.3,7
+945,General,416.33,"Moyer, Mcbride and Harris",2.9,7
+946,Vacuum Cleaner Note,253.79,Philips,2.7,3
+947,Why,248.48,Thompson LLC,2.2,12
+948,Pick,27.28,Gonzalez Inc,3.5,12
+949,Candidate,247.85,Stevens-Graham,3.2,14
+950,Final,105.79,"Romero, Marshall and Moore",1.2,9
+951,Blood,224.05,"Smith, Cochran and Crane",3.6,10
+952,TV Pattern,633.11,Samsung,2.9,0
+953,Whether,275.89,Barrett Group,3.5,10
+954,Worker,404.82,Lucas and Sons,1.1,12
+955,Each,275.1,Campbell-Vargas,2.4,14
+956,Air Purifier Produce,265.23,IKEA,3.2,3
+957,Wall,267.37,Baird Inc,2.4,5
+958,Dress Class,287.08,Nike,2.8,2
+959,Key,488.66,"Allen, Mcdonald and Murphy",4.0,8
+960,Represent,102.9,Martin-Hess,3.1,14
+961,Point,167.38,Williams LLC,2.8,14
+962,Hospital,103.97,"Warren, Medina and Smith",4.4,5
+963,Safe,30.84,Shelton-Mitchell,2.0,7
+964,Dress Likely,18.32,Adidas,3.4,2
+965,Sneakers Strategy,138.62,Nike,4.4,2
+966,Carry,352.12,"Gonzalez, Evans and Cook",1.1,11
+967,Smartwatch Couple,1430.89,HP,2.6,0
+968,Jeans Add,81.55,Nike,1.9,2
+969,Quality,215.27,Bell Inc,2.3,12
+970,Capital,168.0,"Schmidt, Mccann and Bates",4.1,13
+971,Action,138.6,"Caldwell, Beltran and Gallagher",4.1,6
+972,Lamp Hour,507.52,Bosch,2.5,3
+973,Trade,456.19,Schmidt-Goodwin,3.3,14
+974,Other,358.19,Walsh PLC,2.7,9
+975,Smartphone Feeling,289.82,Samsung,4.0,0
+976,As,141.2,King Inc,2.6,14
+977,Blender Cause,457.59,Philips,3.9,3
+978,Biography Painting,64.12,Vintage,4.4,1
+979,Microwave Group,272.91,Panasonic,3.9,3
+980,T-shirt Remain,244.85,Uniqlo,1.9,2
+981,Lamp Price,202.71,Dyson,4.2,3
+982,Jacket Those,231.81,Zara,1.4,2
+983,Skill,54.17,Green-Taylor,3.5,9
+984,Like,107.58,Anderson Inc,3.8,5
+985,Staff,305.12,Archer-Gutierrez,2.5,5
+986,T-shirt How,53.21,Nike,3.6,2
+987,Dream,171.25,Robinson Ltd,1.9,8
+988,Lipstick Write,148.91,Clinique,4.7,4
+989,Still,171.21,Mills LLC,1.7,7
+990,Write,194.14,Graham and Sons,3.2,13
+991,Dress When,238.71,Nike,4.7,2
+992,Include,73.1,Ochoa-Donovan,4.1,10
+993,Jeans Notice,228.63,Nike,1.1,2
+994,Visit,472.81,Clark-Valenzuela,1.6,5
+995,Dress Option,118.94,Zara,3.0,2
+996,View,340.68,Watts-Chandler,2.8,10
+997,Air Purifier Hand,680.78,Dyson,2.4,3
+998,Yard,363.7,"Salas, Aguilar and Steele",2.0,11
+999,Cookbook Never,34.07,Penguin,4.4,1
