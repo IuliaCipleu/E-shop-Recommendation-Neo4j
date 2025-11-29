@@ -1,3355 +1,3355 @@
 [
     {
         "query_id": 1,
-        "query": "MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Product)-[:BELONGS_TO]->(c:Category)<-[:BELONGS_TO]-(rec:Product)\nWHERE rec.product_id <> p1.product_id\n  AND rec.price >= p1.price * 0.3 \n  AND rec.price <= p1.price * 1.5\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nWITH DISTINCT rec, c\nRETURN rec.name AS RecommendedProduct, \n       c.name AS Category, \n       rec.price AS Price, \n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
+        "query": "// Fetch a specific user's orders\nMATCH (u:User {user_id: 1})-[r:PLACED]->(p:Product)\nRETURN u.name, p.name, r.quantity, r.total_price;\n\n",
         "total_params": 50,
-        "cold_avg_sec": 0.052424460000329416,
-        "hot_avg_sec": 0.04100211999975727,
+        "cold_avg_sec": 0.04685051799940993,
+        "hot_avg_sec": 0.03873810999968555,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.59100060000128,
-                "hot_times": [
-                    0.05174819999956526
-                ],
-                "hot_mean": 0.05174819999956526
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.04572840000037104,
-                "hot_times": [
-                    0.04173669999727281
-                ],
-                "hot_mean": 0.04173669999727281
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.04442589999962365,
+                "cold_time": 0.43720480000047246,
                 "hot_times": [
-                    0.04330870000194409
+                    0.040125500003341585
                 ],
-                "hot_mean": 0.04330870000194409
+                "hot_mean": 0.040125500003341585
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.0434227000005194,
-                "hot_times": [
-                    0.042369199996755924
-                ],
-                "hot_mean": 0.042369199996755924
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.044473599999037106,
-                "hot_times": [
-                    0.039497300000221
-                ],
-                "hot_mean": 0.039497300000221
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.0810498999999254,
-                "hot_times": [
-                    0.039601000000402564
-                ],
-                "hot_mean": 0.039601000000402564
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.04368150000300375,
-                "hot_times": [
-                    0.04136510000171256
-                ],
-                "hot_mean": 0.04136510000171256
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.04156860000148299,
+                "cold_time": 0.03894989999389509,
                 "hot_times": [
-                    0.04237520000242512
+                    0.037912499996309634
                 ],
-                "hot_mean": 0.04237520000242512
+                "hot_mean": 0.037912499996309634
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.0378227000037441,
+                "hot_times": [
+                    0.03903279999940423
+                ],
+                "hot_mean": 0.03903279999940423
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.0421042000016314,
+                "cold_time": 0.03550210000685183,
                 "hot_times": [
-                    0.04532900000049267
+                    0.035003700002562255
                 ],
-                "hot_mean": 0.04532900000049267
+                "hot_mean": 0.035003700002562255
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03984599999967031,
+                "hot_times": [
+                    0.03650339999876451
+                ],
+                "hot_mean": 0.03650339999876451
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.04238379999878816,
+                "cold_time": 0.053149500003200956,
                 "hot_times": [
-                    0.04098299999895971
+                    0.03911879999941448
                 ],
-                "hot_mean": 0.04098299999895971
+                "hot_mean": 0.03911879999941448
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.041314000001875684,
+                "cold_time": 0.038178000002517365,
                 "hot_times": [
-                    0.039351499999611406
+                    0.03839760000118986
                 ],
-                "hot_mean": 0.039351499999611406
+                "hot_mean": 0.03839760000118986
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.040300299999216804,
+                "cold_time": 0.03825499999948079,
                 "hot_times": [
-                    0.04119960000025458
+                    0.037476999998034444
                 ],
-                "hot_mean": 0.04119960000025458
+                "hot_mean": 0.037476999998034444
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.04213769999842043,
+                "cold_time": 0.040096999997331295,
                 "hot_times": [
-                    0.041773500000999775
+                    0.03983889999653911
                 ],
-                "hot_mean": 0.041773500000999775
+                "hot_mean": 0.03983889999653911
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.036663699997006916,
+                "hot_times": [
+                    0.03828659999999218
+                ],
+                "hot_mean": 0.03828659999999218
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.0375484999967739,
+                "hot_times": [
+                    0.03822970000328496
+                ],
+                "hot_mean": 0.03822970000328496
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03846550000162097,
+                "hot_times": [
+                    0.03854210000281455
+                ],
+                "hot_mean": 0.03854210000281455
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.038374199997633696,
+                "hot_times": [
+                    0.03961909999634372
+                ],
+                "hot_mean": 0.03961909999634372
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.040709100001549814,
+                "cold_time": 0.037222200000542216,
                 "hot_times": [
-                    0.04218159999800264
+                    0.037864099998841994
                 ],
-                "hot_mean": 0.04218159999800264
+                "hot_mean": 0.037864099998841994
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03814300000522053,
+                "hot_times": [
+                    0.038069599999289494
+                ],
+                "hot_mean": 0.038069599999289494
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.038428699997894,
+                "hot_times": [
+                    0.037432700002682395
+                ],
+                "hot_mean": 0.037432700002682395
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.038894699995580595,
+                "hot_times": [
+                    0.03730799999902956
+                ],
+                "hot_mean": 0.03730799999902956
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.037195600001723506,
+                "hot_times": [
+                    0.03943629999412224
+                ],
+                "hot_mean": 0.03943629999412224
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.03669009999430273,
+                "hot_times": [
+                    0.03952720000233967
+                ],
+                "hot_mean": 0.03952720000233967
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03644189999613445,
+                "hot_times": [
+                    0.03819459999795072
+                ],
+                "hot_mean": 0.03819459999795072
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.03884510000352748,
+                "hot_times": [
+                    0.03893279999465449
+                ],
+                "hot_mean": 0.03893279999465449
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03941449999547331,
+                "hot_times": [
+                    0.03993139999511186
+                ],
+                "hot_mean": 0.03993139999511186
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.039206000001286156,
+                "hot_times": [
+                    0.039005400001769885
+                ],
+                "hot_mean": 0.039005400001769885
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.04032230000302661,
+                "hot_times": [
+                    0.041243699997721706
+                ],
+                "hot_mean": 0.041243699997721706
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03877720000309637,
+                "hot_times": [
+                    0.039390199999616016
+                ],
+                "hot_mean": 0.039390199999616016
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.037721299995610025,
+                "hot_times": [
+                    0.041538500001479406
+                ],
+                "hot_mean": 0.041538500001479406
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.04095959999904153,
+                "cold_time": 0.040675099997315556,
                 "hot_times": [
-                    0.041642799998953706
+                    0.03851600000052713
                 ],
-                "hot_mean": 0.041642799998953706
+                "hot_mean": 0.03851600000052713
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.037329200000385754,
+                "hot_times": [
+                    0.04066969999985304
+                ],
+                "hot_mean": 0.04066969999985304
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.039997200001380406,
+                "hot_times": [
+                    0.03917599999840604
+                ],
+                "hot_mean": 0.03917599999840604
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.039310799998929724,
+                "hot_times": [
+                    0.038567100004001986
+                ],
+                "hot_mean": 0.038567100004001986
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.03788009999698261,
+                "hot_times": [
+                    0.03800050000427291
+                ],
+                "hot_mean": 0.03800050000427291
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.038698199998179916,
+                "hot_times": [
+                    0.04048560000228463
+                ],
+                "hot_mean": 0.04048560000228463
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03913720000127796,
+                "hot_times": [
+                    0.037466699999640696
+                ],
+                "hot_mean": 0.037466699999640696
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03765100000600796,
+                "hot_times": [
+                    0.03983159999916097
+                ],
+                "hot_mean": 0.03983159999916097
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.03973989999940386,
+                "hot_times": [
+                    0.03802030000224477
+                ],
+                "hot_mean": 0.03802030000224477
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.03892439999617636,
+                "hot_times": [
+                    0.03940660000080243
+                ],
+                "hot_mean": 0.03940660000080243
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.042847599997912766,
+                "cold_time": 0.04068869999900926,
                 "hot_times": [
-                    0.04148260000147275
+                    0.038681899997754954
                 ],
-                "hot_mean": 0.04148260000147275
+                "hot_mean": 0.038681899997754954
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.04031819999727304,
+                "cold_time": 0.03819870000006631,
                 "hot_times": [
-                    0.041768700000829995
+                    0.03805399999691872
                 ],
-                "hot_mean": 0.041768700000829995
+                "hot_mean": 0.03805399999691872
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.03814780000175233,
+                "cold_time": 0.03886849999980768,
                 "hot_times": [
-                    0.03898329999719863
+                    0.03981470000144327
                 ],
-                "hot_mean": 0.03898329999719863
+                "hot_mean": 0.03981470000144327
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04054879999966943,
+                "cold_time": 0.03759179999906337,
                 "hot_times": [
-                    0.04150859999936074
+                    0.03808359999675304
                 ],
-                "hot_mean": 0.04150859999936074
+                "hot_mean": 0.03808359999675304
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04115259999889531,
-                "hot_times": [
-                    0.04094749999785563
-                ],
-                "hot_mean": 0.04094749999785563
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.041604400001233444,
-                "hot_times": [
-                    0.03824770000210265
-                ],
-                "hot_mean": 0.03824770000210265
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.039680599998973776,
-                "hot_times": [
-                    0.042218599999614526
-                ],
-                "hot_mean": 0.042218599999614526
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03964320000159205,
-                "hot_times": [
-                    0.04029199999786215
-                ],
-                "hot_mean": 0.04029199999786215
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.039479999999457505,
-                "hot_times": [
-                    0.04052120000051218
-                ],
-                "hot_mean": 0.04052120000051218
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.04012050000164891,
-                "hot_times": [
-                    0.04229499999928521
-                ],
-                "hot_mean": 0.04229499999928521
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04585420000148588,
-                "hot_times": [
-                    0.04232169999886537
-                ],
-                "hot_mean": 0.04232169999886537
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04180450000058045,
-                "hot_times": [
-                    0.03915939999933471
-                ],
-                "hot_mean": 0.03915939999933471
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.0405283000000054,
-                "hot_times": [
-                    0.03977210000084597
-                ],
-                "hot_mean": 0.03977210000084597
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03927370000019437,
-                "hot_times": [
-                    0.04115219999948749
-                ],
-                "hot_mean": 0.04115219999948749
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.04408940000212169,
-                "hot_times": [
-                    0.04141170000002603
-                ],
-                "hot_mean": 0.04141170000002603
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.0380505000030098,
-                "hot_times": [
-                    0.04001110000172048
-                ],
-                "hot_mean": 0.04001110000172048
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.04007420000198181,
-                "hot_times": [
-                    0.03933360000155517
-                ],
-                "hot_mean": 0.03933360000155517
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04003920000104699,
-                "hot_times": [
-                    0.04345590000230004
-                ],
-                "hot_mean": 0.04345590000230004
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03832999999940512,
-                "hot_times": [
-                    0.04125030000068364
-                ],
-                "hot_mean": 0.04125030000068364
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.038101099999039434,
+                "cold_time": 0.03801519999979064,
                 "hot_times": [
-                    0.0411260000000766
+                    0.03867029999673832
                 ],
-                "hot_mean": 0.0411260000000766
+                "hot_mean": 0.03867029999673832
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.040590200002043275,
+                "cold_time": 0.039758499995514285,
                 "hot_times": [
-                    0.04879599999912898
+                    0.037456700003531296
                 ],
-                "hot_mean": 0.04879599999912898
+                "hot_mean": 0.037456700003531296
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.04076079999867943,
+                "cold_time": 0.03854039999714587,
                 "hot_times": [
-                    0.03941599999961909
+                    0.037720899999840185
                 ],
-                "hot_mean": 0.03941599999961909
+                "hot_mean": 0.037720899999840185
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.041703599999891594,
+                "cold_time": 0.039339499999186955,
                 "hot_times": [
-                    0.04113330000109272
+                    0.039036600006511435
                 ],
-                "hot_mean": 0.04113330000109272
+                "hot_mean": 0.039036600006511435
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03921740000077989,
+                "cold_time": 0.03907690000050934,
                 "hot_times": [
-                    0.04004249999707099
+                    0.038032999997085426
                 ],
-                "hot_mean": 0.04004249999707099
+                "hot_mean": 0.038032999997085426
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03834429999551503,
+                "hot_times": [
+                    0.03806639999675099
+                ],
+                "hot_mean": 0.03806639999675099
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.039550000001327135,
+                "cold_time": 0.039281500001379754,
                 "hot_times": [
-                    0.040556699997978285
+                    0.038241499998548534
                 ],
-                "hot_mean": 0.040556699997978285
+                "hot_mean": 0.038241499998548534
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.039601099997526035,
-                "hot_times": [
-                    0.039418800002749776
-                ],
-                "hot_mean": 0.039418800002749776
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03821640000023763,
+                "cold_time": 0.04098379999777535,
                 "hot_times": [
-                    0.04047749999881489
+                    0.038860100001329556
                 ],
-                "hot_mean": 0.04047749999881489
+                "hot_mean": 0.038860100001329556
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.03789939999842318,
-                "hot_times": [
-                    0.037244199997076066
-                ],
-                "hot_mean": 0.037244199997076066
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03650270000071032,
-                "hot_times": [
-                    0.037575799997284776
-                ],
-                "hot_mean": 0.037575799997284776
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.040545399999246,
+                "cold_time": 0.04058639999857405,
                 "hot_times": [
-                    0.03687519999948563
+                    0.04113900000083959
                 ],
-                "hot_mean": 0.03687519999948563
+                "hot_mean": 0.04113900000083959
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03649810000206344,
-                "hot_times": [
-                    0.036250000001018634
-                ],
-                "hot_mean": 0.036250000001018634
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03620740000042133,
-                "hot_times": [
-                    0.0398005999995803
-                ],
-                "hot_mean": 0.0398005999995803
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0407221000023128,
-                "hot_times": [
-                    0.03957579999769223
-                ],
-                "hot_mean": 0.03957579999769223
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.03873179999936838,
-                "hot_times": [
-                    0.039622500000405125
-                ],
-                "hot_mean": 0.039622500000405125
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.039527900000393856,
+                "cold_time": 0.03654909999750089,
                 "hot_times": [
-                    0.041599500000302214
+                    0.03894449999643257
                 ],
-                "hot_mean": 0.041599500000302214
+                "hot_mean": 0.03894449999643257
             }
         ]
     },
     {
         "query_id": 2,
-        "query": "// Step 1 \u2013 collect purchase categories and average price\nMATCH (u:User {user_id: 1})-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c:Category)\nWITH u, COLLECT(DISTINCT c) AS purchaseCategories, AVG(p1.price) AS avgPrice\n\n// Step 2 \u2013 collect wishlist categories separately\nOPTIONAL MATCH (u)-[:WISHLISTED]->(w:Product)-[:BELONGS_TO]->(wc:Category)\nWITH u, purchaseCategories, avgPrice, COLLECT(DISTINCT wc) AS wishlistCategories\n\n// Step 3 \u2013 merge the two lists without APOC\nWITH u, avgPrice, purchaseCategories + wishlistCategories AS allCategories\nUNWIND allCategories AS cat\nWITH u, avgPrice, COLLECT(DISTINCT cat) AS interestCategories\n\n// Step 4 \u2013 find recommended products\nMATCH (rec:Product)-[:BELONGS_TO]->(cat:Category)\nWHERE cat IN interestCategories\n  AND rec.price >= avgPrice * 0.7 \n  AND rec.price <= avgPrice * 1.3\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct,\n       cat.name AS Category,\n       rec.price AS Price,\n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
+        "query": "\n// Fetch a product\u2019s details and its category\nMATCH (p:Product {product_id: 3})-[:BELONGS_TO]->(c:Category)\nRETURN p.name, p.price, p.brand, c.name AS category;",
         "total_params": 50,
-        "cold_avg_sec": 0.044958688000042456,
-        "hot_avg_sec": 0.04020603799966921,
+        "cold_avg_sec": 0.038919415999698684,
+        "hot_avg_sec": 0.03831961000032606,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.21317710000221268,
-                "hot_times": [
-                    0.0446473000010883
-                ],
-                "hot_mean": 0.0446473000010883
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.042932299998938106,
-                "hot_times": [
-                    0.041009199998370605
-                ],
-                "hot_mean": 0.041009199998370605
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.042366400000901194,
+                "cold_time": 0.056939299996884074,
                 "hot_times": [
-                    0.04227080000055139
+                    0.03948000000673346
                 ],
-                "hot_mean": 0.04227080000055139
+                "hot_mean": 0.03948000000673346
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04128660000060336,
-                "hot_times": [
-                    0.04204020000179298
-                ],
-                "hot_mean": 0.04204020000179298
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.041732300000148825,
-                "hot_times": [
-                    0.04163849999895319
-                ],
-                "hot_mean": 0.04163849999895319
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.09033939999790164,
-                "hot_times": [
-                    0.038836499999888474
-                ],
-                "hot_mean": 0.038836499999888474
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.04170299999896088,
-                "hot_times": [
-                    0.04300639999928535
-                ],
-                "hot_mean": 0.04300639999928535
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.04265730000042822,
+                "cold_time": 0.038132599998789374,
                 "hot_times": [
-                    0.041432599999097874
+                    0.03880600000411505
                 ],
-                "hot_mean": 0.041432599999097874
+                "hot_mean": 0.03880600000411505
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03994280000188155,
+                "hot_times": [
+                    0.035712800003238954
+                ],
+                "hot_mean": 0.035712800003238954
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.0428076999996847,
+                "cold_time": 0.03564790000382345,
                 "hot_times": [
-                    0.04001290000087465
+                    0.04102760000387207
                 ],
-                "hot_mean": 0.04001290000087465
+                "hot_mean": 0.04102760000387207
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03923139999824343,
+                "hot_times": [
+                    0.03838199999881908
+                ],
+                "hot_mean": 0.03838199999881908
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.041792699998040916,
+                "cold_time": 0.045828599999367725,
                 "hot_times": [
-                    0.040348699996684445
+                    0.03596560000005411
                 ],
-                "hot_mean": 0.040348699996684445
+                "hot_mean": 0.03596560000005411
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.037009600000601495,
+                "cold_time": 0.040418799995677546,
                 "hot_times": [
-                    0.04064300000027288
+                    0.039605999998457264
                 ],
-                "hot_mean": 0.04064300000027288
+                "hot_mean": 0.039605999998457264
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.03987050000068848,
+                "cold_time": 0.03704690000449773,
                 "hot_times": [
-                    0.04062989999874844
+                    0.0384014000010211
                 ],
-                "hot_mean": 0.04062989999874844
+                "hot_mean": 0.0384014000010211
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.04079930000079912,
+                "cold_time": 0.038030899995646905,
                 "hot_times": [
-                    0.040181200001825346
+                    0.037515399999392685
                 ],
-                "hot_mean": 0.040181200001825346
+                "hot_mean": 0.037515399999392685
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03784340000129305,
+                "hot_times": [
+                    0.03706429999874672
+                ],
+                "hot_mean": 0.03706429999874672
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03905149999627611,
+                "hot_times": [
+                    0.03769339999416843
+                ],
+                "hot_mean": 0.03769339999416843
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.038579300002311356,
+                "hot_times": [
+                    0.03752919999533333
+                ],
+                "hot_mean": 0.03752919999533333
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.038340599996445235,
+                "hot_times": [
+                    0.03682390000176383
+                ],
+                "hot_mean": 0.03682390000176383
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.04012499999953434,
+                "cold_time": 0.04012230000080308,
                 "hot_times": [
-                    0.04002289999698405
+                    0.040126100000634324
                 ],
-                "hot_mean": 0.04002289999698405
+                "hot_mean": 0.040126100000634324
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03951429999870015,
+                "hot_times": [
+                    0.03832490000058897
+                ],
+                "hot_mean": 0.03832490000058897
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03920569999900181,
+                "hot_times": [
+                    0.038550400000531226
+                ],
+                "hot_mean": 0.038550400000531226
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04015570000046864,
+                "hot_times": [
+                    0.038417600000684615
+                ],
+                "hot_mean": 0.038417600000684615
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.03789169999799924,
+                "hot_times": [
+                    0.03620040000532754
+                ],
+                "hot_mean": 0.03620040000532754
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.03474760000244714,
+                "hot_times": [
+                    0.04002230000332929
+                ],
+                "hot_mean": 0.04002230000332929
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03679980000015348,
+                "hot_times": [
+                    0.039373200001136865
+                ],
+                "hot_mean": 0.039373200001136865
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.038449300001957454,
+                "hot_times": [
+                    0.037996700004441664
+                ],
+                "hot_mean": 0.037996700004441664
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04307159999734722,
+                "hot_times": [
+                    0.04019310000148835
+                ],
+                "hot_mean": 0.04019310000148835
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.037036100002296735,
+                "hot_times": [
+                    0.03863999999884982
+                ],
+                "hot_mean": 0.03863999999884982
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.03780229999392759,
+                "hot_times": [
+                    0.037829599998076446
+                ],
+                "hot_mean": 0.037829599998076446
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.038918500002182554,
+                "hot_times": [
+                    0.03957430000446038
+                ],
+                "hot_mean": 0.03957430000446038
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.040607399998407345,
+                "hot_times": [
+                    0.039305300000705756
+                ],
+                "hot_mean": 0.039305300000705756
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.04108000000269385,
+                "cold_time": 0.03778269999747863,
                 "hot_times": [
-                    0.040701400001125876
+                    0.037617000001773704
                 ],
-                "hot_mean": 0.040701400001125876
+                "hot_mean": 0.037617000001773704
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03801430000021355,
+                "hot_times": [
+                    0.03908460000093328
+                ],
+                "hot_mean": 0.03908460000093328
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03933439999673283,
+                "hot_times": [
+                    0.037728099996456876
+                ],
+                "hot_mean": 0.037728099996456876
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03888639999786392,
+                "hot_times": [
+                    0.03721840000071097
+                ],
+                "hot_mean": 0.03721840000071097
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.03838810000161175,
+                "hot_times": [
+                    0.03748250000353437
+                ],
+                "hot_mean": 0.03748250000353437
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.035681000001204666,
+                "hot_times": [
+                    0.03844350000144914
+                ],
+                "hot_mean": 0.03844350000144914
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03798180000012508,
+                "hot_times": [
+                    0.03857050000078743
+                ],
+                "hot_mean": 0.03857050000078743
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03770030000305269,
+                "hot_times": [
+                    0.03814019999845186
+                ],
+                "hot_mean": 0.03814019999845186
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.038449100000434555,
+                "hot_times": [
+                    0.039267000000108965
+                ],
+                "hot_mean": 0.039267000000108965
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.037933999999950174,
+                "hot_times": [
+                    0.037631799998052884
+                ],
+                "hot_mean": 0.037631799998052884
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04295069999716361,
+                "cold_time": 0.039784500004316214,
                 "hot_times": [
-                    0.041887200000928715
+                    0.03878570000233594
                 ],
-                "hot_mean": 0.041887200000928715
+                "hot_mean": 0.03878570000233594
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.041018500000063796,
+                "cold_time": 0.03815549999853829,
                 "hot_times": [
-                    0.041122700000414625
+                    0.03846930000145221
                 ],
-                "hot_mean": 0.041122700000414625
+                "hot_mean": 0.03846930000145221
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.04070990000036545,
+                "cold_time": 0.03919260000111535,
                 "hot_times": [
-                    0.04235340000013821
+                    0.038095999996585306
                 ],
-                "hot_mean": 0.04235340000013821
+                "hot_mean": 0.038095999996585306
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04003079999893089,
+                "cold_time": 0.0381995999996434,
                 "hot_times": [
-                    0.03991830000086338
+                    0.039555700001074
                 ],
-                "hot_mean": 0.03991830000086338
+                "hot_mean": 0.039555700001074
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.040786699999443954,
-                "hot_times": [
-                    0.04137970000010682
-                ],
-                "hot_mean": 0.04137970000010682
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.040554199997131946,
-                "hot_times": [
-                    0.041870100001688115
-                ],
-                "hot_mean": 0.041870100001688115
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.03911629999856814,
-                "hot_times": [
-                    0.036922399998729816
-                ],
-                "hot_mean": 0.036922399998729816
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04170940000039991,
-                "hot_times": [
-                    0.03988440000102855
-                ],
-                "hot_mean": 0.03988440000102855
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.04001390000121319,
-                "hot_times": [
-                    0.03900590000193915
-                ],
-                "hot_mean": 0.03900590000193915
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.039860099997895304,
-                "hot_times": [
-                    0.04049030000169296
-                ],
-                "hot_mean": 0.04049030000169296
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04083530000207247,
-                "hot_times": [
-                    0.04002349999791477
-                ],
-                "hot_mean": 0.04002349999791477
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03972309999880963,
-                "hot_times": [
-                    0.04020739999759826
-                ],
-                "hot_mean": 0.04020739999759826
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039371000002574874,
-                "hot_times": [
-                    0.03988250000111293
-                ],
-                "hot_mean": 0.03988250000111293
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.039861799999926006,
-                "hot_times": [
-                    0.03991189999942435
-                ],
-                "hot_mean": 0.03991189999942435
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.04084599999987404,
-                "hot_times": [
-                    0.04209810000247671
-                ],
-                "hot_mean": 0.04209810000247671
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03941259999919566,
-                "hot_times": [
-                    0.03987820000111242
-                ],
-                "hot_mean": 0.03987820000111242
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.03940599999987171,
-                "hot_times": [
-                    0.03686539999762317
-                ],
-                "hot_mean": 0.03686539999762317
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039395699997839984,
-                "hot_times": [
-                    0.0391429999981483
-                ],
-                "hot_mean": 0.0391429999981483
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04130740000255173,
-                "hot_times": [
-                    0.03938969999944675
-                ],
-                "hot_mean": 0.03938969999944675
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04080740000063088,
+                "cold_time": 0.038288900002953596,
                 "hot_times": [
-                    0.040566699997725664
+                    0.03788269999495242
                 ],
-                "hot_mean": 0.040566699997725664
+                "hot_mean": 0.03788269999495242
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.04229670000131591,
+                "cold_time": 0.03753370000049472,
                 "hot_times": [
-                    0.03832659999898169
+                    0.03791639999690233
                 ],
-                "hot_mean": 0.03832659999898169
+                "hot_mean": 0.03791639999690233
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03748049999921932,
+                "cold_time": 0.03835059999983059,
                 "hot_times": [
-                    0.04018720000021858
+                    0.03793430000223452
                 ],
-                "hot_mean": 0.04018720000021858
+                "hot_mean": 0.03793430000223452
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.04052709999814397,
+                "cold_time": 0.038352399998984765,
                 "hot_times": [
-                    0.04077789999792003
+                    0.03762350000033621
                 ],
-                "hot_mean": 0.04077789999792003
+                "hot_mean": 0.03762350000033621
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.039039500003127614,
+                "cold_time": 0.03731100000004517,
                 "hot_times": [
-                    0.039116900003136834
+                    0.03857689999858849
                 ],
-                "hot_mean": 0.039116900003136834
+                "hot_mean": 0.03857689999858849
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.0371852999960538,
+                "hot_times": [
+                    0.03789249999681488
+                ],
+                "hot_mean": 0.03789249999681488
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.039770299998053815,
+                "cold_time": 0.03910699999687495,
                 "hot_times": [
-                    0.03944529999716906
+                    0.03770549999899231
                 ],
-                "hot_mean": 0.03944529999716906
+                "hot_mean": 0.03770549999899231
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.03965299999981653,
-                "hot_times": [
-                    0.03780149999874993
-                ],
-                "hot_mean": 0.03780149999874993
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.04129079999984242,
+                "cold_time": 0.03821289999905275,
                 "hot_times": [
-                    0.03920229999857838
+                    0.03924140000162879
                 ],
-                "hot_mean": 0.03920229999857838
+                "hot_mean": 0.03924140000162879
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.03969430000142893,
-                "hot_times": [
-                    0.03719479999926989
-                ],
-                "hot_mean": 0.03719479999926989
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04085820000182139,
-                "hot_times": [
-                    0.039913199998409254
-                ],
-                "hot_mean": 0.039913199998409254
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04058749999967404,
+                "cold_time": 0.038519599998835474,
                 "hot_times": [
-                    0.03991729999688687
+                    0.03785339999740245
                 ],
-                "hot_mean": 0.03991729999688687
+                "hot_mean": 0.03785339999740245
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.040009500000451226,
-                "hot_times": [
-                    0.03963089999888325
-                ],
-                "hot_mean": 0.03963089999888325
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03985299999840208,
-                "hot_times": [
-                    0.039753000000928296
-                ],
-                "hot_mean": 0.039753000000928296
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03976460000194493,
-                "hot_times": [
-                    0.040520200000173645
-                ],
-                "hot_mean": 0.040520200000173645
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.039661700000579,
-                "hot_times": [
-                    0.039922600000863895
-                ],
-                "hot_mean": 0.039922600000863895
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.04005170000164071,
+                "cold_time": 0.03826880000269739,
                 "hot_times": [
-                    0.03836989999763318
+                    0.03870209999877261
                 ],
-                "hot_mean": 0.03836989999763318
+                "hot_mean": 0.03870209999877261
             }
         ]
     },
     {
         "query_id": 3,
-        "query": "MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec:Product)\nWHERE u1 <> other\n  AND NOT (u1)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct, COUNT(*) AS Popularity\nORDER BY Popularity DESC\nLIMIT 5;\n",
+        "query": "MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Product)-[:BELONGS_TO]->(c:Category)<-[:BELONGS_TO]-(rec:Product)\nWHERE rec.product_id <> p1.product_id\n  AND rec.price >= p1.price * 0.3 \n  AND rec.price <= p1.price * 1.5\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nWITH DISTINCT rec, c\nRETURN rec.name AS RecommendedProduct, \n       c.name AS Category, \n       rec.price AS Price, \n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
         "total_params": 50,
-        "cold_avg_sec": 0.04166202199994586,
-        "hot_avg_sec": 0.03885489799991774,
+        "cold_avg_sec": 0.04123760000045877,
+        "hot_avg_sec": 0.038359277999406916,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.107222599999659,
-                "hot_times": [
-                    0.037740599997050595
-                ],
-                "hot_mean": 0.037740599997050595
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.039905400000861846,
-                "hot_times": [
-                    0.039931800001795636
-                ],
-                "hot_mean": 0.039931800001795636
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.039351600000372855,
+                "cold_time": 0.11276270000234945,
                 "hot_times": [
-                    0.03885470000022906
+                    0.03826969999499852
                 ],
-                "hot_mean": 0.03885470000022906
+                "hot_mean": 0.03826969999499852
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039414200000464916,
-                "hot_times": [
-                    0.04036609999820939
-                ],
-                "hot_mean": 0.04036609999820939
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039579199998115655,
-                "hot_times": [
-                    0.039695300001767464
-                ],
-                "hot_mean": 0.039695300001767464
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.05673590000151307,
-                "hot_times": [
-                    0.03980330000194954
-                ],
-                "hot_mean": 0.03980330000194954
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.04048239999974612,
-                "hot_times": [
-                    0.035954699997091666
-                ],
-                "hot_mean": 0.035954699997091666
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.03962709999905201,
+                "cold_time": 0.03922779999993509,
                 "hot_times": [
-                    0.03972269999940181
+                    0.03995020000002114
                 ],
-                "hot_mean": 0.03972269999940181
+                "hot_mean": 0.03995020000002114
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.040807800003676675,
+                "hot_times": [
+                    0.039060500006598886
+                ],
+                "hot_mean": 0.039060500006598886
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.04053889999704552,
+                "cold_time": 0.039719100001093466,
                 "hot_times": [
-                    0.04023169999709353
+                    0.037512599999899976
                 ],
-                "hot_mean": 0.04023169999709353
+                "hot_mean": 0.037512599999899976
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03782810000120662,
+                "hot_times": [
+                    0.03861009999673115
+                ],
+                "hot_mean": 0.03861009999673115
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03921289999925648,
+                "cold_time": 0.05864100000326289,
                 "hot_times": [
-                    0.03947379999954137
+                    0.04041280000092229
                 ],
-                "hot_mean": 0.03947379999954137
+                "hot_mean": 0.04041280000092229
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.038151900000229944,
+                "cold_time": 0.03869290000147885,
                 "hot_times": [
-                    0.0381052999982785
+                    0.03762700000515906
                 ],
-                "hot_mean": 0.0381052999982785
+                "hot_mean": 0.03762700000515906
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.038231599999562604,
+                "cold_time": 0.03854350000619888,
                 "hot_times": [
-                    0.03762289999940549
+                    0.036869100003968924
                 ],
-                "hot_mean": 0.03762289999940549
+                "hot_mean": 0.036869100003968924
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.0384410000006028,
+                "cold_time": 0.03937360000418266,
                 "hot_times": [
-                    0.03998030000002473
+                    0.03989000000001397
                 ],
-                "hot_mean": 0.03998030000002473
+                "hot_mean": 0.03989000000001397
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.039317300004768185,
+                "hot_times": [
+                    0.03641369999968447
+                ],
+                "hot_mean": 0.03641369999968447
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03791750000527827,
+                "hot_times": [
+                    0.03606229999422794
+                ],
+                "hot_mean": 0.03606229999422794
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03796380000130739,
+                "hot_times": [
+                    0.037764799999422394
+                ],
+                "hot_mean": 0.037764799999422394
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03800459999911254,
+                "hot_times": [
+                    0.03984929999569431
+                ],
+                "hot_mean": 0.03984929999569431
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.03992379999908735,
+                "cold_time": 0.03893680000328459,
                 "hot_times": [
-                    0.038831899997603614
+                    0.03753560000041034
                 ],
-                "hot_mean": 0.038831899997603614
+                "hot_mean": 0.03753560000041034
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03820659999473719,
+                "hot_times": [
+                    0.036359399993671104
+                ],
+                "hot_mean": 0.036359399993671104
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.04108509999787202,
+                "hot_times": [
+                    0.03924810000171419
+                ],
+                "hot_mean": 0.03924810000171419
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04088849999970989,
+                "hot_times": [
+                    0.035923299998103175
+                ],
+                "hot_mean": 0.035923299998103175
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.03914049999730196,
+                "hot_times": [
+                    0.039082900002540555
+                ],
+                "hot_mean": 0.039082900002540555
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.03714239999681013,
+                "hot_times": [
+                    0.03881399999954738
+                ],
+                "hot_mean": 0.03881399999954738
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.041620900003181305,
+                "hot_times": [
+                    0.038487099998747
+                ],
+                "hot_mean": 0.038487099998747
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.040195800000219606,
+                "hot_times": [
+                    0.039370600003167056
+                ],
+                "hot_mean": 0.039370600003167056
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.0356130999934976,
+                "hot_times": [
+                    0.03884929999912856
+                ],
+                "hot_mean": 0.03884929999912856
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03747739999380428,
+                "hot_times": [
+                    0.037713899997470435
+                ],
+                "hot_mean": 0.037713899997470435
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.0381065999972634,
+                "hot_times": [
+                    0.037897700000030454
+                ],
+                "hot_mean": 0.037897700000030454
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.036288200004491955,
+                "hot_times": [
+                    0.03803630000038538
+                ],
+                "hot_mean": 0.03803630000038538
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.03813310000259662,
+                "hot_times": [
+                    0.038129799999296665
+                ],
+                "hot_mean": 0.038129799999296665
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.03984429999763961,
+                "cold_time": 0.0784222999936901,
                 "hot_times": [
-                    0.03992429999925662
+                    0.03963159999693744
                 ],
-                "hot_mean": 0.03992429999925662
+                "hot_mean": 0.03963159999693744
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04056480000144802,
+                "hot_times": [
+                    0.03579300000274088
+                ],
+                "hot_mean": 0.03579300000274088
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03554710000025807,
+                "hot_times": [
+                    0.03535319999355124
+                ],
+                "hot_mean": 0.03535319999355124
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03891109999676701,
+                "hot_times": [
+                    0.039735900005325675
+                ],
+                "hot_mean": 0.039735900005325675
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.037938200002827216,
+                "hot_times": [
+                    0.03597479999734787
+                ],
+                "hot_mean": 0.03597479999734787
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.0383942999978899,
+                "hot_times": [
+                    0.03938879999623168
+                ],
+                "hot_mean": 0.03938879999623168
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03836250000313157,
+                "hot_times": [
+                    0.04015899999649264
+                ],
+                "hot_mean": 0.04015899999649264
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03821749999769963,
+                "hot_times": [
+                    0.039676099993812386
+                ],
+                "hot_mean": 0.039676099993812386
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.03737630000250647,
+                "hot_times": [
+                    0.03828300000168383
+                ],
+                "hot_mean": 0.03828300000168383
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.035939900000812486,
+                "hot_times": [
+                    0.035807000000204425
+                ],
+                "hot_mean": 0.035807000000204425
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.07338089999757358,
+                "cold_time": 0.03917609999916749,
                 "hot_times": [
-                    0.03708170000027167
+                    0.039866799997980706
                 ],
-                "hot_mean": 0.03708170000027167
+                "hot_mean": 0.039866799997980706
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.039746200000081444,
+                "cold_time": 0.03824860000167973,
                 "hot_times": [
-                    0.03971810000075493
+                    0.038582000001042616
                 ],
-                "hot_mean": 0.03971810000075493
+                "hot_mean": 0.038582000001042616
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.040336699999897974,
+                "cold_time": 0.0398198000038974,
                 "hot_times": [
-                    0.03976730000067619
+                    0.03755570000066655
                 ],
-                "hot_mean": 0.03976730000067619
+                "hot_mean": 0.03755570000066655
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03947680000055698,
+                "cold_time": 0.03990380000323057,
                 "hot_times": [
-                    0.042661399998905836
+                    0.03757439999753842
                 ],
-                "hot_mean": 0.042661399998905836
+                "hot_mean": 0.03757439999753842
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03980020000017248,
-                "hot_times": [
-                    0.040295500002685
-                ],
-                "hot_mean": 0.040295500002685
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.04043639999872539,
-                "hot_times": [
-                    0.03908719999890309
-                ],
-                "hot_mean": 0.03908719999890309
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.04054110000288347,
-                "hot_times": [
-                    0.0395009999992908
-                ],
-                "hot_mean": 0.0395009999992908
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.0404807000013534,
-                "hot_times": [
-                    0.039864799997303635
-                ],
-                "hot_mean": 0.039864799997303635
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.039484300003095996,
-                "hot_times": [
-                    0.036181999999826076
-                ],
-                "hot_mean": 0.036181999999826076
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.04033820000040578,
-                "hot_times": [
-                    0.039533399998617824
-                ],
-                "hot_mean": 0.039533399998617824
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0395418999978574,
-                "hot_times": [
-                    0.03812300000208779
-                ],
-                "hot_mean": 0.03812300000208779
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04006160000062664,
-                "hot_times": [
-                    0.03925550000349176
-                ],
-                "hot_mean": 0.03925550000349176
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03854199999841512,
-                "hot_times": [
-                    0.0380364999982703
-                ],
-                "hot_mean": 0.0380364999982703
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03517900000224472,
-                "hot_times": [
-                    0.03854380000120727
-                ],
-                "hot_mean": 0.03854380000120727
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.041926199999579694,
-                "hot_times": [
-                    0.039724099999148166
-                ],
-                "hot_mean": 0.039724099999148166
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.038323699998727534,
-                "hot_times": [
-                    0.03992899999866495
-                ],
-                "hot_mean": 0.03992899999866495
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.04015389999767649,
-                "hot_times": [
-                    0.03629870000077062
-                ],
-                "hot_mean": 0.03629870000077062
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039344799999526,
-                "hot_times": [
-                    0.03796910000164644
-                ],
-                "hot_mean": 0.03796910000164644
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03812699999980396,
-                "hot_times": [
-                    0.03790160000062315
-                ],
-                "hot_mean": 0.03790160000062315
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03777759999866248,
+                "cold_time": 0.03540480000083335,
                 "hot_times": [
-                    0.038255699997534975
+                    0.0412133999998332
                 ],
-                "hot_mean": 0.038255699997534975
+                "hot_mean": 0.0412133999998332
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03840700000000652,
+                "cold_time": 0.03823569999804022,
                 "hot_times": [
-                    0.038323500000842614
+                    0.03830770000058692
                 ],
-                "hot_mean": 0.038323500000842614
+                "hot_mean": 0.03830770000058692
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03901720000067144,
+                "cold_time": 0.039654000000155065,
                 "hot_times": [
-                    0.035814200000459095
+                    0.0393019999974058
                 ],
-                "hot_mean": 0.035814200000459095
+                "hot_mean": 0.0393019999974058
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.0382011000001512,
+                "cold_time": 0.038167800004885066,
                 "hot_times": [
-                    0.03558039999916218
+                    0.038297399994917214
                 ],
-                "hot_mean": 0.03558039999916218
+                "hot_mean": 0.038297399994917214
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03977890000169282,
+                "cold_time": 0.03856890000315616,
                 "hot_times": [
-                    0.040545399999246
+                    0.03930140000011306
                 ],
-                "hot_mean": 0.040545399999246
+                "hot_mean": 0.03930140000011306
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.037660899994079955,
+                "hot_times": [
+                    0.0359972000005655
+                ],
+                "hot_mean": 0.0359972000005655
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03936479999902076,
+                "cold_time": 0.03854169999976875,
                 "hot_times": [
-                    0.03930229999969015
+                    0.03968670000176644
                 ],
-                "hot_mean": 0.03930229999969015
+                "hot_mean": 0.03968670000176644
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.038814700001239544,
-                "hot_times": [
-                    0.03895530000227154
-                ],
-                "hot_mean": 0.03895530000227154
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03850429999874905,
+                "cold_time": 0.038415299997723196,
                 "hot_times": [
-                    0.03935099999944214
+                    0.040106500004185364
                 ],
-                "hot_mean": 0.03935099999944214
+                "hot_mean": 0.040106500004185364
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.03778550000060932,
-                "hot_times": [
-                    0.03900500000236207
-                ],
-                "hot_mean": 0.03900500000236207
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.039762899999914225,
-                "hot_times": [
-                    0.04007630000342033
-                ],
-                "hot_mean": 0.04007630000342033
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.039978299999347655,
+                "cold_time": 0.0393331000013859,
                 "hot_times": [
-                    0.04027529999802937
+                    0.040534400002798066
                 ],
-                "hot_mean": 0.04027529999802937
+                "hot_mean": 0.040534400002798066
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0389458999998169,
-                "hot_times": [
-                    0.03836510000110138
-                ],
-                "hot_mean": 0.03836510000110138
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03868670000156271,
-                "hot_times": [
-                    0.03868460000012419
-                ],
-                "hot_mean": 0.03868460000012419
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03832230000261916,
-                "hot_times": [
-                    0.03794049999851268
-                ],
-                "hot_mean": 0.03794049999851268
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.03826420000041253,
-                "hot_times": [
-                    0.03835149999940768
-                ],
-                "hot_mean": 0.03835149999940768
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.039605300000403076,
+                "cold_time": 0.03944079999928363,
                 "hot_times": [
-                    0.03820570000243606
+                    0.03809579999506241
                 ],
-                "hot_mean": 0.03820570000243606
+                "hot_mean": 0.03809579999506241
             }
         ]
     },
     {
         "query_id": 4,
-        "query": "// Hybrid recommendation combining multiple signals\nMATCH (u:User {user_id: 1})\n\n// --- Purchases ---\nOPTIONAL MATCH (u)-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c1:Category)<-[:BELONGS_TO]-(rec1:Product)\nWHERE rec1 <> p1\nWITH u, rec1, COUNT(*) * 2 AS purchaseScore  // weight 2\n\n// --- Wishlists ---\nOPTIONAL MATCH (u)-[:WISHLISTED]->(p2:Product)-[:BELONGS_TO]->(c2:Category)<-[:BELONGS_TO]-(rec2:Product)\nWHERE rec2 <> p2\nWITH u, rec1, rec2, purchaseScore, COUNT(rec2) * 1.5 AS wishlistScore  // weight 1.5\n\n// --- Other users (collaborative) ---\nOPTIONAL MATCH (u)-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec3:Product)\nWHERE rec3 <> p\nWITH u, rec1, rec2, rec3, purchaseScore, wishlistScore, COUNT(rec3) * 1.0 AS collabScore\n\n// --- Combine all ---\nWITH COALESCE(rec1, rec2, rec3) AS rec,\n     COALESCE(purchaseScore,0) + COALESCE(wishlistScore,0) + COALESCE(collabScore,0) AS totalScore\nRETURN rec.name AS RecommendedProduct, rec.price, rec.brand, totalScore\nORDER BY totalScore DESC\nLIMIT 5;\n",
+        "query": "// Step 1 \u2013 collect purchase categories and average price\nMATCH (u:User {user_id: 1})-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c:Category)\nWITH u, COLLECT(DISTINCT c) AS purchaseCategories, AVG(p1.price) AS avgPrice\n\n// Step 2 \u2013 collect wishlist categories separately\nOPTIONAL MATCH (u)-[:WISHLISTED]->(w:Product)-[:BELONGS_TO]->(wc:Category)\nWITH u, purchaseCategories, avgPrice, COLLECT(DISTINCT wc) AS wishlistCategories\n\n// Step 3 \u2013 merge the two lists without APOC\nWITH u, avgPrice, purchaseCategories + wishlistCategories AS allCategories\nUNWIND allCategories AS cat\nWITH u, avgPrice, COLLECT(DISTINCT cat) AS interestCategories\n\n// Step 4 \u2013 find recommended products\nMATCH (rec:Product)-[:BELONGS_TO]->(cat:Category)\nWHERE cat IN interestCategories\n  AND rec.price >= avgPrice * 0.7 \n  AND rec.price <= avgPrice * 1.3\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct,\n       cat.name AS Category,\n       rec.price AS Price,\n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
         "total_params": 50,
-        "cold_avg_sec": 0.047050355999890596,
-        "hot_avg_sec": 0.04249383199996373,
+        "cold_avg_sec": 0.041858804000512465,
+        "hot_avg_sec": 0.039974911999161124,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.2019557999992685,
-                "hot_times": [
-                    0.050703999997494975
-                ],
-                "hot_mean": 0.050703999997494975
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.07936739999786369,
-                "hot_times": [
-                    0.053447599999344675
-                ],
-                "hot_mean": 0.053447599999344675
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.04583669999919948,
+                "cold_time": 0.1396969000052195,
                 "hot_times": [
-                    0.0456607999985863
+                    0.03679169999668375
                 ],
-                "hot_mean": 0.0456607999985863
+                "hot_mean": 0.03679169999668375
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04594279999946593,
-                "hot_times": [
-                    0.04515750000064145
-                ],
-                "hot_mean": 0.04515750000064145
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04634770000120625,
-                "hot_times": [
-                    0.04772369999773218
-                ],
-                "hot_mean": 0.04772369999773218
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.10567119999905117,
-                "hot_times": [
-                    0.049092899997049244
-                ],
-                "hot_mean": 0.049092899997049244
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.047408399997948436,
-                "hot_times": [
-                    0.04732760000115377
-                ],
-                "hot_mean": 0.04732760000115377
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.04616650000025402,
+                "cold_time": 0.04002369999943767,
                 "hot_times": [
-                    0.04668060000039986
+                    0.04314969999541063
                 ],
-                "hot_mean": 0.04668060000039986
+                "hot_mean": 0.04314969999541063
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.039336800000455696,
+                "hot_times": [
+                    0.04037680000328692
+                ],
+                "hot_mean": 0.04037680000328692
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.044720199999574106,
+                "cold_time": 0.03970660000049975,
                 "hot_times": [
-                    0.045855199998186436
+                    0.04025800000090385
                 ],
-                "hot_mean": 0.045855199998186436
+                "hot_mean": 0.04025800000090385
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03870979999919655,
+                "hot_times": [
+                    0.040406200001598336
+                ],
+                "hot_mean": 0.040406200001598336
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.047299100002419436,
+                "cold_time": 0.07018680000328459,
                 "hot_times": [
-                    0.046343900001375005
+                    0.03987180000694934
                 ],
-                "hot_mean": 0.046343900001375005
+                "hot_mean": 0.03987180000694934
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.04285460000028252,
+                "cold_time": 0.04015429999708431,
                 "hot_times": [
-                    0.04191300000093179
+                    0.036063799998373725
                 ],
-                "hot_mean": 0.04191300000093179
+                "hot_mean": 0.036063799998373725
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.041096499997365754,
+                "cold_time": 0.039298399999097455,
                 "hot_times": [
-                    0.04229880000275443
+                    0.04061370000272291
                 ],
-                "hot_mean": 0.04229880000275443
+                "hot_mean": 0.04061370000272291
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.04191519999949378,
+                "cold_time": 0.03664180000487249,
                 "hot_times": [
-                    0.041611300002841745
+                    0.037779599995701574
                 ],
-                "hot_mean": 0.041611300002841745
+                "hot_mean": 0.037779599995701574
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.036206400000082795,
+                "hot_times": [
+                    0.03748040000209585
+                ],
+                "hot_mean": 0.03748040000209585
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.0365721999987727,
+                "hot_times": [
+                    0.039082700001017656
+                ],
+                "hot_mean": 0.039082700001017656
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.0403227999995579,
+                "hot_times": [
+                    0.03689239999948768
+                ],
+                "hot_mean": 0.03689239999948768
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.0366481000019121,
+                "hot_times": [
+                    0.04041249999863794
+                ],
+                "hot_mean": 0.04041249999863794
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.04279049999968265,
+                "cold_time": 0.03945180000300752,
                 "hot_times": [
-                    0.04188649999923655
+                    0.03667810000479221
                 ],
-                "hot_mean": 0.04188649999923655
+                "hot_mean": 0.03667810000479221
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.039406800002325326,
+                "hot_times": [
+                    0.04010660000494681
+                ],
+                "hot_mean": 0.04010660000494681
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.04031889999896521,
+                "hot_times": [
+                    0.038383799997973256
+                ],
+                "hot_mean": 0.038383799997973256
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04132920000120066,
+                "hot_times": [
+                    0.04081859999860171
+                ],
+                "hot_mean": 0.04081859999860171
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.039470399999117944,
+                "hot_times": [
+                    0.037169199997151736
+                ],
+                "hot_mean": 0.037169199997151736
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.040624100001878105,
+                "hot_times": [
+                    0.04491029999917373
+                ],
+                "hot_mean": 0.04491029999917373
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03953709999768762,
+                "hot_times": [
+                    0.04028180000022985
+                ],
+                "hot_mean": 0.04028180000022985
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.040389200003119186,
+                "hot_times": [
+                    0.03952209999988554
+                ],
+                "hot_mean": 0.03952209999988554
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04100279999693157,
+                "hot_times": [
+                    0.03821849999803817
+                ],
+                "hot_mean": 0.03821849999803817
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03808810000191443,
+                "hot_times": [
+                    0.04013719999784371
+                ],
+                "hot_mean": 0.04013719999784371
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.04078979999758303,
+                "hot_times": [
+                    0.04062300000077812
+                ],
+                "hot_mean": 0.04062300000077812
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.038683500002662186,
+                "hot_times": [
+                    0.04163970000081463
+                ],
+                "hot_mean": 0.04163970000081463
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.0393162000036682,
+                "hot_times": [
+                    0.043406699995102827
+                ],
+                "hot_mean": 0.043406699995102827
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.04256869999881019,
+                "cold_time": 0.03936510000494309,
                 "hot_times": [
-                    0.03951819999929285
+                    0.03901459999906365
                 ],
-                "hot_mean": 0.03951819999929285
+                "hot_mean": 0.03901459999906365
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03764000000228407,
+                "hot_times": [
+                    0.04101379999337951
+                ],
+                "hot_mean": 0.04101379999337951
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.039481600004364736,
+                "hot_times": [
+                    0.038732899993192405
+                ],
+                "hot_mean": 0.038732899993192405
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03764760000194656,
+                "hot_times": [
+                    0.038659999998344574
+                ],
+                "hot_mean": 0.038659999998344574
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.04029699999955483,
+                "hot_times": [
+                    0.040152399997168686
+                ],
+                "hot_mean": 0.040152399997168686
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.040103800005454104,
+                "hot_times": [
+                    0.0401036999974167
+                ],
+                "hot_mean": 0.0401036999974167
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03973539999424247,
+                "hot_times": [
+                    0.03937260000384413
+                ],
+                "hot_mean": 0.03937260000384413
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.040220199996838346,
+                "hot_times": [
+                    0.04084399999555899
+                ],
+                "hot_mean": 0.04084399999555899
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.0394877000071574,
+                "hot_times": [
+                    0.0399598000003607
+                ],
+                "hot_mean": 0.0399598000003607
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.03925500000332249,
+                "hot_times": [
+                    0.042121300000872
+                ],
+                "hot_mean": 0.042121300000872
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04107250000015483,
+                "cold_time": 0.03857219999918016,
                 "hot_times": [
-                    0.04208629999993718
+                    0.04285179999715183
                 ],
-                "hot_mean": 0.04208629999993718
+                "hot_mean": 0.04285179999715183
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.04348599999866565,
+                "cold_time": 0.03951849999430124,
                 "hot_times": [
-                    0.04300439999860828
+                    0.041031199994904455
                 ],
-                "hot_mean": 0.04300439999860828
+                "hot_mean": 0.041031199994904455
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.042174800000793766,
+                "cold_time": 0.03917399999772897,
                 "hot_times": [
-                    0.042134100000112085
+                    0.03795410000020638
                 ],
-                "hot_mean": 0.042134100000112085
+                "hot_mean": 0.03795410000020638
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04102939999938826,
+                "cold_time": 0.04036630000337027,
                 "hot_times": [
-                    0.04235500000140746
+                    0.04038030000083381
                 ],
-                "hot_mean": 0.04235500000140746
+                "hot_mean": 0.04038030000083381
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04187360000287299,
-                "hot_times": [
-                    0.04185159999906318
-                ],
-                "hot_mean": 0.04185159999906318
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.04160310000224854,
-                "hot_times": [
-                    0.03796220000003814
-                ],
-                "hot_mean": 0.03796220000003814
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.042979000001651,
-                "hot_times": [
-                    0.041464000001724344
-                ],
-                "hot_mean": 0.041464000001724344
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04182120000041323,
-                "hot_times": [
-                    0.04222670000308426
-                ],
-                "hot_mean": 0.04222670000308426
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.041190600000845734,
-                "hot_times": [
-                    0.03744670000014594
-                ],
-                "hot_mean": 0.03744670000014594
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.04285309999977471,
-                "hot_times": [
-                    0.041734500002348796
-                ],
-                "hot_mean": 0.041734500002348796
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03951759999836213,
-                "hot_times": [
-                    0.03803679999691667
-                ],
-                "hot_mean": 0.03803679999691667
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.041130199999315664,
-                "hot_times": [
-                    0.04091770000013639
-                ],
-                "hot_mean": 0.04091770000013639
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04037469999821042,
-                "hot_times": [
-                    0.04075430000011693
-                ],
-                "hot_mean": 0.04075430000011693
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04111519999787561,
-                "hot_times": [
-                    0.042346900001575705
-                ],
-                "hot_mean": 0.042346900001575705
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.041422300000704126,
-                "hot_times": [
-                    0.046177000000170665
-                ],
-                "hot_mean": 0.046177000000170665
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.040501100000255974,
-                "hot_times": [
-                    0.04009550000046147
-                ],
-                "hot_mean": 0.04009550000046147
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.03787289999672794,
-                "hot_times": [
-                    0.039603199998964556
-                ],
-                "hot_mean": 0.039603199998964556
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.040962999999464955,
-                "hot_times": [
-                    0.04072549999909825
-                ],
-                "hot_mean": 0.04072549999909825
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.04138050000256044,
-                "hot_times": [
-                    0.042151300000114134
-                ],
-                "hot_mean": 0.042151300000114134
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03999090000070282,
+                "cold_time": 0.04038990000117337,
                 "hot_times": [
-                    0.04192239999974845
+                    0.040634399992995895
                 ],
-                "hot_mean": 0.04192239999974845
+                "hot_mean": 0.040634399992995895
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.04207250000035856,
+                "cold_time": 0.03819189999921946,
                 "hot_times": [
-                    0.03805649999776506
+                    0.04131800000322983
                 ],
-                "hot_mean": 0.03805649999776506
+                "hot_mean": 0.04131800000322983
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.037467199999809964,
+                "cold_time": 0.040479199997207616,
                 "hot_times": [
-                    0.038018399998691166
+                    0.04064920000382699
                 ],
-                "hot_mean": 0.038018399998691166
+                "hot_mean": 0.04064920000382699
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.04014699999970617,
+                "cold_time": 0.03840730000229087,
                 "hot_times": [
-                    0.03987789999882807
+                    0.038667100001475774
                 ],
-                "hot_mean": 0.03987789999882807
+                "hot_mean": 0.038667100001475774
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03712850000010803,
+                "cold_time": 0.037665399999241345,
                 "hot_times": [
-                    0.04430930000307853
+                    0.04083819999505067
                 ],
-                "hot_mean": 0.04430930000307853
+                "hot_mean": 0.04083819999505067
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03809120000369148,
+                "hot_times": [
+                    0.03917859999637585
+                ],
+                "hot_mean": 0.03917859999637585
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.040750399999524234,
+                "cold_time": 0.038373599993065,
                 "hot_times": [
-                    0.0401516999991145
+                    0.04124289999890607
                 ],
-                "hot_mean": 0.0401516999991145
+                "hot_mean": 0.04124289999890607
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.03899540000202251,
-                "hot_times": [
-                    0.040133300000888994
-                ],
-                "hot_mean": 0.040133300000888994
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.04209179999816115,
+                "cold_time": 0.03981529999873601,
                 "hot_times": [
-                    0.041688799999974435
+                    0.04056010000203969
                 ],
-                "hot_mean": 0.041688799999974435
+                "hot_mean": 0.04056010000203969
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.042606099999829894,
-                "hot_times": [
-                    0.041894800000591204
-                ],
-                "hot_mean": 0.041894800000591204
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.039881400000012945,
-                "hot_times": [
-                    0.042262299997673836
-                ],
-                "hot_mean": 0.042262299997673836
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.039863999998488,
+                "cold_time": 0.03867569999420084,
                 "hot_times": [
-                    0.04134699999849545
+                    0.04141929999605054
                 ],
-                "hot_mean": 0.04134699999849545
+                "hot_mean": 0.04141929999605054
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03788640000129817,
-                "hot_times": [
-                    0.04192300000067917
-                ],
-                "hot_mean": 0.04192300000067917
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0424276000012469,
-                "hot_times": [
-                    0.041321400000015274
-                ],
-                "hot_mean": 0.041321400000015274
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.041366900000866735,
-                "hot_times": [
-                    0.04022190000250703
-                ],
-                "hot_mean": 0.04022190000250703
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.041710800000146264,
-                "hot_times": [
-                    0.040368099998886464
-                ],
-                "hot_mean": 0.040368099998886464
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.041828800000075717,
+                "cold_time": 0.04007380000257399,
                 "hot_times": [
-                    0.04289950000020326
+                    0.040970399997604545
                 ],
-                "hot_mean": 0.04289950000020326
+                "hot_mean": 0.040970399997604545
             }
         ]
     },
     {
         "query_id": 5,
-        "query": "// Fetch a specific user's orders\nMATCH (u:User {user_id: 1})-[r:PLACED]->(p:Product)\nRETURN u.name, p.name, r.quantity, r.total_price;\n\n",
+        "query": "MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec:Product)\nWHERE u1 <> other\n  AND NOT (u1)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct, COUNT(*) AS Popularity\nORDER BY Popularity DESC\nLIMIT 5;\n",
         "total_params": 50,
-        "cold_avg_sec": 0.04257387800025754,
-        "hot_avg_sec": 0.03761880400008522,
+        "cold_avg_sec": 0.03974904000002425,
+        "hot_avg_sec": 0.038469965999247506,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.07557370000358787,
-                "hot_times": [
-                    0.03587150000021211
-                ],
-                "hot_mean": 0.03587150000021211
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.03835840000101598,
-                "hot_times": [
-                    0.038214399999560555
-                ],
-                "hot_mean": 0.038214399999560555
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03844580000077258,
+                "cold_time": 0.08322999999654712,
                 "hot_times": [
-                    0.0369801999986521
+                    0.037392099999124184
                 ],
-                "hot_mean": 0.0369801999986521
+                "hot_mean": 0.037392099999124184
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.038390999998227926,
-                "hot_times": [
-                    0.035315999997692415
-                ],
-                "hot_mean": 0.035315999997692415
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.038872500001161825,
-                "hot_times": [
-                    0.03735249999954249
-                ],
-                "hot_mean": 0.03735249999954249
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.049641800000244984,
-                "hot_times": [
-                    0.038853799997013994
-                ],
-                "hot_mean": 0.038853799997013994
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.038393599999835715,
-                "hot_times": [
-                    0.03924199999892153
-                ],
-                "hot_mean": 0.03924199999892153
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.03849439999976312,
+                "cold_time": 0.03720400000020163,
                 "hot_times": [
-                    0.03800979999869014
+                    0.038676700001815334
                 ],
-                "hot_mean": 0.03800979999869014
+                "hot_mean": 0.038676700001815334
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03778289999900153,
+                "hot_times": [
+                    0.037853299996641
+                ],
+                "hot_mean": 0.037853299996641
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.03754879999905825,
+                "cold_time": 0.03799360000266461,
                 "hot_times": [
-                    0.035158800001227064
+                    0.040273799997521564
                 ],
-                "hot_mean": 0.035158800001227064
+                "hot_mean": 0.040273799997521564
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.038183199998456985,
+                "hot_times": [
+                    0.037343200005125254
+                ],
+                "hot_mean": 0.037343200005125254
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03927790000307141,
+                "cold_time": 0.05567400000290945,
                 "hot_times": [
-                    0.0376670000005106
+                    0.03830249999737134
                 ],
-                "hot_mean": 0.0376670000005106
+                "hot_mean": 0.03830249999737134
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.038088400000560796,
+                "cold_time": 0.03663339999911841,
                 "hot_times": [
-                    0.03766100000211736
+                    0.03890049999608891
                 ],
-                "hot_mean": 0.03766100000211736
+                "hot_mean": 0.03890049999608891
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.0351838000024145,
+                "cold_time": 0.03819890000158921,
                 "hot_times": [
-                    0.035168599999451544
+                    0.03703739999764366
                 ],
-                "hot_mean": 0.035168599999451544
+                "hot_mean": 0.03703739999764366
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03467780000210041,
+                "cold_time": 0.03915069999493426,
                 "hot_times": [
-                    0.03480389999822364
+                    0.04090939999878174
                 ],
-                "hot_mean": 0.03480389999822364
+                "hot_mean": 0.04090939999878174
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03645229999528965,
+                "hot_times": [
+                    0.038604199995461386
+                ],
+                "hot_mean": 0.038604199995461386
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.037781500002893154,
+                "hot_times": [
+                    0.03590239999903133
+                ],
+                "hot_mean": 0.03590239999903133
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03925790000357665,
+                "hot_times": [
+                    0.038473599997814745
+                ],
+                "hot_mean": 0.038473599997814745
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03838220000034198,
+                "hot_times": [
+                    0.03841620000457624
+                ],
+                "hot_mean": 0.03841620000457624
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.0383947000009357,
+                "cold_time": 0.03819220000150381,
                 "hot_times": [
-                    0.034848600000259466
+                    0.039082900002540555
                 ],
-                "hot_mean": 0.034848600000259466
+                "hot_mean": 0.039082900002540555
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03790120000485331,
+                "hot_times": [
+                    0.041790499999478925
+                ],
+                "hot_mean": 0.041790499999478925
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.039801799997803755,
+                "hot_times": [
+                    0.037372899998445064
+                ],
+                "hot_mean": 0.037372899998445064
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04033019999769749,
+                "hot_times": [
+                    0.03749899999820627
+                ],
+                "hot_mean": 0.03749899999820627
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.03847289999976056,
+                "hot_times": [
+                    0.04030320000310894
+                ],
+                "hot_mean": 0.04030320000310894
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.03938249999919208,
+                "hot_times": [
+                    0.037178799997491296
+                ],
+                "hot_mean": 0.037178799997491296
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.038673800001561176,
+                "hot_times": [
+                    0.03871179999987362
+                ],
+                "hot_mean": 0.03871179999987362
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.03828189999330789,
+                "hot_times": [
+                    0.03913209999882383
+                ],
+                "hot_mean": 0.03913209999882383
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03860940000595292,
+                "hot_times": [
+                    0.039781799998309
+                ],
+                "hot_mean": 0.039781799998309
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03995759999816073,
+                "hot_times": [
+                    0.040088700006890576
+                ],
+                "hot_mean": 0.040088700006890576
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.03748040000209585,
+                "hot_times": [
+                    0.03764949999458622
+                ],
+                "hot_mean": 0.03764949999458622
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03758739999466343,
+                "hot_times": [
+                    0.04367919999640435
+                ],
+                "hot_mean": 0.04367919999640435
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.04242559999693185,
+                "hot_times": [
+                    0.03847429999586893
+                ],
+                "hot_mean": 0.03847429999586893
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.034629099998710444,
+                "cold_time": 0.03751459999330109,
                 "hot_times": [
-                    0.035800000001472654
+                    0.03901989999576472
                 ],
-                "hot_mean": 0.035800000001472654
+                "hot_mean": 0.03901989999576472
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.039172299999336246,
+                "hot_times": [
+                    0.0392541999972309
+                ],
+                "hot_mean": 0.0392541999972309
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.039546800006064586,
+                "hot_times": [
+                    0.042608000003383495
+                ],
+                "hot_mean": 0.042608000003383495
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.03955790000327397,
+                "hot_times": [
+                    0.039434299993445165
+                ],
+                "hot_mean": 0.039434299993445165
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.04206829999748152,
+                "hot_times": [
+                    0.03786900000704918
+                ],
+                "hot_mean": 0.03786900000704918
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.038193000000319444,
+                "hot_times": [
+                    0.037322099997254554
+                ],
+                "hot_mean": 0.037322099997254554
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04069770000205608,
+                "hot_times": [
+                    0.04180349999660393
+                ],
+                "hot_mean": 0.04180349999660393
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.034755199994833674,
+                "hot_times": [
+                    0.03785499999503372
+                ],
+                "hot_mean": 0.03785499999503372
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.037946299999020994,
+                "hot_times": [
+                    0.03789449999749195
+                ],
+                "hot_mean": 0.03789449999749195
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.03688819999661064,
+                "hot_times": [
+                    0.03853199999866774
+                ],
+                "hot_mean": 0.03853199999866774
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03868030000012368,
+                "cold_time": 0.03711269999621436,
                 "hot_times": [
-                    0.03613070000210428
+                    0.03676809999888064
                 ],
-                "hot_mean": 0.03613070000210428
+                "hot_mean": 0.03676809999888064
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.0346559999998135,
+                "cold_time": 0.037130700002308004,
                 "hot_times": [
-                    0.0391632999999274
+                    0.03672560000268277
                 ],
-                "hot_mean": 0.0391632999999274
+                "hot_mean": 0.03672560000268277
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.03816480000023148,
+                "cold_time": 0.03606469999795081,
                 "hot_times": [
-                    0.03772270000263234
+                    0.04250569999567233
                 ],
-                "hot_mean": 0.03772270000263234
+                "hot_mean": 0.04250569999567233
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.038543399998161476,
+                "cold_time": 0.038490799997816794,
                 "hot_times": [
-                    0.037156700000196
+                    0.036695100003271364
                 ],
-                "hot_mean": 0.037156700000196
+                "hot_mean": 0.036695100003271364
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.038451399999757996,
-                "hot_times": [
-                    0.03836080000110087
-                ],
-                "hot_mean": 0.03836080000110087
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.03794480000215117,
-                "hot_times": [
-                    0.038432000001193956
-                ],
-                "hot_mean": 0.038432000001193956
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.03698200000144425,
-                "hot_times": [
-                    0.035530900000594556
-                ],
-                "hot_mean": 0.035530900000594556
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039736799997626804,
-                "hot_times": [
-                    0.03641100000095321
-                ],
-                "hot_mean": 0.03641100000095321
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.039278899999771966,
-                "hot_times": [
-                    0.037597499998810235
-                ],
-                "hot_mean": 0.037597499998810235
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.03559750000204076,
-                "hot_times": [
-                    0.03544979999787756
-                ],
-                "hot_mean": 0.03544979999787756
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03887390000090818,
-                "hot_times": [
-                    0.03873590000148397
-                ],
-                "hot_mean": 0.03873590000148397
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03714570000011008,
-                "hot_times": [
-                    0.03755799999998999
-                ],
-                "hot_mean": 0.03755799999998999
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03908370000135619,
-                "hot_times": [
-                    0.037793299998156726
-                ],
-                "hot_mean": 0.037793299998156726
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03795420000096783,
-                "hot_times": [
-                    0.03765029999703984
-                ],
-                "hot_mean": 0.03765029999703984
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.038081099999544676,
-                "hot_times": [
-                    0.03781890000027488
-                ],
-                "hot_mean": 0.03781890000027488
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03532980000090902,
-                "hot_times": [
-                    0.038695999999617925
-                ],
-                "hot_mean": 0.038695999999617925
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.03831440000067232,
-                "hot_times": [
-                    0.0378963000002841
-                ],
-                "hot_mean": 0.0378963000002841
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03744120000192197,
-                "hot_times": [
-                    0.03825510000024224
-                ],
-                "hot_mean": 0.03825510000024224
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0379609999981767,
-                "hot_times": [
-                    0.038894000001164386
-                ],
-                "hot_mean": 0.038894000001164386
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.039414399998349836,
+                "cold_time": 0.03767290000541834,
                 "hot_times": [
-                    0.03808760000174516
+                    0.0381072000018321
                 ],
-                "hot_mean": 0.03808760000174516
+                "hot_mean": 0.0381072000018321
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03811629999836441,
+                "cold_time": 0.04279289999976754,
                 "hot_times": [
-                    0.039373100000375416
+                    0.036128600004303735
                 ],
-                "hot_mean": 0.039373100000375416
+                "hot_mean": 0.036128600004303735
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03495189999739523,
+                "cold_time": 0.03652710000460502,
                 "hot_times": [
-                    0.03955309999946621
+                    0.034565699999802746
                 ],
-                "hot_mean": 0.03955309999946621
+                "hot_mean": 0.034565699999802746
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.23131369999828166,
+                "cold_time": 0.03944840000622207,
                 "hot_times": [
-                    0.039169700001366436
+                    0.035156099998857826
                 ],
-                "hot_mean": 0.039169700001366436
+                "hot_mean": 0.035156099998857826
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03906939999797032,
+                "cold_time": 0.03972960000101011,
                 "hot_times": [
-                    0.03781989999697544
+                    0.0369289000009303
                 ],
-                "hot_mean": 0.03781989999697544
+                "hot_mean": 0.0369289000009303
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03682600000320235,
+                "hot_times": [
+                    0.03732229999877745
+                ],
+                "hot_mean": 0.03732229999877745
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.038688700002239784,
+                "cold_time": 0.03856670000095619,
                 "hot_times": [
-                    0.03731350000089151
+                    0.03867680000257678
                 ],
-                "hot_mean": 0.03731350000089151
+                "hot_mean": 0.03867680000257678
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.038645599997835234,
-                "hot_times": [
-                    0.038422999998147134
-                ],
-                "hot_mean": 0.038422999998147134
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.039025199999741744,
+                "cold_time": 0.04182230000151321,
                 "hot_times": [
-                    0.038267300002189586
+                    0.03726260000257753
                 ],
-                "hot_mean": 0.038267300002189586
+                "hot_mean": 0.03726260000257753
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.037788600002386374,
-                "hot_times": [
-                    0.03824400000303285
-                ],
-                "hot_mean": 0.03824400000303285
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03750149999905261,
-                "hot_times": [
-                    0.03817940000226372
-                ],
-                "hot_mean": 0.03817940000226372
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03517120000105933,
+                "cold_time": 0.03767689999949653,
                 "hot_times": [
-                    0.038901500000065425
+                    0.03580399999918882
                 ],
-                "hot_mean": 0.038901500000065425
+                "hot_mean": 0.03580399999918882
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03770499999882304,
-                "hot_times": [
-                    0.03807120000055875
-                ],
-                "hot_mean": 0.03807120000055875
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.038386100000934675,
-                "hot_times": [
-                    0.03778249999959371
-                ],
-                "hot_mean": 0.03778249999959371
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.035487500001181616,
-                "hot_times": [
-                    0.03850810000221827
-                ],
-                "hot_mean": 0.03850810000221827
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.0376140000007581,
-                "hot_times": [
-                    0.03859000000011292
-                ],
-                "hot_mean": 0.03859000000011292
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.0376222000013513,
+                "cold_time": 0.03822850000142353,
                 "hot_times": [
-                    0.03845499999806634
+                    0.040429099994071294
                 ],
-                "hot_mean": 0.03845499999806634
+                "hot_mean": 0.040429099994071294
             }
         ]
     },
     {
         "query_id": 6,
-        "query": "\n// Fetch a product\u2019s details and its category\nMATCH (p:Product {product_id: 3})-[:BELONGS_TO]->(c:Category)\nRETURN p.name, p.price, p.brand, c.name AS category;",
+        "query": "// Hybrid recommendation combining multiple signals\nMATCH (u:User {user_id: 1})\n\n// --- Purchases ---\nOPTIONAL MATCH (u)-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c1:Category)<-[:BELONGS_TO]-(rec1:Product)\nWHERE rec1 <> p1\nWITH u, rec1, COUNT(*) * 2 AS purchaseScore  // weight 2\n\n// --- Wishlists ---\nOPTIONAL MATCH (u)-[:WISHLISTED]->(p2:Product)-[:BELONGS_TO]->(c2:Category)<-[:BELONGS_TO]-(rec2:Product)\nWHERE rec2 <> p2\nWITH u, rec1, rec2, purchaseScore, COUNT(rec2) * 1.5 AS wishlistScore  // weight 1.5\n\n// --- Other users (collaborative) ---\nOPTIONAL MATCH (u)-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec3:Product)\nWHERE rec3 <> p\nWITH u, rec1, rec2, rec3, purchaseScore, wishlistScore, COUNT(rec3) * 1.0 AS collabScore\n\n// --- Combine all ---\nWITH COALESCE(rec1, rec2, rec3) AS rec,\n     COALESCE(purchaseScore,0) + COALESCE(wishlistScore,0) + COALESCE(collabScore,0) AS totalScore\nRETURN rec.name AS RecommendedProduct, rec.price, rec.brand, totalScore\nORDER BY totalScore DESC\nLIMIT 5;\n",
         "total_params": 50,
-        "cold_avg_sec": 0.03914189599985548,
-        "hot_avg_sec": 0.037579599999880885,
+        "cold_avg_sec": 0.04671116999932565,
+        "hot_avg_sec": 0.048294267999881416,
         "per_param_results": [
             {
                 "params": {
-                    "userId": 3678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.06300669999836828,
-                "hot_times": [
-                    0.038971900001342874
-                ],
-                "hot_mean": 0.038971900001342874
-            },
-            {
-                "params": {
-                    "userId": 153,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.039327300000877585,
-                "hot_times": [
-                    0.03521080000064103
-                ],
-                "hot_mean": 0.03521080000064103
-            },
-            {
-                "params": {
-                    "userId": 2542,
+                    "userId": 47,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03534899999795016,
+                "cold_time": 0.16699420000077225,
                 "hot_times": [
-                    0.0359026999976777
+                    0.23664049999933923
                 ],
-                "hot_mean": 0.0359026999976777
+                "hot_mean": 0.23664049999933923
             },
             {
                 "params": {
-                    "userId": 3537,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04021899999861489,
-                "hot_times": [
-                    0.035071700000116834
-                ],
-                "hot_mean": 0.035071700000116834
-            },
-            {
-                "params": {
-                    "userId": 12,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03819220000150381,
-                "hot_times": [
-                    0.038390999998227926
-                ],
-                "hot_mean": 0.038390999998227926
-            },
-            {
-                "params": {
-                    "userId": 1262,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04854369999884511,
-                "hot_times": [
-                    0.04031140000006417
-                ],
-                "hot_mean": 0.04031140000006417
-            },
-            {
-                "params": {
-                    "userId": 678,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.0399875000002794,
-                "hot_times": [
-                    0.03877890000148909
-                ],
-                "hot_mean": 0.03877890000148909
-            },
-            {
-                "params": {
-                    "userId": 70,
+                    "userId": 2300,
                     "region": "EU"
                 },
-                "cold_time": 0.03864659999817377,
+                "cold_time": 0.046191499997803476,
                 "hot_times": [
-                    0.039831099998991704
+                    0.04503919999842765
                 ],
-                "hot_mean": 0.039831099998991704
+                "hot_mean": 0.04503919999842765
             },
             {
                 "params": {
-                    "userId": 2331,
+                    "userId": 287,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.04331829999864567,
+                "hot_times": [
+                    0.04208620000281371
+                ],
+                "hot_mean": 0.04208620000281371
+            },
+            {
+                "params": {
+                    "userId": 3796,
                     "region": "US"
                 },
-                "cold_time": 0.039526000000478234,
+                "cold_time": 0.04178959999990184,
                 "hot_times": [
-                    0.038616199999523815
+                    0.04470939999737311
                 ],
-                "hot_mean": 0.038616199999523815
+                "hot_mean": 0.04470939999737311
             },
             {
                 "params": {
-                    "userId": 534,
+                    "userId": 1192,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.045335399998293724,
+                "hot_times": [
+                    0.04344879999553086
+                ],
+                "hot_mean": 0.04344879999553086
+            },
+            {
+                "params": {
+                    "userId": 1549,
                     "region": "LATAM"
                 },
-                "cold_time": 0.038877099999808706,
+                "cold_time": 0.07385280000016792,
                 "hot_times": [
-                    0.03828070000236039
+                    0.04723019999801181
                 ],
-                "hot_mean": 0.03828070000236039
+                "hot_mean": 0.04723019999801181
             },
             {
                 "params": {
-                    "userId": 2216,
-                    "region": "US"
+                    "userId": 3679,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.03743910000048345,
+                "cold_time": 0.04568039999867324,
                 "hot_times": [
-                    0.039232700000866316
+                    0.04824360000202432
                 ],
-                "hot_mean": 0.039232700000866316
+                "hot_mean": 0.04824360000202432
             },
             {
                 "params": {
-                    "userId": 2495,
-                    "region": "EU"
+                    "userId": 1494,
+                    "region": "LATAM"
                 },
-                "cold_time": 0.03695539999898756,
+                "cold_time": 0.043387799996708054,
                 "hot_times": [
-                    0.0380364999982703
+                    0.04385840000031749
                 ],
-                "hot_mean": 0.0380364999982703
+                "hot_mean": 0.04385840000031749
             },
             {
                 "params": {
-                    "userId": 1287,
+                    "userId": 2467,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03793679999944288,
+                "cold_time": 0.04404839999915566,
                 "hot_times": [
-                    0.03725349999876926
+                    0.04431230000045616
                 ],
-                "hot_mean": 0.03725349999876926
+                "hot_mean": 0.04431230000045616
             },
             {
                 "params": {
-                    "userId": 3545,
+                    "userId": 3383,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.04360879999876488,
+                "hot_times": [
+                    0.04307119999430142
+                ],
+                "hot_mean": 0.04307119999430142
+            },
+            {
+                "params": {
+                    "userId": 2844,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.03993110000010347,
+                "hot_times": [
+                    0.042131100002734456
+                ],
+                "hot_mean": 0.042131100002734456
+            },
+            {
+                "params": {
+                    "userId": 1957,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.042668499998399056,
+                "hot_times": [
+                    0.04052179999416694
+                ],
+                "hot_mean": 0.04052179999416694
+            },
+            {
+                "params": {
+                    "userId": 2667,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.039506499997514766,
+                "hot_times": [
+                    0.04334170000220183
+                ],
+                "hot_mean": 0.04334170000220183
+            },
+            {
+                "params": {
+                    "userId": 410,
                     "region": "EU"
                 },
-                "cold_time": 0.04036840000117081,
+                "cold_time": 0.04208249999646796,
                 "hot_times": [
-                    0.038393500002712244
+                    0.04280080000171438
                 ],
-                "hot_mean": 0.038393500002712244
+                "hot_mean": 0.04280080000171438
+            },
+            {
+                "params": {
+                    "userId": 429,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04082199999538716,
+                "hot_times": [
+                    0.042288899996492546
+                ],
+                "hot_mean": 0.042288899996492546
+            },
+            {
+                "params": {
+                    "userId": 3773,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.03938989999733167,
+                "hot_times": [
+                    0.04060820000449894
+                ],
+                "hot_mean": 0.04060820000449894
+            },
+            {
+                "params": {
+                    "userId": 3302,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.040715800001635216,
+                "hot_times": [
+                    0.039873900001111906
+                ],
+                "hot_mean": 0.039873900001111906
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "cold_time": 0.042405299995152745,
+                "hot_times": [
+                    0.040689800000109244
+                ],
+                "hot_mean": 0.040689800000109244
+            },
+            {
+                "params": {
+                    "userId": 3550,
+                    "region": "EU"
+                },
+                "cold_time": 0.03993850000551902,
+                "hot_times": [
+                    0.03815559999929974
+                ],
+                "hot_mean": 0.03815559999929974
+            },
+            {
+                "params": {
+                    "userId": 1048,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.04186990000016522,
+                "hot_times": [
+                    0.043094599997857586
+                ],
+                "hot_mean": 0.043094599997857586
+            },
+            {
+                "params": {
+                    "userId": 2706,
+                    "region": "US"
+                },
+                "cold_time": 0.04143260000273585,
+                "hot_times": [
+                    0.04349940000247443
+                ],
+                "hot_mean": 0.04349940000247443
+            },
+            {
+                "params": {
+                    "userId": 2982,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.040336300000490155,
+                "hot_times": [
+                    0.038961700003710575
+                ],
+                "hot_mean": 0.038961700003710575
+            },
+            {
+                "params": {
+                    "userId": 1413,
+                    "region": "AFRICA"
+                },
+                "cold_time": 0.04067570000188425,
+                "hot_times": [
+                    0.04040259999601403
+                ],
+                "hot_mean": 0.04040259999601403
+            },
+            {
+                "params": {
+                    "userId": 760,
+                    "region": "EU"
+                },
+                "cold_time": 0.046237899994594045,
+                "hot_times": [
+                    0.041738099993381184
+                ],
+                "hot_mean": 0.041738099993381184
+            },
+            {
+                "params": {
+                    "userId": 2684,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04223149999597808,
+                "hot_times": [
+                    0.04252059999998892
+                ],
+                "hot_mean": 0.04252059999998892
+            },
+            {
+                "params": {
+                    "userId": 2996,
+                    "region": "US"
+                },
+                "cold_time": 0.04044219999923371,
+                "hot_times": [
+                    0.04299310000351397
+                ],
+                "hot_mean": 0.04299310000351397
             },
             {
                 "params": {
                     "userId": 3271,
                     "region": "US"
                 },
-                "cold_time": 0.037864099998841994,
+                "cold_time": 0.03929700000298908,
                 "hot_times": [
-                    0.03787449999799719
+                    0.039385100004437845
                 ],
-                "hot_mean": 0.03787449999799719
+                "hot_mean": 0.039385100004437845
             },
             {
                 "params": {
-                    "userId": 2303,
+                    "userId": 1402,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.041483200002403464,
+                "hot_times": [
+                    0.03921529999934137
+                ],
+                "hot_mean": 0.03921529999934137
+            },
+            {
+                "params": {
+                    "userId": 194,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04123420000541955,
+                "hot_times": [
+                    0.038255799998296425
+                ],
+                "hot_mean": 0.038255799998296425
+            },
+            {
+                "params": {
+                    "userId": 2917,
+                    "region": "ASIA"
+                },
+                "cold_time": 0.045336999995925,
+                "hot_times": [
+                    0.04494849999900907
+                ],
+                "hot_mean": 0.04494849999900907
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "cold_time": 0.04560559999663383,
+                "hot_times": [
+                    0.04283659999782685
+                ],
+                "hot_mean": 0.04283659999782685
+            },
+            {
+                "params": {
+                    "userId": 916,
+                    "region": "US"
+                },
+                "cold_time": 0.042617799997969996,
+                "hot_times": [
+                    0.04033730000082869
+                ],
+                "hot_mean": 0.04033730000082869
+            },
+            {
+                "params": {
+                    "userId": 3959,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04202330000407528,
+                "hot_times": [
+                    0.044749100001354236
+                ],
+                "hot_mean": 0.044749100001354236
+            },
+            {
+                "params": {
+                    "userId": 2039,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04196260000026086,
+                "hot_times": [
+                    0.055479900001955684
+                ],
+                "hot_mean": 0.055479900001955684
+            },
+            {
+                "params": {
+                    "userId": 846,
+                    "region": "US"
+                },
+                "cold_time": 0.05263350000313949,
+                "hot_times": [
+                    0.040992399997776374
+                ],
+                "hot_mean": 0.040992399997776374
+            },
+            {
+                "params": {
+                    "userId": 1100,
+                    "region": "EU"
+                },
+                "cold_time": 0.044330900003842544,
+                "hot_times": [
+                    0.044432399998186156
+                ],
+                "hot_mean": 0.044432399998186156
+            },
+            {
+                "params": {
+                    "userId": 2788,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.04008619999876828,
+                "cold_time": 0.03951020000386052,
                 "hot_times": [
-                    0.03446749999784515
+                    0.04928669999935664
                 ],
-                "hot_mean": 0.03446749999784515
+                "hot_mean": 0.04928669999935664
             },
             {
                 "params": {
-                    "userId": 441,
+                    "userId": 1936,
                     "region": "US"
                 },
-                "cold_time": 0.038560500001040054,
+                "cold_time": 0.03915189999679569,
                 "hot_times": [
-                    0.040067500001896406
+                    0.058811799994145986
                 ],
-                "hot_mean": 0.040067500001896406
+                "hot_mean": 0.058811799994145986
             },
             {
                 "params": {
-                    "userId": 1762,
-                    "region": "ASIA"
+                    "userId": 816,
+                    "region": "US"
                 },
-                "cold_time": 0.03624829999898793,
+                "cold_time": 0.049859400001878385,
                 "hot_times": [
-                    0.03668599999946309
+                    0.05210810000426136
                 ],
-                "hot_mean": 0.03668599999946309
+                "hot_mean": 0.05210810000426136
             },
             {
                 "params": {
-                    "userId": 3448,
+                    "userId": 1383,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03838760000144248,
+                "cold_time": 0.060127000004285946,
                 "hot_times": [
-                    0.037822300000698306
+                    0.06820750000042608
                 ],
-                "hot_mean": 0.037822300000698306
+                "hot_mean": 0.06820750000042608
             },
             {
                 "params": {
-                    "userId": 52,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.04648600000291481,
-                "hot_times": [
-                    0.03904379999949015
-                ],
-                "hot_mean": 0.03904379999949015
-            },
-            {
-                "params": {
-                    "userId": 3120,
-                    "region": "EU"
-                },
-                "cold_time": 0.03757640000185347,
-                "hot_times": [
-                    0.038248000000749016
-                ],
-                "hot_mean": 0.038248000000749016
-            },
-            {
-                "params": {
-                    "userId": 2680,
-                    "region": "EU"
-                },
-                "cold_time": 0.03466550000302959,
-                "hot_times": [
-                    0.04304269999920507
-                ],
-                "hot_mean": 0.04304269999920507
-            },
-            {
-                "params": {
-                    "userId": 3372,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.035304000000905944,
-                "hot_times": [
-                    0.03724299999885261
-                ],
-                "hot_mean": 0.03724299999885261
-            },
-            {
-                "params": {
-                    "userId": 2930,
-                    "region": "EU"
-                },
-                "cold_time": 0.03813359999912791,
-                "hot_times": [
-                    0.035511699999915436
-                ],
-                "hot_mean": 0.035511699999915436
-            },
-            {
-                "params": {
-                    "userId": 1640,
-                    "region": "EU"
-                },
-                "cold_time": 0.03986250000161817,
-                "hot_times": [
-                    0.034779199999320554
-                ],
-                "hot_mean": 0.034779199999320554
-            },
-            {
-                "params": {
-                    "userId": 809,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03831539999737288,
-                "hot_times": [
-                    0.034916799999336945
-                ],
-                "hot_mean": 0.034916799999336945
-            },
-            {
-                "params": {
-                    "userId": 1237,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03891989999829093,
-                "hot_times": [
-                    0.03805559999818797
-                ],
-                "hot_mean": 0.03805559999818797
-            },
-            {
-                "params": {
-                    "userId": 2212,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.03558820000034757,
-                "hot_times": [
-                    0.03812599999946542
-                ],
-                "hot_mean": 0.03812599999946542
-            },
-            {
-                "params": {
-                    "userId": 2689,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.038698500000464264,
-                "hot_times": [
-                    0.037958100001560524
-                ],
-                "hot_mean": 0.037958100001560524
-            },
-            {
-                "params": {
-                    "userId": 1791,
-                    "region": "US"
-                },
-                "cold_time": 0.03745849999904749,
-                "hot_times": [
-                    0.035451599997031735
-                ],
-                "hot_mean": 0.035451599997031735
-            },
-            {
-                "params": {
-                    "userId": 1197,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.038516700002219295,
-                "hot_times": [
-                    0.03838589999941178
-                ],
-                "hot_mean": 0.03838589999941178
-            },
-            {
-                "params": {
-                    "userId": 165,
-                    "region": "EU"
-                },
-                "cold_time": 0.03853939999680733,
-                "hot_times": [
-                    0.03978099999949336
-                ],
-                "hot_mean": 0.03978099999949336
-            },
-            {
-                "params": {
-                    "userId": 3102,
-                    "region": "ASIA"
-                },
-                "cold_time": 0.039760200001182966,
-                "hot_times": [
-                    0.03969820000202162
-                ],
-                "hot_mean": 0.03969820000202162
-            },
-            {
-                "params": {
-                    "userId": 54,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.0383756999981415,
-                "hot_times": [
-                    0.03749990000142134
-                ],
-                "hot_mean": 0.03749990000142134
-            },
-            {
-                "params": {
-                    "userId": 3143,
+                    "userId": 2878,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03820439999981318,
+                "cold_time": 0.042136999996728264,
                 "hot_times": [
-                    0.03747250000014901
+                    0.04224119999707909
                 ],
-                "hot_mean": 0.03747250000014901
+                "hot_mean": 0.04224119999707909
             },
             {
                 "params": {
-                    "userId": 86,
-                    "region": "US"
+                    "userId": 3978,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.03845469999941997,
+                "cold_time": 0.05937019999691984,
                 "hot_times": [
-                    0.037423599998874124
+                    0.04754200000024866
                 ],
-                "hot_mean": 0.037423599998874124
+                "hot_mean": 0.04754200000024866
             },
             {
                 "params": {
-                    "userId": 1441,
-                    "region": "US"
+                    "userId": 913,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.037810500001796754,
+                "cold_time": 0.044241399999009445,
                 "hot_times": [
-                    0.03898920000210637
+                    0.04397199999948498
                 ],
-                "hot_mean": 0.03898920000210637
+                "hot_mean": 0.04397199999948498
             },
             {
                 "params": {
-                    "userId": 3655,
-                    "region": "EU"
+                    "userId": 3533,
+                    "region": "AFRICA"
                 },
-                "cold_time": 0.0372471000009682,
+                "cold_time": 0.05664170000090962,
                 "hot_times": [
-                    0.0349471999979869
+                    0.060599299999012146
                 ],
-                "hot_mean": 0.0349471999979869
+                "hot_mean": 0.060599299999012146
             },
             {
                 "params": {
-                    "userId": 874,
+                    "userId": 2739,
                     "region": "LATAM"
                 },
-                "cold_time": 0.03890110000065761,
+                "cold_time": 0.04088199999387143,
                 "hot_times": [
-                    0.034819799999240786
+                    0.04489319999993313
                 ],
-                "hot_mean": 0.034819799999240786
+                "hot_mean": 0.04489319999993313
             },
             {
                 "params": {
-                    "userId": 1477,
+                    "userId": 3939,
+                    "region": "LATAM"
+                },
+                "cold_time": 0.04344619999756105,
+                "hot_times": [
+                    0.04083810000156518
+                ],
+                "hot_mean": 0.04083810000156518
+            },
+            {
+                "params": {
+                    "userId": 252,
                     "region": "ASIA"
                 },
-                "cold_time": 0.03765269999712473,
+                "cold_time": 0.039654599997447804,
                 "hot_times": [
-                    0.03510889999961364
+                    0.04584080000495305
                 ],
-                "hot_mean": 0.03510889999961364
+                "hot_mean": 0.04584080000495305
             },
             {
                 "params": {
-                    "userId": 3066,
-                    "region": "US"
-                },
-                "cold_time": 0.03696259999924223,
-                "hot_times": [
-                    0.035260000000562286
-                ],
-                "hot_mean": 0.035260000000562286
-            },
-            {
-                "params": {
-                    "userId": 2759,
+                    "userId": 799,
                     "region": "LATAM"
                 },
-                "cold_time": 0.039247900000191294,
+                "cold_time": 0.04689990000042599,
                 "hot_times": [
-                    0.040220200000476325
+                    0.04570560000138357
                 ],
-                "hot_mean": 0.040220200000476325
+                "hot_mean": 0.04570560000138357
             },
             {
                 "params": {
-                    "userId": 106,
-                    "region": "US"
-                },
-                "cold_time": 0.039412299996911315,
-                "hot_times": [
-                    0.037036400000943104
-                ],
-                "hot_mean": 0.037036400000943104
-            },
-            {
-                "params": {
-                    "userId": 329,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03872789999877568,
-                "hot_times": [
-                    0.03798570000071777
-                ],
-                "hot_mean": 0.03798570000071777
-            },
-            {
-                "params": {
-                    "userId": 323,
+                    "userId": 3238,
                     "region": "AFRICA"
                 },
-                "cold_time": 0.03784460000315448,
+                "cold_time": 0.04196529999899212,
                 "hot_times": [
-                    0.03796890000012354
+                    0.041746700000658166
                 ],
-                "hot_mean": 0.03796890000012354
+                "hot_mean": 0.041746700000658166
             },
             {
                 "params": {
-                    "userId": 3769,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03971760000058566,
-                "hot_times": [
-                    0.03888860000006389
-                ],
-                "hot_mean": 0.03888860000006389
-            },
-            {
-                "params": {
-                    "userId": 2889,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03973929999847314,
-                "hot_times": [
-                    0.035250299999461276
-                ],
-                "hot_mean": 0.035250299999461276
-            },
-            {
-                "params": {
-                    "userId": 1429,
-                    "region": "LATAM"
-                },
-                "cold_time": 0.03965529999913997,
-                "hot_times": [
-                    0.0350177000000258
-                ],
-                "hot_mean": 0.0350177000000258
-            },
-            {
-                "params": {
-                    "userId": 1723,
-                    "region": "AFRICA"
-                },
-                "cold_time": 0.037466500001755776,
-                "hot_times": [
-                    0.037759700000606244
-                ],
-                "hot_mean": 0.037759700000606244
-            },
-            {
-                "params": {
-                    "userId": 3126,
+                    "userId": 3241,
                     "region": "US"
                 },
-                "cold_time": 0.038328299997374415,
+                "cold_time": 0.04025319999345811,
                 "hot_times": [
-                    0.0378893999986758
+                    0.040026300004683435
                 ],
-                "hot_mean": 0.0378893999986758
+                "hot_mean": 0.040026300004683435
             }
         ]
     }
