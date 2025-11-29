@@ -17,7 +17,7 @@ if not URI or not USERNAME or not PASSWORD:
     raise ValueError("Missing Neo4j credentials in .env file")
 
 QUERY_FILE = "queries/neo4j_query_saved_cypher_2025-11-22.csv"
-OUTPUT_JSON = "benchmark_results_small.json"
+OUTPUT_JSON = "benchmark_results_medium.json"
 
 RUNS_PER_QUERY = 1        # number of hot-cache runs
 # Fetch real user_ids first
@@ -36,6 +36,11 @@ REGIONS = ["EU", "US", "ASIA", "AFRICA", "LATAM"]
 # Load only queries with id > 3
 df = pd.read_csv(QUERY_FILE).dropna(subset=["query"])
 queries = df[df["id"] > 3]["query"].tolist()
+# ----- MOVE LAST 2 FIRST -----
+if len(queries) >= 2:
+    last_two = queries[-2:]      # last 2 queries
+    rest = queries[:-2]          # all except last 2
+    queries = last_two + rest    # new order
 
 results = []
 
