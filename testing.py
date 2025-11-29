@@ -30,6 +30,9 @@ driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
 
 # Load queries
 queries = pd.read_csv(QUERY_FILE)["query"].dropna().tolist()
+df = pd.read_csv(QUERY_FILE).dropna(subset=["query"])
+queries = df[df["id"] > 3]["query"].tolist()
+
 
 results = []
 
@@ -44,7 +47,7 @@ def run_one(session, query, params):
 with driver.session() as session:
 
     for qid, query in enumerate(queries, start=1):
-        print(f"\n⚡ Query {qid}: {query}")
+        print(f" Query {qid}: {query}")
 
         per_param_times = []
 
