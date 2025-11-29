@@ -17,7 +17,7 @@ if not URI or not USERNAME or not PASSWORD:
     raise ValueError("Missing Neo4j credentials in .env file")
 
 QUERY_FILE = "queries/neo4j_query_saved_cypher_2025-11-22.csv"
-OUTPUT_JSON = "benchmark_results_medium.json"
+OUTPUT_JSON = "benchmark_results_large.json"
 
 RUNS_PER_QUERY = 1        # number of hot-cache runs
 # Fetch real user_ids first
