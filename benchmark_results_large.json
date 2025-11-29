@@ -3,8 +3,8 @@
         "query_id": 1,
         "query": "MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Product)-[:BELONGS_TO]->(c:Category)<-[:BELONGS_TO]-(rec:Product)\nWHERE rec.product_id <> p1.product_id\n  AND rec.price >= p1.price * 0.3 \n  AND rec.price <= p1.price * 1.5\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nWITH DISTINCT rec, c\nRETURN rec.name AS RecommendedProduct, \n       c.name AS Category, \n       rec.price AS Price, \n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 6.47229249999873,
+        "parameter_count": 49,
+        "overall_mean_sec": 5.887968436734586,
         "per_param_results": [
             {
                 "params": {
@@ -12,9 +12,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    6.47229249999873
+                    6.366153999999369
                 ],
-                "mean": 6.47229249999873
+                "mean": 6.366153999999369
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.81799989999854
+                ],
+                "mean": 5.81799989999854
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    6.013914700000896
+                ],
+                "mean": 6.013914700000896
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.894740499999898
+                ],
+                "mean": 5.894740499999898
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    6.105041299997538
+                ],
+                "mean": 6.105041299997538
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    5.875914200001716
+                ],
+                "mean": 5.875914200001716
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.90661689999979
+                ],
+                "mean": 5.90661689999979
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.854805099999794
+                ],
+                "mean": 5.854805099999794
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    6.0459199999968405
+                ],
+                "mean": 6.0459199999968405
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.988788200000272
+                ],
+                "mean": 5.988788200000272
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    5.951746200000343
+                ],
+                "mean": 5.951746200000343
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.890763399998832
+                ],
+                "mean": 5.890763399998832
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.897342200001731
+                ],
+                "mean": 5.897342200001731
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.900316499999462
+                ],
+                "mean": 5.900316499999462
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.991624499998579
+                ],
+                "mean": 5.991624499998579
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    5.858267100000376
+                ],
+                "mean": 5.858267100000376
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.911356900000101
+                ],
+                "mean": 5.911356900000101
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.793625800000882
+                ],
+                "mean": 5.793625800000882
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.924530699998286
+                ],
+                "mean": 5.924530699998286
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.818644499999209
+                ],
+                "mean": 5.818644499999209
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    5.888101000000461
+                ],
+                "mean": 5.888101000000461
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.801002100000915
+                ],
+                "mean": 5.801002100000915
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.905211900000722
+                ],
+                "mean": 5.905211900000722
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.826106500000606
+                ],
+                "mean": 5.826106500000606
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.868385900001158
+                ],
+                "mean": 5.868385900001158
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    5.764438800000789
+                ],
+                "mean": 5.764438800000789
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.865812800002459
+                ],
+                "mean": 5.865812800002459
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.831953099997918
+                ],
+                "mean": 5.831953099997918
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.834813100002066
+                ],
+                "mean": 5.834813100002066
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.827782699998352
+                ],
+                "mean": 5.827782699998352
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    5.855133699998987
+                ],
+                "mean": 5.855133699998987
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.805597499998839
+                ],
+                "mean": 5.805597499998839
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.879934000000503
+                ],
+                "mean": 5.879934000000503
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.851403099997697
+                ],
+                "mean": 5.851403099997697
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.939834299999347
+                ],
+                "mean": 5.939834299999347
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    5.840713100002176
+                ],
+                "mean": 5.840713100002176
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.884388599999511
+                ],
+                "mean": 5.884388599999511
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.798865299999306
+                ],
+                "mean": 5.798865299999306
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.898037700000714
+                ],
+                "mean": 5.898037700000714
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.894361099999514
+                ],
+                "mean": 5.894361099999514
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    5.878550299999915
+                ],
+                "mean": 5.878550299999915
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.851482900001429
+                ],
+                "mean": 5.851482900001429
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.926927500000602
+                ],
+                "mean": 5.926927500000602
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.81945099999939
+                ],
+                "mean": 5.81945099999939
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    5.8688153000002785
+                ],
+                "mean": 5.8688153000002785
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    5.808653799998865
+                ],
+                "mean": 5.808653799998865
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    5.828757200000837
+                ],
+                "mean": 5.828757200000837
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    5.807956000000559
+                ],
+                "mean": 5.807956000000559
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    5.84987049999836
+                ],
+                "mean": 5.84987049999836
             }
         ]
     },
@@ -22,8 +502,8 @@
         "query_id": 2,
         "query": "// Step 1 \u2013 collect purchase categories and average price\nMATCH (u:User {user_id: 1})-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c:Category)\nWITH u, COLLECT(DISTINCT c) AS purchaseCategories, AVG(p1.price) AS avgPrice\n\n// Step 2 \u2013 collect wishlist categories separately\nOPTIONAL MATCH (u)-[:WISHLISTED]->(w:Product)-[:BELONGS_TO]->(wc:Category)\nWITH u, purchaseCategories, avgPrice, COLLECT(DISTINCT wc) AS wishlistCategories\n\n// Step 3 \u2013 merge the two lists without APOC\nWITH u, avgPrice, purchaseCategories + wishlistCategories AS allCategories\nUNWIND allCategories AS cat\nWITH u, avgPrice, COLLECT(DISTINCT cat) AS interestCategories\n\n// Step 4 \u2013 find recommended products\nMATCH (rec:Product)-[:BELONGS_TO]->(cat:Category)\nWHERE cat IN interestCategories\n  AND rec.price >= avgPrice * 0.7 \n  AND rec.price <= avgPrice * 1.3\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct,\n       cat.name AS Category,\n       rec.price AS Price,\n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 0.3972122999985004,
+        "parameter_count": 49,
+        "overall_mean_sec": 0.04618435102049855,
         "per_param_results": [
             {
                 "params": {
@@ -31,9 +511,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    0.3972122999985004
+                    0.053989799998817034
                 ],
-                "mean": 0.3972122999985004
+                "mean": 0.053989799998817034
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04812110000057146
+                ],
+                "mean": 0.04812110000057146
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.047180999998090556
+                ],
+                "mean": 0.047180999998090556
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.05015629999979865
+                ],
+                "mean": 0.05015629999979865
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04774660000111908
+                ],
+                "mean": 0.04774660000111908
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    0.0455206000006001
+                ],
+                "mean": 0.0455206000006001
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.049165399999765214
+                ],
+                "mean": 0.049165399999765214
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04553309999755584
+                ],
+                "mean": 0.04553309999755584
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04331319999982952
+                ],
+                "mean": 0.04331319999982952
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.09747790000255918
+                ],
+                "mean": 0.09747790000255918
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    0.054016399997635745
+                ],
+                "mean": 0.054016399997635745
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.044251200000871904
+                ],
+                "mean": 0.044251200000871904
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.047180900000967085
+                ],
+                "mean": 0.047180900000967085
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.046283300001960015
+                ],
+                "mean": 0.046283300001960015
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.045441000002028886
+                ],
+                "mean": 0.045441000002028886
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04607390000091982
+                ],
+                "mean": 0.04607390000091982
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.041020700002263766
+                ],
+                "mean": 0.041020700002263766
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.0461369000004197
+                ],
+                "mean": 0.0461369000004197
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.045756100000289734
+                ],
+                "mean": 0.045756100000289734
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.040929399998276494
+                ],
+                "mean": 0.040929399998276494
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04526790000090841
+                ],
+                "mean": 0.04526790000090841
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.046616999999969266
+                ],
+                "mean": 0.046616999999969266
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04539669999940088
+                ],
+                "mean": 0.04539669999940088
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.042917900002066744
+                ],
+                "mean": 0.042917900002066744
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.042286699997930555
+                ],
+                "mean": 0.042286699997930555
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04230649999954039
+                ],
+                "mean": 0.04230649999954039
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.044410999998945044
+                ],
+                "mean": 0.044410999998945044
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04547370000000228
+                ],
+                "mean": 0.04547370000000228
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043849200003023725
+                ],
+                "mean": 0.043849200003023725
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04370259999996051
+                ],
+                "mean": 0.04370259999996051
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04385479999837116
+                ],
+                "mean": 0.04385479999837116
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.043842099999892525
+                ],
+                "mean": 0.043842099999892525
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04541550000067218
+                ],
+                "mean": 0.04541550000067218
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04525180000200635
+                ],
+                "mean": 0.04525180000200635
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043563500003074296
+                ],
+                "mean": 0.043563500003074296
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04457629999888013
+                ],
+                "mean": 0.04457629999888013
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04301829999894835
+                ],
+                "mean": 0.04301829999894835
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04453040000225883
+                ],
+                "mean": 0.04453040000225883
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.044321199999103555
+                ],
+                "mean": 0.044321199999103555
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.042837799999688286
+                ],
+                "mean": 0.042837799999688286
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04472229999737465
+                ],
+                "mean": 0.04472229999737465
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.042787300000782125
+                ],
+                "mean": 0.042787300000782125
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04305979999844567
+                ],
+                "mean": 0.04305979999844567
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04375699999945937
+                ],
+                "mean": 0.04375699999945937
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04364960000020801
+                ],
+                "mean": 0.04364960000020801
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    0.044861099999252474
+                ],
+                "mean": 0.044861099999252474
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04389249999803724
+                ],
+                "mean": 0.04389249999803724
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04420229999959702
+                ],
+                "mean": 0.04420229999959702
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043365600002289284
+                ],
+                "mean": 0.043365600002289284
             }
         ]
     },
@@ -41,8 +1001,8 @@
         "query_id": 3,
         "query": "MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec:Product)\nWHERE u1 <> other\n  AND NOT (u1)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct, COUNT(*) AS Popularity\nORDER BY Popularity DESC\nLIMIT 5;\n",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 0.1871078000003763,
+        "parameter_count": 49,
+        "overall_mean_sec": 0.046025548979259284,
         "per_param_results": [
             {
                 "params": {
@@ -50,9 +1010,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    0.1871078000003763
+                    0.05108199999813223
                 ],
-                "mean": 0.1871078000003763
+                "mean": 0.05108199999813223
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04600380000192672
+                ],
+                "mean": 0.04600380000192672
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04567239999960293
+                ],
+                "mean": 0.04567239999960293
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04622449999806122
+                ],
+                "mean": 0.04622449999806122
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04556810000212863
+                ],
+                "mean": 0.04556810000212863
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04369529999894439
+                ],
+                "mean": 0.04369529999894439
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04628900000170688
+                ],
+                "mean": 0.04628900000170688
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04352879999714787
+                ],
+                "mean": 0.04352879999714787
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.044094099997892044
+                ],
+                "mean": 0.044094099997892044
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.07459019999805605
+                ],
+                "mean": 0.07459019999805605
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    0.05260139999882085
+                ],
+                "mean": 0.05260139999882085
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04550279999966733
+                ],
+                "mean": 0.04550279999966733
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04855900000256952
+                ],
+                "mean": 0.04855900000256952
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.045869499997934327
+                ],
+                "mean": 0.045869499997934327
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04306150000047637
+                ],
+                "mean": 0.04306150000047637
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    0.043873799997527385
+                ],
+                "mean": 0.043873799997527385
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04418709999663406
+                ],
+                "mean": 0.04418709999663406
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04044969999813475
+                ],
+                "mean": 0.04044969999813475
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04505020000215154
+                ],
+                "mean": 0.04505020000215154
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04386080000040238
+                ],
+                "mean": 0.04386080000040238
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04058350000195787
+                ],
+                "mean": 0.04058350000195787
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04134100000010221
+                ],
+                "mean": 0.04134100000010221
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.0402695999982825
+                ],
+                "mean": 0.0402695999982825
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04324550000092131
+                ],
+                "mean": 0.04324550000092131
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04153320000114036
+                ],
+                "mean": 0.04153320000114036
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    0.043002899998100474
+                ],
+                "mean": 0.043002899998100474
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.0437636000024213
+                ],
+                "mean": 0.0437636000024213
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04439239999919664
+                ],
+                "mean": 0.04439239999919664
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.044299799999862444
+                ],
+                "mean": 0.044299799999862444
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04118609999932232
+                ],
+                "mean": 0.04118609999932232
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04422139999951469
+                ],
+                "mean": 0.04422139999951469
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04409339999983786
+                ],
+                "mean": 0.04409339999983786
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04078959999969811
+                ],
+                "mean": 0.04078959999969811
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.045613499998580664
+                ],
+                "mean": 0.045613499998580664
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043767300001491094
+                ],
+                "mean": 0.043767300001491094
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    0.043463599999086
+                ],
+                "mean": 0.043463599999086
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04357470000104513
+                ],
+                "mean": 0.04357470000104513
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.040336300000490155
+                ],
+                "mean": 0.040336300000490155
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04389209999862942
+                ],
+                "mean": 0.04389209999862942
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04371330000140006
+                ],
+                "mean": 0.04371330000140006
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04472269999678247
+                ],
+                "mean": 0.04472269999678247
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.043225599998550024
+                ],
+                "mean": 0.043225599998550024
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.044846599997981684
+                ],
+                "mean": 0.044846599997981684
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.10516989999814541
+                ],
+                "mean": 0.10516989999814541
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04465170000185026
+                ],
+                "mean": 0.04465170000185026
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04380710000259569
+                ],
+                "mean": 0.04380710000259569
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04427989999749116
+                ],
+                "mean": 0.04427989999749116
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04381849999845144
+                ],
+                "mean": 0.04381849999845144
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043883100002858555
+                ],
+                "mean": 0.043883100002858555
             }
         ]
     },
@@ -60,8 +1500,8 @@
         "query_id": 4,
         "query": "// Hybrid recommendation combining multiple signals\nMATCH (u:User {user_id: 1})\n\n// --- Purchases ---\nOPTIONAL MATCH (u)-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c1:Category)<-[:BELONGS_TO]-(rec1:Product)\nWHERE rec1 <> p1\nWITH u, rec1, COUNT(*) * 2 AS purchaseScore  // weight 2\n\n// --- Wishlists ---\nOPTIONAL MATCH (u)-[:WISHLISTED]->(p2:Product)-[:BELONGS_TO]->(c2:Category)<-[:BELONGS_TO]-(rec2:Product)\nWHERE rec2 <> p2\nWITH u, rec1, rec2, purchaseScore, COUNT(rec2) * 1.5 AS wishlistScore  // weight 1.5\n\n// --- Other users (collaborative) ---\nOPTIONAL MATCH (u)-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec3:Product)\nWHERE rec3 <> p\nWITH u, rec1, rec2, rec3, purchaseScore, wishlistScore, COUNT(rec3) * 1.0 AS collabScore\n\n// --- Combine all ---\nWITH COALESCE(rec1, rec2, rec3) AS rec,\n     COALESCE(purchaseScore,0) + COALESCE(wishlistScore,0) + COALESCE(collabScore,0) AS totalScore\nRETURN rec.name AS RecommendedProduct, rec.price, rec.brand, totalScore\nORDER BY totalScore DESC\nLIMIT 5;\n",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 0.3071520999983477,
+        "parameter_count": 49,
+        "overall_mean_sec": 0.04684117959171702,
         "per_param_results": [
             {
                 "params": {
@@ -69,9 +1509,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    0.3071520999983477
+                    0.051485100000718376
                 ],
-                "mean": 0.3071520999983477
+                "mean": 0.051485100000718376
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04633600000306615
+                ],
+                "mean": 0.04633600000306615
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.045397999998385785
+                ],
+                "mean": 0.045397999998385785
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04637480000019423
+                ],
+                "mean": 0.04637480000019423
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.045267400000739144
+                ],
+                "mean": 0.045267400000739144
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    0.045862200000556186
+                ],
+                "mean": 0.045862200000556186
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04551359999823035
+                ],
+                "mean": 0.04551359999823035
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.044014200000674464
+                ],
+                "mean": 0.044014200000674464
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04118539999763016
+                ],
+                "mean": 0.04118539999763016
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.1144505999982357
+                ],
+                "mean": 0.1144505999982357
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    0.050302200001169695
+                ],
+                "mean": 0.050302200001169695
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.045141399998101406
+                ],
+                "mean": 0.045141399998101406
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.041908899998816196
+                ],
+                "mean": 0.041908899998816196
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04631399999925634
+                ],
+                "mean": 0.04631399999925634
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.045335200000408804
+                ],
+                "mean": 0.045335200000408804
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    0.050084499998774845
+                ],
+                "mean": 0.050084499998774845
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.05954039999778615
+                ],
+                "mean": 0.05954039999778615
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04635160000179894
+                ],
+                "mean": 0.04635160000179894
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.0448781000013696
+                ],
+                "mean": 0.0448781000013696
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.045211799999378854
+                ],
+                "mean": 0.045211799999378854
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    0.048325299998396076
+                ],
+                "mean": 0.048325299998396076
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04501920000257087
+                ],
+                "mean": 0.04501920000257087
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.043951099996775156
+                ],
+                "mean": 0.043951099996775156
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04361659999995027
+                ],
+                "mean": 0.04361659999995027
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.044110800001362804
+                ],
+                "mean": 0.044110800001362804
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    0.045010899997578235
+                ],
+                "mean": 0.045010899997578235
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.052644000003056135
+                ],
+                "mean": 0.052644000003056135
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04761090000101831
+                ],
+                "mean": 0.04761090000101831
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.0447055000004184
+                ],
+                "mean": 0.0447055000004184
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04203309999866178
+                ],
+                "mean": 0.04203309999866178
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    0.043924400000832975
+                ],
+                "mean": 0.043924400000832975
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04348329999993439
+                ],
+                "mean": 0.04348329999993439
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04650909999691066
+                ],
+                "mean": 0.04650909999691066
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04229019999911543
+                ],
+                "mean": 0.04229019999911543
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.040956000000733184
+                ],
+                "mean": 0.040956000000733184
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    0.044539200000144774
+                ],
+                "mean": 0.044539200000144774
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.044267700002819765
+                ],
+                "mean": 0.044267700002819765
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.043904800000746036
+                ],
+                "mean": 0.043904800000746036
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04455009999946924
+                ],
+                "mean": 0.04455009999946924
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04529270000057295
+                ],
+                "mean": 0.04529270000057295
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04398109999965527
+                ],
+                "mean": 0.04398109999965527
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04504089999682037
+                ],
+                "mean": 0.04504089999682037
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.0450648000005458
+                ],
+                "mean": 0.0450648000005458
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043520600000192644
+                ],
+                "mean": 0.043520600000192644
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.044185999999172054
+                ],
+                "mean": 0.044185999999172054
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04459320000023581
+                ],
+                "mean": 0.04459320000023581
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04301850000047125
+                ],
+                "mean": 0.04301850000047125
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04397669999889331
+                ],
+                "mean": 0.04397669999889331
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04413570000178879
+                ],
+                "mean": 0.04413570000178879
             }
         ]
     },
@@ -79,8 +1999,8 @@
         "query_id": 5,
         "query": "// Fetch a specific user's orders\nMATCH (u:User {user_id: 1})-[r:PLACED]->(p:Product)\nRETURN u.name, p.name, r.quantity, r.total_price;\n\n",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 0.09376349999729428,
+        "parameter_count": 49,
+        "overall_mean_sec": 0.04450071020389204,
         "per_param_results": [
             {
                 "params": {
@@ -88,9 +2008,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    0.09376349999729428
+                    0.04966649999914807
                 ],
-                "mean": 0.09376349999729428
+                "mean": 0.04966649999914807
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.044701200000417884
+                ],
+                "mean": 0.044701200000417884
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.044657399997959146
+                ],
+                "mean": 0.044657399997959146
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04293649999817717
+                ],
+                "mean": 0.04293649999817717
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043922000000748085
+                ],
+                "mean": 0.043922000000748085
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04429149999850779
+                ],
+                "mean": 0.04429149999850779
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04311740000048303
+                ],
+                "mean": 0.04311740000048303
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04393809999965015
+                ],
+                "mean": 0.04393809999965015
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04437549999784096
+                ],
+                "mean": 0.04437549999784096
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.07009969999853638
+                ],
+                "mean": 0.07009969999853638
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04784290000316105
+                ],
+                "mean": 0.04784290000316105
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04565000000002328
+                ],
+                "mean": 0.04565000000002328
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.0455686000022979
+                ],
+                "mean": 0.0455686000022979
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.041050399999221554
+                ],
+                "mean": 0.041050399999221554
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043965499997284496
+                ],
+                "mean": 0.043965499997284496
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04697149999992689
+                ],
+                "mean": 0.04697149999992689
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04495830000087153
+                ],
+                "mean": 0.04495830000087153
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04385859999820241
+                ],
+                "mean": 0.04385859999820241
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043360799998481525
+                ],
+                "mean": 0.043360799998481525
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04495449999740231
+                ],
+                "mean": 0.04495449999740231
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04034559999854537
+                ],
+                "mean": 0.04034559999854537
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.043121499998960644
+                ],
+                "mean": 0.043121499998960644
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04376119999869843
+                ],
+                "mean": 0.04376119999869843
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04406810000000405
+                ],
+                "mean": 0.04406810000000405
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043297899999743095
+                ],
+                "mean": 0.043297899999743095
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04071180000028107
+                ],
+                "mean": 0.04071180000028107
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04387409999981173
+                ],
+                "mean": 0.04387409999981173
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04359340000155498
+                ],
+                "mean": 0.04359340000155498
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04430030000003171
+                ],
+                "mean": 0.04430030000003171
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04497040000205743
+                ],
+                "mean": 0.04497040000205743
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    0.043128799999976764
+                ],
+                "mean": 0.043128799999976764
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.0443663000005472
+                ],
+                "mean": 0.0443663000005472
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04352139999900828
+                ],
+                "mean": 0.04352139999900828
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04001989999960642
+                ],
+                "mean": 0.04001989999960642
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.043680399998265784
+                ],
+                "mean": 0.043680399998265784
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    0.044425200001569465
+                ],
+                "mean": 0.044425200001569465
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04178639999736333
+                ],
+                "mean": 0.04178639999736333
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04499960000248393
+                ],
+                "mean": 0.04499960000248393
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.043518200000107754
+                ],
+                "mean": 0.043518200000107754
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.044321400000626454
+                ],
+                "mean": 0.044321400000626454
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04351590000078431
+                ],
+                "mean": 0.04351590000078431
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04357549999986077
+                ],
+                "mean": 0.04357549999986077
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.044234000000869855
+                ],
+                "mean": 0.044234000000869855
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04392250000091735
+                ],
+                "mean": 0.04392250000091735
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04412690000026487
+                ],
+                "mean": 0.04412690000026487
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04367710000224179
+                ],
+                "mean": 0.04367710000224179
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.044406000000890344
+                ],
+                "mean": 0.044406000000890344
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04390699999930803
+                ],
+                "mean": 0.04390699999930803
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04347109999798704
+                ],
+                "mean": 0.04347109999798704
             }
         ]
     },
@@ -98,8 +2498,8 @@
         "query_id": 6,
         "query": "\n// Fetch a product\u2019s details and its category\nMATCH (p:Product {product_id: 3})-[:BELONGS_TO]->(c:Category)\nRETURN p.name, p.price, p.brand, c.name AS category;",
         "runs_per_query": 1,
-        "parameter_count": 1,
-        "overall_mean_sec": 0.08367480000015348,
+        "parameter_count": 49,
+        "overall_mean_sec": 0.04170518163270887,
         "per_param_results": [
             {
                 "params": {
@@ -107,9 +2507,489 @@
                     "region": "US"
                 },
                 "runs": [
-                    0.08367480000015348
+                    0.04404200000135461
                 ],
-                "mean": 0.08367480000015348
+                "mean": 0.04404200000135461
+            },
+            {
+                "params": {
+                    "userId": 2,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04404450000220095
+                ],
+                "mean": 0.04404450000220095
+            },
+            {
+                "params": {
+                    "userId": 3,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.043300599998474354
+                ],
+                "mean": 0.043300599998474354
+            },
+            {
+                "params": {
+                    "userId": 4,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.03992400000061025
+                ],
+                "mean": 0.03992400000061025
+            },
+            {
+                "params": {
+                    "userId": 5,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.03992400000061025
+                ],
+                "mean": 0.03992400000061025
+            },
+            {
+                "params": {
+                    "userId": 6,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04393609999897308
+                ],
+                "mean": 0.04393609999897308
+            },
+            {
+                "params": {
+                    "userId": 7,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04149719999986701
+                ],
+                "mean": 0.04149719999986701
+            },
+            {
+                "params": {
+                    "userId": 8,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.037885300000198185
+                ],
+                "mean": 0.037885300000198185
+            },
+            {
+                "params": {
+                    "userId": 9,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.03800509999928181
+                ],
+                "mean": 0.03800509999928181
+            },
+            {
+                "params": {
+                    "userId": 10,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.05478389999916544
+                ],
+                "mean": 0.05478389999916544
+            },
+            {
+                "params": {
+                    "userId": 11,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04196840000076918
+                ],
+                "mean": 0.04196840000076918
+            },
+            {
+                "params": {
+                    "userId": 12,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04176200000074459
+                ],
+                "mean": 0.04176200000074459
+            },
+            {
+                "params": {
+                    "userId": 13,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04254639999999199
+                ],
+                "mean": 0.04254639999999199
+            },
+            {
+                "params": {
+                    "userId": 14,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.040798400001222035
+                ],
+                "mean": 0.040798400001222035
+            },
+            {
+                "params": {
+                    "userId": 15,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04283030000078725
+                ],
+                "mean": 0.04283030000078725
+            },
+            {
+                "params": {
+                    "userId": 16,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04170420000082231
+                ],
+                "mean": 0.04170420000082231
+            },
+            {
+                "params": {
+                    "userId": 17,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04144649999943795
+                ],
+                "mean": 0.04144649999943795
+            },
+            {
+                "params": {
+                    "userId": 18,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04123289999915869
+                ],
+                "mean": 0.04123289999915869
+            },
+            {
+                "params": {
+                    "userId": 19,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04156870000224444
+                ],
+                "mean": 0.04156870000224444
+            },
+            {
+                "params": {
+                    "userId": 20,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04148929999792017
+                ],
+                "mean": 0.04148929999792017
+            },
+            {
+                "params": {
+                    "userId": 21,
+                    "region": "US"
+                },
+                "runs": [
+                    0.0377026999994996
+                ],
+                "mean": 0.0377026999994996
+            },
+            {
+                "params": {
+                    "userId": 22,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04152740000063204
+                ],
+                "mean": 0.04152740000063204
+            },
+            {
+                "params": {
+                    "userId": 23,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.041783599997870624
+                ],
+                "mean": 0.041783599997870624
+            },
+            {
+                "params": {
+                    "userId": 24,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04192429999966407
+                ],
+                "mean": 0.04192429999966407
+            },
+            {
+                "params": {
+                    "userId": 25,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04284430000188877
+                ],
+                "mean": 0.04284430000188877
+            },
+            {
+                "params": {
+                    "userId": 26,
+                    "region": "US"
+                },
+                "runs": [
+                    0.041306800001621014
+                ],
+                "mean": 0.041306800001621014
+            },
+            {
+                "params": {
+                    "userId": 27,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.041933499996957835
+                ],
+                "mean": 0.041933499996957835
+            },
+            {
+                "params": {
+                    "userId": 28,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04184000000168453
+                ],
+                "mean": 0.04184000000168453
+            },
+            {
+                "params": {
+                    "userId": 29,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04236709999895538
+                ],
+                "mean": 0.04236709999895538
+            },
+            {
+                "params": {
+                    "userId": 30,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04191560000253958
+                ],
+                "mean": 0.04191560000253958
+            },
+            {
+                "params": {
+                    "userId": 31,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04215409999960684
+                ],
+                "mean": 0.04215409999960684
+            },
+            {
+                "params": {
+                    "userId": 32,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04131749999942258
+                ],
+                "mean": 0.04131749999942258
+            },
+            {
+                "params": {
+                    "userId": 33,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.04141230000095675
+                ],
+                "mean": 0.04141230000095675
+            },
+            {
+                "params": {
+                    "userId": 34,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.039760299998306436
+                ],
+                "mean": 0.039760299998306436
+            },
+            {
+                "params": {
+                    "userId": 35,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04041760000109207
+                ],
+                "mean": 0.04041760000109207
+            },
+            {
+                "params": {
+                    "userId": 36,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04282009999951697
+                ],
+                "mean": 0.04282009999951697
+            },
+            {
+                "params": {
+                    "userId": 37,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04658980000021984
+                ],
+                "mean": 0.04658980000021984
+            },
+            {
+                "params": {
+                    "userId": 38,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.0412084000017785
+                ],
+                "mean": 0.0412084000017785
+            },
+            {
+                "params": {
+                    "userId": 39,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.041969499998231186
+                ],
+                "mean": 0.041969499998231186
+            },
+            {
+                "params": {
+                    "userId": 40,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.04105340000023716
+                ],
+                "mean": 0.04105340000023716
+            },
+            {
+                "params": {
+                    "userId": 41,
+                    "region": "US"
+                },
+                "runs": [
+                    0.04087000000072294
+                ],
+                "mean": 0.04087000000072294
+            },
+            {
+                "params": {
+                    "userId": 42,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04176730000108364
+                ],
+                "mean": 0.04176730000108364
+            },
+            {
+                "params": {
+                    "userId": 43,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.03957350000200677
+                ],
+                "mean": 0.03957350000200677
+            },
+            {
+                "params": {
+                    "userId": 44,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.04016289999708533
+                ],
+                "mean": 0.04016289999708533
+            },
+            {
+                "params": {
+                    "userId": 45,
+                    "region": "EU"
+                },
+                "runs": [
+                    0.0400182000012137
+                ],
+                "mean": 0.0400182000012137
+            },
+            {
+                "params": {
+                    "userId": 46,
+                    "region": "US"
+                },
+                "runs": [
+                    0.041330700001708465
+                ],
+                "mean": 0.041330700001708465
+            },
+            {
+                "params": {
+                    "userId": 47,
+                    "region": "ASIA"
+                },
+                "runs": [
+                    0.04125179999755346
+                ],
+                "mean": 0.04125179999755346
+            },
+            {
+                "params": {
+                    "userId": 48,
+                    "region": "AFRICA"
+                },
+                "runs": [
+                    0.040300099997693906
+                ],
+                "mean": 0.040300099997693906
+            },
+            {
+                "params": {
+                    "userId": 49,
+                    "region": "LATAM"
+                },
+                "runs": [
+                    0.039741299999150215
+                ],
+                "mean": 0.039741299999150215
             }
         ]
     }

@@ -1,0 +1,22 @@
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|p{8cm}|c|}
+\hline
+\textbf{Query ID} & \textbf{Query (truncated)} & \textbf{Avg Time (s)}\\
+\hline
+1 & MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Produc... & 5.8880\\
+\hline
+2 & // Step 1 – collect purchase categories and average price MA... & 0.0462\\
+\hline
+3 & MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACE... & 0.0460\\
+\hline
+4 & // Hybrid recommendation combining multiple signals MATCH (u... & 0.0468\\
+\hline
+5 & // Fetch a specific user's orders MATCH (u:User {user_id: 1}... & 0.0445\\
+\hline
+6 &  // Fetch a product’s details and its category MATCH (p:Prod... & 0.0417\\
+\hline
+\end{tabular}
+\caption{Average execution time per query on Neo4j AuraDB.}
+\label{tab:query_benchmark}
+\end{table}
