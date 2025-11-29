@@ -1,0 +1,116 @@
+[
+    {
+        "query_id": 1,
+        "query": "MATCH (u:User {user_id: 1})-[:PLACED|WISHLISTED]->(p1:Product)-[:BELONGS_TO]->(c:Category)<-[:BELONGS_TO]-(rec:Product)\nWHERE rec.product_id <> p1.product_id\n  AND rec.price >= p1.price * 0.3 \n  AND rec.price <= p1.price * 1.5\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nWITH DISTINCT rec, c\nRETURN rec.name AS RecommendedProduct, \n       c.name AS Category, \n       rec.price AS Price, \n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 6.47229249999873,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    6.47229249999873
+                ],
+                "mean": 6.47229249999873
+            }
+        ]
+    },
+    {
+        "query_id": 2,
+        "query": "// Step 1 \u2013 collect purchase categories and average price\nMATCH (u:User {user_id: 1})-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c:Category)\nWITH u, COLLECT(DISTINCT c) AS purchaseCategories, AVG(p1.price) AS avgPrice\n\n// Step 2 \u2013 collect wishlist categories separately\nOPTIONAL MATCH (u)-[:WISHLISTED]->(w:Product)-[:BELONGS_TO]->(wc:Category)\nWITH u, purchaseCategories, avgPrice, COLLECT(DISTINCT wc) AS wishlistCategories\n\n// Step 3 \u2013 merge the two lists without APOC\nWITH u, avgPrice, purchaseCategories + wishlistCategories AS allCategories\nUNWIND allCategories AS cat\nWITH u, avgPrice, COLLECT(DISTINCT cat) AS interestCategories\n\n// Step 4 \u2013 find recommended products\nMATCH (rec:Product)-[:BELONGS_TO]->(cat:Category)\nWHERE cat IN interestCategories\n  AND rec.price >= avgPrice * 0.7 \n  AND rec.price <= avgPrice * 1.3\n  AND NOT (u)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct,\n       cat.name AS Category,\n       rec.price AS Price,\n       rec.rating AS Rating\nORDER BY Rating DESC\nLIMIT 10;\n",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 0.3972122999985004,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    0.3972122999985004
+                ],
+                "mean": 0.3972122999985004
+            }
+        ]
+    },
+    {
+        "query_id": 3,
+        "query": "MATCH (u1:User {user_id: 1})-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec:Product)\nWHERE u1 <> other\n  AND NOT (u1)-[:PLACED|WISHLISTED]->(rec)\nRETURN rec.name AS RecommendedProduct, COUNT(*) AS Popularity\nORDER BY Popularity DESC\nLIMIT 5;\n",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 0.1871078000003763,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    0.1871078000003763
+                ],
+                "mean": 0.1871078000003763
+            }
+        ]
+    },
+    {
+        "query_id": 4,
+        "query": "// Hybrid recommendation combining multiple signals\nMATCH (u:User {user_id: 1})\n\n// --- Purchases ---\nOPTIONAL MATCH (u)-[:PLACED]->(p1:Product)-[:BELONGS_TO]->(c1:Category)<-[:BELONGS_TO]-(rec1:Product)\nWHERE rec1 <> p1\nWITH u, rec1, COUNT(*) * 2 AS purchaseScore  // weight 2\n\n// --- Wishlists ---\nOPTIONAL MATCH (u)-[:WISHLISTED]->(p2:Product)-[:BELONGS_TO]->(c2:Category)<-[:BELONGS_TO]-(rec2:Product)\nWHERE rec2 <> p2\nWITH u, rec1, rec2, purchaseScore, COUNT(rec2) * 1.5 AS wishlistScore  // weight 1.5\n\n// --- Other users (collaborative) ---\nOPTIONAL MATCH (u)-[:PLACED]->(p:Product)<-[:PLACED]-(other:User)-[:PLACED]->(rec3:Product)\nWHERE rec3 <> p\nWITH u, rec1, rec2, rec3, purchaseScore, wishlistScore, COUNT(rec3) * 1.0 AS collabScore\n\n// --- Combine all ---\nWITH COALESCE(rec1, rec2, rec3) AS rec,\n     COALESCE(purchaseScore,0) + COALESCE(wishlistScore,0) + COALESCE(collabScore,0) AS totalScore\nRETURN rec.name AS RecommendedProduct, rec.price, rec.brand, totalScore\nORDER BY totalScore DESC\nLIMIT 5;\n",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 0.3071520999983477,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    0.3071520999983477
+                ],
+                "mean": 0.3071520999983477
+            }
+        ]
+    },
+    {
+        "query_id": 5,
+        "query": "// Fetch a specific user's orders\nMATCH (u:User {user_id: 1})-[r:PLACED]->(p:Product)\nRETURN u.name, p.name, r.quantity, r.total_price;\n\n",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 0.09376349999729428,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    0.09376349999729428
+                ],
+                "mean": 0.09376349999729428
+            }
+        ]
+    },
+    {
+        "query_id": 6,
+        "query": "\n// Fetch a product\u2019s details and its category\nMATCH (p:Product {product_id: 3})-[:BELONGS_TO]->(c:Category)\nRETURN p.name, p.price, p.brand, c.name AS category;",
+        "runs_per_query": 1,
+        "parameter_count": 1,
+        "overall_mean_sec": 0.08367480000015348,
+        "per_param_results": [
+            {
+                "params": {
+                    "userId": 1,
+                    "region": "US"
+                },
+                "runs": [
+                    0.08367480000015348
+                ],
+                "mean": 0.08367480000015348
+            }
+        ]
+    }
+]

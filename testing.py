@@ -20,8 +20,8 @@ if not URI or not USERNAME or not PASSWORD:
 QUERY_FILE = "queries/neo4j_query_saved_cypher_2025-11-22.csv"   # CSV with parametric queries
 OUTPUT_JSON = "benchmark_results_large.json"
 
-RUNS_PER_QUERY = 5                   # Run each query N times
-USER_IDS = list(range(1, 501))      # parameters to test (e.g. user_id)
+RUNS_PER_QUERY = 1                   # Run each query N times
+USER_IDS = list(range(1, 50))      # parameters to test (e.g. user_id)
 REGIONS = ["EU", "US", "ASIA", "AFRICA", "LATAM"]    # optional param set
 # ==========================
 
