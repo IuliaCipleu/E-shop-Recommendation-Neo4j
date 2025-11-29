@@ -3,8 +3,8 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-INPUT_JSON = "benchmark_results_small.json"
-OUTPUT_DIR = "plots_small"
+INPUT_JSON = "benchmark_results_large.json"
+OUTPUT_DIR = "plots_large"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
